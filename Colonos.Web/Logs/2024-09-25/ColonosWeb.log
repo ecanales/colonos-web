@@ -1,0 +1,12 @@
+2024-09-25 02:22:28.2867 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\picking-produccion-orizontal.rdlc 
+2024-09-25 02:22:36.0594 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/239DOZBUAPAUBFONINXAVQIJ1  
+2024-09-25 15:18:35.2868 loggerfile se ha generado un error al cerrar picking:5535, El articulo CECER22009 no existe.
+ 
+2024-09-25 15:18:36.8920 loggerfile picking:5535,    en Colonos.Manager.ManagerDocumentos.Actualizar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 202
+   en Colonos.Web.confirmar_picking.Guardar(Boolean confirmado, Boolean& seguir) 
+2024-09-25 15:57:14.6830 loggerfile EditarDireccion: No se puede reconocer la cadena como valor DateTime válido. 
+2024-09-25 16:02:10.5477 loggerfile EditarDireccion: No se puede reconocer la cadena como valor DateTime válido. 
+2024-09-25 16:02:14.4355 loggerfile EditarDireccion: No se puede reconocer la cadena como valor DateTime válido. 
+2024-09-25 16:02:16.4651 loggerfile EditarDireccion: No se puede reconocer la cadena como valor DateTime válido. 
+2024-09-25 16:02:25.7508 loggerfile EditarDireccion: No se puede reconocer la cadena como valor DateTime válido. 
+2024-09-25 16:03:04.1252 loggerfile EditarDireccion: No se puede reconocer la cadena como valor DateTime válido. 

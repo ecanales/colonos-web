@@ -1,0 +1,15 @@
+2024-09-02 01:04:56.0074 loggerfile VerBandeja_Event Error:Referencia a objeto no establecida como instancia de un objeto. 
+2024-09-02 03:12:46.6285 loggerfile Error Procesar informe seguimiento pedidos 
+2024-09-02 03:17:53.9026 loggerfile Error Procesar informe seguimiento pedidos 
+2024-09-02 19:04:56.4335 loggerfile se ha generado error al grabar Transacción de inventario: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. 
+2024-09-02 19:04:56.6522 loggerfile Guardar Pedido Error: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. 
+2024-09-02 19:04:56.7024 loggerfile Guardar Pedido StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 144
+   en Colonos.Web.venta_pedido.Guardar_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\venta-pedido.aspx.cs:línea 610 
+2024-09-02 19:05:14.2132 loggerfile se ha generado error al grabar Transacción de inventario: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. 
+2024-09-02 19:05:14.2747 loggerfile Guardar Pedido Error: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. 
+2024-09-02 19:05:14.2747 loggerfile Guardar Pedido StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 144
+   en Colonos.Web.venta_pedido.Guardar_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\venta-pedido.aspx.cs:línea 610 
+2024-09-02 19:05:39.6095 loggerfile No fue posible generar transacción 
+2024-09-02 19:05:39.6520 loggerfile Guardar Pedido Error: No fue posible generar transacción 
+2024-09-02 19:05:39.6520 loggerfile Guardar Pedido StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 151
+   en Colonos.Web.venta_pedido.Guardar_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\venta-pedido.aspx.cs:línea 610 

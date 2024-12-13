@@ -1,0 +1,2 @@
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.DataAccess\obj\Debug\Colonos.EndPointDataAccess.csproj.AssemblyReference.cache
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.DataAccess\obj\Debug\Colonos.EndPointDataAccess.csproj.CoreCompileInputs.cache

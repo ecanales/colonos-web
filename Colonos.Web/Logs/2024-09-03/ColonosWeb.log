@@ -1,0 +1,62 @@
+2024-09-03 04:04:24.2027 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\picking-toledo.rdlc 
+2024-09-03 04:04:41.2859 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/W3RDTVGSAM83FAHZ6DF5IYH9X  
+2024-09-03 04:05:29.5679 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\picking-produccion-orizontal.rdlc 
+2024-09-03 04:05:32.1447 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/29414GFE1JD0JVG3WZF0YN1BL  
+2024-09-03 04:07:10.5855 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\picking-toledo.rdlc 
+2024-09-03 04:07:12.8907 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/9LML3RVMDQ1OJD3XD76PO0U54  
+2024-09-03 04:09:51.1601 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\picking-produccion-orizontal.rdlc 
+2024-09-03 04:09:55.9920 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/U0WOX5ITYBBTD3T643SO2A04T  
+2024-09-03 04:15:55.0841 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\picking-produccion-orizontal.rdlc 
+2024-09-03 04:15:57.9810 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/TJJ0R51KE7RGNIMQ3U9U75TCV  
+2024-09-03 04:23:37.0999 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\picking-produccion-orizontal.rdlc 
+2024-09-03 04:23:41.7478 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/JF86A9BQ1IJS2VLBMJ64W2WH0  
+2024-09-03 05:18:51.1826 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\picking-produccion-orizontal.rdlc 
+2024-09-03 05:19:06.7807 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/92EFPCK6GDIF8F1LA38RULY48  
+2024-09-03 05:28:34.9926 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\picking-toledo.rdlc 
+2024-09-03 05:28:46.6058 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/TAQ9ZXBZICYF8KX01FI79TZVC  
+2024-09-03 05:29:30.7492 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\picking-toledo.rdlc 
+2024-09-03 05:29:34.0531 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/UK06KZ4F7KT5UKWE26IFHPHZK  
+2024-09-03 05:31:44.8563 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\picking-toledo.rdlc 
+2024-09-03 05:31:48.8900 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/EM59HVPJOKQBHJPA8FCH5Y3LH  
+2024-09-03 07:17:12.5010 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 07:18:48.3820 loggerfile Error Generando PDF Message: Se ha producido un error durante el procesamiento local de informes. 
+2024-09-03 07:18:48.3859 loggerfile Error Generando PDF InnerException: La definición del informe 'D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc' no es válida. 
+2024-09-03 07:19:38.8504 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 07:19:50.3312 loggerfile Error Generando PDF Message: Se ha producido un error durante el procesamiento local de informes. 
+2024-09-03 07:19:50.3312 loggerfile Error Generando PDF InnerException: La definición del informe 'D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc' no es válida. 
+2024-09-03 07:20:59.2633 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 07:21:51.5188 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 07:27:35.1813 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 07:27:44.2702 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/2GD7OL2Z9MQGG009NRN8Y06IQ  
+2024-09-03 07:31:24.0135 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 07:31:31.7174 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/9EAGG9WL06BB9MQEKGW5RLVAF  
+2024-09-03 07:33:20.0097 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 07:33:28.4047 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/EJZ3NMW68WPTKI8H6V4IADGC2  
+2024-09-03 07:37:23.7238 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 07:37:25.4406 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/DUTORI8XXCOCR49BAXN2QRV5H  
+2024-09-03 08:22:38.2637 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 08:22:45.0754 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/FYZY8R7R6T0OJL5LUJ8RE4HX3  
+2024-09-03 08:25:07.4733 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 08:25:10.1300 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/UJRUV4D5QHF5K6OUPSJOZ3DBK  
+2024-09-03 08:31:40.8495 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 08:31:44.4725 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/4EHSKHUDO9O7RQDXSTLLO5HSI  
+2024-09-03 08:32:42.7027 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 08:32:44.9704 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/U892GA9AJPVFK6OFISCHC0A7V  
+2024-09-03 08:34:01.0969 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 08:34:02.4994 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/6V0BTCUUKTAA0APS2NQ2YJW3V  
+2024-09-03 08:41:27.2067 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 08:41:29.0474 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/M30MFS7IVI3Z8P1Q5HY8WWKG1  
+2024-09-03 08:42:09.4744 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 08:42:11.3698 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/UWR8X5KTK0F2N2GG3TSU1I7KF  
+2024-09-03 08:42:50.0775 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 08:42:51.6557 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/O3PX7MQ5ZON1VH0RL07U6WWK6  
+2024-09-03 08:45:35.0583 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 08:45:42.3008 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/HNIMZFE25TBF71PNCE3O8HDPF  
+2024-09-03 08:48:27.4813 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 08:48:30.2719 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/KABMCAR0L48ZZLS6YDHWC4I8T  
+2024-09-03 08:49:45.6560 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 08:49:47.3223 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/VB9RZH6ALA4O1PIMCG6VMLUAU  
+2024-09-03 08:51:07.3896 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 08:51:08.9890 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/EE02PGVVRXD6JZMIX12OFQT26  
+2024-09-03 08:53:12.3421 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-09-03 08:53:14.7242 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/6O2W2144BXET6YDN1QBOS7YHC  

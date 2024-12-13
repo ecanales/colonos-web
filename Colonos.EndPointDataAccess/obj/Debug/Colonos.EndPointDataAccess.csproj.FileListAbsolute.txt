@@ -1,0 +1,17 @@
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.EndPointDataAccess\obj\Debug\Colonos.EndPointDataAccess.csproj.AssemblyReference.cache
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.EndPointDataAccess\obj\Debug\Colonos.EndPointDataAccess.csproj.CoreCompileInputs.cache
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.EndPointDataAccess\bin\Debug\Colonos.EndPointDataAccess.dll.config
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.EndPointDataAccess\bin\Debug\Colonos.EndPointDataAccess.dll
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.EndPointDataAccess\bin\Debug\Colonos.EndPointDataAccess.pdb
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.EndPointDataAccess\bin\Debug\EntityFramework.dll
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.EndPointDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.EndPointDataAccess\bin\Debug\EntityFramework.xml
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.EndPointDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.EndPointDataAccess\obj\Debug\Colonos.EndPointDataAccess.csproj.CopyComplete
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.EndPointDataAccess\obj\Debug\Colonos.EndPointDataAccess.dll
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.EndPointDataAccess\obj\Debug\Colonos.EndPointDataAccess.pdb
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.EndPointDataAccess\bin\Debug\NLog.config
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.EndPointDataAccess\bin\Debug\Newtonsoft.Json.dll
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.EndPointDataAccess\bin\Debug\NLog.dll
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.EndPointDataAccess\bin\Debug\Newtonsoft.Json.xml
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.EndPointDataAccess\bin\Debug\NLog.xml

@@ -1,0 +1,16 @@
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.AgenteEndPoint\bin\Debug\NLog.config
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.AgenteEndPoint\bin\Debug\Colonos.AgenteEndPoint.dll
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.AgenteEndPoint\bin\Debug\Colonos.AgenteEndPoint.pdb
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.AgenteEndPoint\bin\Debug\Colonos.Entidades.dll
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.AgenteEndPoint\bin\Debug\Newtonsoft.Json.dll
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.AgenteEndPoint\bin\Debug\NLog.dll
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.AgenteEndPoint\bin\Debug\RestSharp.dll
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.AgenteEndPoint\bin\Debug\Colonos.Entidades.pdb
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.AgenteEndPoint\bin\Debug\Newtonsoft.Json.xml
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.AgenteEndPoint\bin\Debug\NLog.xml
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.AgenteEndPoint\bin\Debug\RestSharp.xml
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.AgenteEndPoint\obj\Debug\Colonos.AgenteEndPoint.csproj.AssemblyReference.cache
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.AgenteEndPoint\obj\Debug\Colonos.AgenteEndPoint.csproj.CoreCompileInputs.cache
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.AgenteEndPoint\obj\Debug\Colonos.AgenteEndPoint.csproj.CopyComplete
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.AgenteEndPoint\obj\Debug\Colonos.AgenteEndPoint.dll
+D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.AgenteEndPoint\obj\Debug\Colonos.AgenteEndPoint.pdb

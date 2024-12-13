@@ -1,0 +1,4 @@
+2024-11-25 10:45:33.7347 loggerfile Error Listando doctipo: 10, No es posible conectar con el servidor remoto 
+2024-11-25 10:45:35.3534 loggerfile No es posible conectar con el servidor remoto 
+2024-11-25 10:45:38.7242 loggerfile    en Colonos.Manager.ManagerDocumentos.ListPedidos(String metodo, Int32 doctipo, String estado, String estadooperativo, Int32 pendiente, String usuario, String desde, String hasta) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 80
+   en Colonos.Web.bandeja_pedidos.Consultar() en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-pedidos.aspx.cs:línea 145 

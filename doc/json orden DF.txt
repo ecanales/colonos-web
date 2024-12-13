@@ -1,0 +1,77 @@
+{
+    "orderData": {
+        "documentTypeID": "FVAELEC",
+        "number": 980101,
+        "client": {
+            "fileId": "77.492.269-5",
+            "legalCode": "77.492.269-5",
+            "name": "GRUPO MAIKO SPA",
+            "giro": "ACTIVIDADES DE RESTAURANTES Y DE SERVICIO MOVIL DE COMIDAS",
+            "address": "EL RODEO 13332",
+            "country": "CHILE",
+            "city": "SANTIAGO",
+            "region": "METROPOLITANA",
+            "district": "LO BARNECHEA",
+            "email": "rsanmartin@lorenzabistro.cl",
+            "phone": "+56 9 5744 9702"
+        },
+        "creationDate": "2024-01-02T00:00:00",
+        "shopID": "GVL000000000000",
+        "paymentConditionID": "CREDITO15",
+        "billingCoindID": "PESO",
+        "billingRate": 1.00000000,
+        "referenceNumber": "",
+        "sellerID": "CALL CENTER 3",
+        "expirationDate": "2024-01-17T00:00:00",
+        "comment": "am 09.52",
+        "billingComment": "",
+        "dispatchComment": "",
+        "details": [
+            {
+                "line": 1,
+                "total": 444000.00000000,
+                "discountType": "Value",
+                "discountValue": 0,
+                "isExempt": false,
+                "detailedDescription": "PORCIONADO 20 GRAMOS",
+                "comment": "120 unidades de 200 gramos etioqueta argentino ",
+                "count": 24.00000000,
+                "unit": "KG",
+                "name": "2 LC LC O FILETE PORCIONADO 200 GR",
+                "code": "VAFILPOR10",
+                "isService": false,
+                "price": 18500.00000000
+            }
+        ],
+        "modifiers": [
+            {
+                "name": "RAPEL",
+                "class": "PV",
+                "number": 1,
+                "value": 0.00000000,
+                "percentage": 0
+            }
+        ],
+        "taxes": [
+            {
+                "name": "IVA",
+                "symbol": "%",
+                "percentage": 19,
+                "code": "IVA",
+                "value": 84360.00000000
+            }
+        ],
+        "totals": {
+            "exempt": 0.00000000,
+            "affectable": 444000.00000000,
+            "linealDiscount": 0.00000000,
+            "linealSurcharge": 0,
+            "totalWithoutLinealDiscount": 444000.00000000,
+            "totalDiscountSurcharge": 0.00000000,
+            "total": 528360.00000000
+        }
+    },
+    "success": true,
+    "message": null,
+    "exceptionMessage": null
+}

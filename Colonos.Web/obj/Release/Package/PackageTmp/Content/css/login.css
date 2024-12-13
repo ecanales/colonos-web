@@ -1,0 +1,59 @@
+﻿* {
+    padding:0;
+    margin:0;
+}
+
+body {
+    background-image: url("/Content/img/fondologin.png");
+    background-size: cover;
+    font-family: 'Oswald', sans-serif;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    background-color: #000000a3;
+}
+
+.box
+{
+    border:0;
+}
+
+.w25 {
+    width:25%;
+}
+
+.w50 {
+    width:50%;
+}
+.signin-form {
+    padding: 1rem;
+}
+
+
+.txtLogin {
+    background: transparent;
+    color: white;
+    border: 0;
+    border-bottom: 1px solid;
+    border-radius: 0;
+}
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: #181717ab;
+    outline: 0;
+ }
+@media (max-width: 500px) {
+    .w25 {
+        width: 50%;
+    }
+}

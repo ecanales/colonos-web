@@ -1,0 +1,23 @@
+2024-11-08 01:08:26.9831 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\picking-toledo.rdlc 
+2024-11-08 01:08:47.6643 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/UG9GXXN2YDRZNYCYOHA8Q4T5I  
+2024-11-08 01:10:08.1563 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\picking-produccion-orizontal.rdlc 
+2024-11-08 01:10:13.8375 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/KLUXSOMXBHDBMFT8EKEU2XFN4  
+2024-11-08 01:11:00.5463 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\picking-produccion-orizontal.rdlc 
+2024-11-08 01:11:05.5918 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/XEYTYZ9MIW8ZJGVKATPI3SZJE  
+2024-11-08 01:32:12.7147 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\picking-toledo.rdlc 
+2024-11-08 01:32:25.5499 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/X18JP02K8FN29XGLUI4R5KWLM  
+2024-11-08 01:34:44.6175 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\picking-toledo.rdlc 
+2024-11-08 01:34:56.5597 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/ZNXMTOCFAD0OOAPLDQ5IL272Y  
+2024-11-08 04:26:23.2998 loggerfile Agente Endpoint. ConsultaPedido: Referencia a objeto no establecida como instancia de un objeto. 
+2024-11-08 06:38:58.4400 loggerfile se ha generado error al grabar Transacción de inventario: Pedido: 412968 ya tiene una Solicitud de Producción generada: 20765 
+2024-11-08 06:38:58.8382 loggerfile Guardar Orden de Produccion Error: Pedido: 412968 ya tiene una Solicitud de Producción generada: 20765 
+2024-11-08 06:38:58.9124 loggerfile Orden de Produccion StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 163
+   en Colonos.Web.bandeja_toledo.GenerarOrdenProduccion() en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-toledo.aspx.cs:línea 812 
+2024-11-08 06:55:17.5079 loggerfile bandeja toledo, actualizando estado item: Referencia a objeto no establecida como instancia de un objeto. 
+2024-11-08 06:55:17.5128 loggerfile bandeja toledo, actualizando estado item:    en Colonos.Manager.ManagerDocumentos.GuardarEtiqueta(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 105
+   en Colonos.Web.bandeja_produccion.CerrarItem() en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-produccion.aspx.cs:línea 363
+   en Colonos.Web.bandeja_produccion.CerrarItem_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-produccion.aspx.cs:línea 303 
+2024-11-08 07:00:22.5660 loggerfile se ha generado error al grabar Transacción de inventario: Pedido: 412793 ya tiene una Solicitud de Producción generada: 20727 
+2024-11-08 07:00:22.5970 loggerfile Guardar Orden de Produccion Error: Pedido: 412793 ya tiene una Solicitud de Producción generada: 20727 
+2024-11-08 07:00:22.5970 loggerfile Orden de Produccion StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 163
+   en Colonos.Web.bandeja_toledo.GenerarOrdenProduccion() en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-toledo.aspx.cs:línea 812 

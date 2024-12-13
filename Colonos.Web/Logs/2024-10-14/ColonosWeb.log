@@ -1,0 +1,69 @@
+2024-10-14 00:09:01.5613 loggerfile se ha generado error al grabar Transacción de inventario: Ya Existe un picking activo 
+2024-10-14 00:09:08.5460 loggerfile se ha generado error al grabar Transacción de inventario: Ya Existe un picking activo 
+2024-10-14 00:09:15.2999 loggerfile se ha generado error al grabar Transacción de inventario: Ya Existe un picking activo 
+2024-10-14 01:26:01.6911 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\picking-produccion-orizontal.rdlc 
+2024-10-14 01:26:20.8533 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/TQST57F9AAP4FVP9EUAJRUAX2  
+2024-10-14 01:50:00.7839 loggerfile metodo:documentos/list, bodegacode:PRODUCCION, doctipo:3010 
+2024-10-14 01:50:00.9088 loggerfile  
+2024-10-14 01:50:19.2233 loggerfile metodo:documentos/list, bodegacode:PRODUCCION, doctipo:3010 
+2024-10-14 01:50:19.2233 loggerfile  
+2024-10-14 09:07:08.4757 loggerfile se ha generado error al grabar Transacción de inventario: El índice (basado en cero) debe ser mayor o igual a cero y menor que el tamaño de la lista de argumentos. 
+2024-10-14 09:07:12.0095 loggerfile Generar Factura. Se ha generado el siguiente error: \n El índice (basado en cero) debe ser mayor o igual a cero y menor que el tamaño de la lista de argumentos. 
+2024-10-14 09:07:12.0622 loggerfile Generar Factura. : \n    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.bandeja_facturacion.Generar_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-facturacion.aspx.cs:línea 230 
+2024-10-14 09:09:09.7721 loggerfile se ha generado error al grabar Transacción de inventario: El índice (basado en cero) debe ser mayor o igual a cero y menor que el tamaño de la lista de argumentos. 
+2024-10-14 09:09:11.3269 loggerfile Generar Factura. Se ha generado el siguiente error: \n El índice (basado en cero) debe ser mayor o igual a cero y menor que el tamaño de la lista de argumentos. 
+2024-10-14 09:09:11.3269 loggerfile Generar Factura. : \n    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.bandeja_facturacion.Generar_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-facturacion.aspx.cs:línea 230 
+2024-10-14 09:11:32.1541 loggerfile se ha generado error al grabar Transacción de inventario: El índice (basado en cero) debe ser mayor o igual a cero y menor que el tamaño de la lista de argumentos. 
+2024-10-14 09:11:34.1759 loggerfile Generar Factura. Se ha generado el siguiente error: \n El índice (basado en cero) debe ser mayor o igual a cero y menor que el tamaño de la lista de argumentos. 
+2024-10-14 09:11:34.1759 loggerfile Generar Factura. : \n    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.bandeja_facturacion.Generar_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-facturacion.aspx.cs:línea 230 
+2024-10-14 09:12:01.1100 loggerfile se ha generado error al grabar Transacción de inventario: El índice (basado en cero) debe ser mayor o igual a cero y menor que el tamaño de la lista de argumentos. 
+2024-10-14 09:12:02.3190 loggerfile Generar Factura. Se ha generado el siguiente error: \n El índice (basado en cero) debe ser mayor o igual a cero y menor que el tamaño de la lista de argumentos. 
+2024-10-14 09:12:02.3190 loggerfile Generar Factura. : \n    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.bandeja_facturacion.Generar_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-facturacion.aspx.cs:línea 230 
+2024-10-14 09:18:53.6340 loggerfile se ha generado error al grabar Transacción de inventario: El índice (basado en cero) debe ser mayor o igual a cero y menor que el tamaño de la lista de argumentos. 
+2024-10-14 09:18:55.0655 loggerfile Generar Factura. Se ha generado el siguiente error: \n El índice (basado en cero) debe ser mayor o igual a cero y menor que el tamaño de la lista de argumentos. 
+2024-10-14 09:18:55.0655 loggerfile Generar Factura. : \n    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.bandeja_facturacion.Generar_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-facturacion.aspx.cs:línea 230 
+2024-10-14 09:19:18.4568 loggerfile se ha generado error al grabar Transacción de inventario: El índice (basado en cero) debe ser mayor o igual a cero y menor que el tamaño de la lista de argumentos. 
+2024-10-14 09:19:25.0991 loggerfile Generar Factura. Se ha generado el siguiente error: \n El índice (basado en cero) debe ser mayor o igual a cero y menor que el tamaño de la lista de argumentos. 
+2024-10-14 09:19:25.0991 loggerfile Generar Factura. : \n    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.bandeja_facturacion.Generar_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-facturacion.aspx.cs:línea 230 
+2024-10-14 09:20:00.0563 loggerfile No fue posible generar transacción 
+2024-10-14 09:21:00.7496 loggerfile Generar Factura. Se ha generado el siguiente error: \n No fue posible generar transacción 
+2024-10-14 09:21:00.7505 loggerfile Generar Factura. : \n    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 153
+   en Colonos.Web.bandeja_facturacion.Generar_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-facturacion.aspx.cs:línea 230 
+2024-10-14 09:23:53.7005 loggerfile se ha generado error al grabar Transacción de inventario: Factura no pudo ser generada en DF: Centralización > Error: The EXECUTE permission was denied on the object 'ufn_GetDateRDS', database 'Platinum', schema 'dbo'. 
+2024-10-14 09:23:54.6118 loggerfile Generar Factura. Se ha generado el siguiente error: \n Factura no pudo ser generada en DF: Centralización > Error: The EXECUTE permission was denied on the object 'ufn_GetDateRDS', database 'Platinum', schema 'dbo'. 
+2024-10-14 09:23:54.6138 loggerfile Generar Factura. : \n    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.bandeja_facturacion.Generar_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-facturacion.aspx.cs:línea 230 
+2024-10-14 10:02:18.3413 loggerfile No fue posible generar transacción 
+2024-10-14 10:03:17.8028 loggerfile Generar Factura. Se ha generado el siguiente error: \n No fue posible generar transacción 
+2024-10-14 10:03:18.1425 loggerfile Generar Factura. : \n    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 153
+   en Colonos.Web.bandeja_facturacion.Generar_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-facturacion.aspx.cs:línea 230 
+2024-10-14 13:18:50.8721 loggerfile EditarDireccion: 'cboCiudad' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value 
+2024-10-14 13:19:10.8564 loggerfile EditarDireccion: 'cboCiudad' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value 
+2024-10-14 13:21:53.9117 loggerfile EditarDireccion: 'cboCiudad' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value 
+2024-10-14 13:28:14.9060 loggerfile EditarDireccion: 'cboComuna' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value 
+2024-10-14 13:28:43.5099 loggerfile EditarDireccion: 'cboComuna' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value 
+2024-10-14 13:31:33.6533 loggerfile EditarDireccion: 'cboComuna' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value 
+2024-10-14 13:31:55.2757 loggerfile EditarDireccion: 'cboComuna' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value 
+2024-10-14 13:33:22.2817 loggerfile EditarDireccion: 'cboComuna' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value 
+2024-10-14 16:21:39.2871 loggerfile EditarDireccion: 'cboSubZona' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value 
+2024-10-14 16:21:43.5032 loggerfile EditarDireccion: 'cboSubZona' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value 
+2024-10-14 16:21:49.4244 loggerfile EditarDireccion: 'cboSubZona' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value 
+2024-10-14 16:21:57.1508 loggerfile EditarDireccion: 'cboSubZona' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value 

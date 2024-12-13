@@ -1,0 +1,28 @@
+2024-09-23 03:19:53.6910 loggerfile se ha generado error al grabar Transacción de inventario: El articulo AVTRUEN443 no existe. 
+2024-09-23 03:19:53.9906 loggerfile Guardar Ajuste Error: El articulo AVTRUEN443 no existe. 
+2024-09-23 03:19:53.9936 loggerfile Guardar Ajuste StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.maestro_ajustes.Guardar_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\maestro-ajustes.aspx.cs:línea 345 
+2024-09-23 03:21:04.3039 loggerfile se ha generado error al grabar Transacción de inventario: El articulo AVTRUEN444 no existe. 
+2024-09-23 03:21:04.3327 loggerfile Guardar Ajuste Error: El articulo AVTRUEN444 no existe. 
+2024-09-23 03:21:04.3327 loggerfile Guardar Ajuste StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.maestro_ajustes.Guardar_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\maestro-ajustes.aspx.cs:línea 345 
+2024-09-23 03:21:52.7254 loggerfile se ha generado error al grabar Transacción de inventario: No hay stock suficiente para el producto VAFILFI195 de la línea de detalle #2. 
+2024-09-23 03:21:52.7523 loggerfile Guardar Ajuste Error: No hay stock suficiente para el producto VAFILFI195 de la línea de detalle #2. 
+2024-09-23 03:21:52.7523 loggerfile Guardar Ajuste StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.maestro_ajustes.Guardar_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\maestro-ajustes.aspx.cs:línea 345 
+2024-09-23 06:42:39.6170 loggerfile se ha generado error al grabar Transacción de inventario: Cliento  no existe 
+2024-09-23 06:42:40.1050 loggerfile Guardar Solciitud de Produccion Error: Cliento  no existe 
+2024-09-23 06:42:40.1648 loggerfile Guardar Solciitud de Produccion StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.bandeja_rendicion.Nuevo_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-rendicion.aspx.cs:línea 41 
+2024-09-23 06:52:48.1330 loggerfile se ha generado error al grabar Transacción de inventario: Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 1, current count = 0. 
+2024-09-23 06:52:48.1539 loggerfile Guardar Solciitud de Produccion Error: Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 1, current count = 0. 
+2024-09-23 06:52:48.1539 loggerfile Guardar Solciitud de Produccion StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.bandeja_rendicion.Nuevo_Event(Object sender, EventArgs e) 
+2024-09-23 16:58:15.1993 loggerfile VerBandeja_Event Error:DataBinding: 'Colonos.Entidades.DocumentoLinea' no contiene una propiedad con el nombre 'CantidadSolictada'. 
+2024-09-23 21:32:56.3397 loggerfile VerBandeja_Event Error:La cadena de entrada no tiene el formato correcto. 
+2024-09-23 21:33:03.5620 loggerfile VerBandeja_Event Error:La cadena de entrada no tiene el formato correcto. 
+2024-09-23 21:33:12.0461 loggerfile VerBandeja_Event Error:La cadena de entrada no tiene el formato correcto. 
+2024-09-23 21:33:41.0257 loggerfile VerBandeja_Event Error:La cadena de entrada no tiene el formato correcto. 
+2024-09-23 21:36:22.8983 loggerfile VerBandeja_Event Error:La cadena de entrada no tiene el formato correcto. 
+2024-09-23 21:36:48.7286 loggerfile VerBandeja_Event Error:La cadena de entrada no tiene el formato correcto. 
+2024-09-23 21:37:19.6525 loggerfile VerBandeja_Event Error:La cadena de entrada no tiene el formato correcto. 

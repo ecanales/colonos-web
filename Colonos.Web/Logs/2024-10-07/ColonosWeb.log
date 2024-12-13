@@ -1,0 +1,8 @@
+2024-10-07 03:11:15.8115 loggerfile se ha generado un error al cerrar picking:6072, El articulo VCOTR22006 no existe.
+ 
+2024-10-07 03:11:16.0675 loggerfile picking:6072,    en Colonos.Manager.ManagerDocumentos.Actualizar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 202
+   en Colonos.Web.confirmar_picking.Guardar(Boolean confirmado, Boolean& seguir) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\confirmar-picking.aspx.cs:línea 413 
+2024-10-07 03:12:01.2860 loggerfile se ha generado un error al cerrar picking:5890, El articulo AGOSO22005 no existe.
+ 
+2024-10-07 03:12:01.2860 loggerfile picking:5890,    en Colonos.Manager.ManagerDocumentos.Actualizar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 202
+   en Colonos.Web.confirmar_picking.Guardar(Boolean confirmado, Boolean& seguir) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\confirmar-picking.aspx.cs:línea 413 

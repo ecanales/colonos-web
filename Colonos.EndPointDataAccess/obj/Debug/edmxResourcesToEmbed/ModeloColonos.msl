@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="COLONOSDBModelStoreContainer" CdmEntityContainer="cnnDatos">
+    <EntitySetMapping Name="ITM1">
+      <EntityTypeMapping TypeName="COLONOSDBModel.ITM1">
+        <MappingFragment StoreEntitySet="ITM1">
+          <ScalarProperty Name="MedidaCode" ColumnName="MedidaCode" />
+          <ScalarProperty Name="MedidaNombre" ColumnName="MedidaNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITM2">
+      <EntityTypeMapping TypeName="COLONOSDBModel.ITM2">
+        <MappingFragment StoreEntitySet="ITM2">
+          <ScalarProperty Name="CategoriaCode" ColumnName="CategoriaCode" />
+          <ScalarProperty Name="CategoriaNombre" ColumnName="CategoriaNombre" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITM3">
+      <EntityTypeMapping TypeName="COLONOSDBModel.ITM3">
+        <MappingFragment StoreEntitySet="ITM3">
+          <ScalarProperty Name="TipoCode" ColumnName="TipoCode" />
+          <ScalarProperty Name="TipoNombre" ColumnName="TipoNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITM4">
+      <EntityTypeMapping TypeName="COLONOSDBModel.ITM4">
+        <MappingFragment StoreEntitySet="ITM4">
+          <ScalarProperty Name="FamiliaCode" ColumnName="FamiliaCode" />
+          <ScalarProperty Name="FamiliaNombre" ColumnName="FamiliaNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITM5">
+      <EntityTypeMapping TypeName="COLONOSDBModel.ITM5">
+        <MappingFragment StoreEntitySet="ITM5">
+          <ScalarProperty Name="AnimalCode" ColumnName="AnimalCode" />
+          <ScalarProperty Name="AnimalNombre" ColumnName="AnimalNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITM6">
+      <EntityTypeMapping TypeName="COLONOSDBModel.ITM6">
+        <MappingFragment StoreEntitySet="ITM6">
+          <ScalarProperty Name="FormatoCode" ColumnName="FormatoCode" />
+          <ScalarProperty Name="FormatoNombre" ColumnName="FormatoNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITM7">
+      <EntityTypeMapping TypeName="COLONOSDBModel.ITM7">
+        <MappingFragment StoreEntitySet="ITM7">
+          <ScalarProperty Name="RefrigeraCode" ColumnName="RefrigeraCode" />
+          <ScalarProperty Name="RefrigeraNombre" ColumnName="RefrigeraNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITM8">
+      <EntityTypeMapping TypeName="COLONOSDBModel.ITM8">
+        <MappingFragment StoreEntitySet="ITM8">
+          <ScalarProperty Name="FrmtoVentaCode" ColumnName="FrmtoVentaCode" />
+          <ScalarProperty Name="FrmtoVentaNombre" ColumnName="FrmtoVentaNombre" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JsonBodegas">
+      <EntityTypeMapping TypeName="COLONOSDBModel.JsonBodegas">
+        <MappingFragment StoreEntitySet="JsonBodegas">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="json" ColumnName="json" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JsonClientes">
+      <EntityTypeMapping TypeName="COLONOSDBModel.JsonClientes">
+        <MappingFragment StoreEntitySet="JsonClientes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="json" ColumnName="json" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JsonProductos">
+      <EntityTypeMapping TypeName="COLONOSDBModel.JsonProductos">
+        <MappingFragment StoreEntitySet="JsonProductos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="json" ColumnName="json" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JsonProveedores">
+      <EntityTypeMapping TypeName="COLONOSDBModel.JsonProveedores">
+        <MappingFragment StoreEntitySet="JsonProveedores">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="json" ColumnName="json" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OBOD">
+      <EntityTypeMapping TypeName="COLONOSDBModel.OBOD">
+        <MappingFragment StoreEntitySet="OBOD">
+          <ScalarProperty Name="BodegaCode" ColumnName="BodegaCode" />
+          <ScalarProperty Name="BodegaNombre" ColumnName="BodegaNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OITB">
+      <EntityTypeMapping TypeName="COLONOSDBModel.OITB">
+        <MappingFragment StoreEntitySet="OITB">
+          <ScalarProperty Name="SkuCode" ColumnName="SkuCode" />
+          <ScalarProperty Name="BodegaCode" ColumnName="BodegaCode" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="Asignado" ColumnName="Asignado" />
+          <ScalarProperty Name="Ordenado" ColumnName="Ordenado" />
+          <ScalarProperty Name="Costo" ColumnName="Costo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OITM">
+      <EntityTypeMapping TypeName="COLONOSDBModel.OITM">
+        <MappingFragment StoreEntitySet="OITM">
+          <ScalarProperty Name="ProdCode" ColumnName="ProdCode" />
+          <ScalarProperty Name="ProdNombre" ColumnName="ProdNombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="CategoriaCode" ColumnName="CategoriaCode" />
+          <ScalarProperty Name="TipoCode" ColumnName="TipoCode" />
+          <ScalarProperty Name="FamiliaCode" ColumnName="FamiliaCode" />
+          <ScalarProperty Name="AnimalCode" ColumnName="AnimalCode" />
+          <ScalarProperty Name="FormatoCode" ColumnName="FormatoCode" />
+          <ScalarProperty Name="RefrigeraCode" ColumnName="RefrigeraCode" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="SocioCode" ColumnName="SocioCode" />
+          <ScalarProperty Name="MarcaCode" ColumnName="MarcaCode" />
+          <ScalarProperty Name="ProcedenciaCode" ColumnName="ProcedenciaCode" />
+          <ScalarProperty Name="Medida" ColumnName="Medida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OPED">
+      <EntityTypeMapping TypeName="COLONOSDBModel.OPED">
+        <MappingFragment StoreEntitySet="OPED">
+          <ScalarProperty Name="DocEntry" ColumnName="DocEntry" />
+          <ScalarProperty Name="DocNum" ColumnName="DocNum" />
+          <ScalarProperty Name="DocFecha" ColumnName="DocFecha" />
+          <ScalarProperty Name="SocioCode" ColumnName="SocioCode" />
+          <ScalarProperty Name="ContactoCode" ColumnName="ContactoCode" />
+          <ScalarProperty Name="CondicionCode" ColumnName="CondicionCode" />
+          <ScalarProperty Name="DireccionCode" ColumnName="DireccionCode" />
+          <ScalarProperty Name="VendedorCode" ColumnName="VendedorCode" />
+          <ScalarProperty Name="UsuarioCode" ColumnName="UsuarioCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OSCP">
+      <EntityTypeMapping TypeName="COLONOSDBModel.OSCP">
+        <MappingFragment StoreEntitySet="OSCP">
+          <ScalarProperty Name="SocioCode" ColumnName="SocioCode" />
+          <ScalarProperty Name="Rut" ColumnName="Rut" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="NombreFantasia" ColumnName="NombreFantasia" />
+          <ScalarProperty Name="SocioTipo" ColumnName="SocioTipo" />
+          <ScalarProperty Name="EmailSII" ColumnName="EmailSII" />
+          <ScalarProperty Name="Giro" ColumnName="Giro" />
+          <ScalarProperty Name="RubroCode" ColumnName="RubroCode" />
+          <ScalarProperty Name="RubroName" ColumnName="RubroName" />
+          <ScalarProperty Name="CondicionCode" ColumnName="CondicionCode" />
+          <ScalarProperty Name="CondicionName" ColumnName="CondicionName" />
+          <ScalarProperty Name="VendedorCode" ColumnName="VendedorCode" />
+          <ScalarProperty Name="MatrizSocio" ColumnName="MatrizSocio" />
+          <ScalarProperty Name="CreditoAutorizado" ColumnName="CreditoAutorizado" />
+          <ScalarProperty Name="CreditoUtiliado" ColumnName="CreditoUtiliado" />
+          <ScalarProperty Name="EstadoOperativo" ColumnName="EstadoOperativo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OVEN">
+      <EntityTypeMapping TypeName="COLONOSDBModel.OVEN">
+        <MappingFragment StoreEntitySet="OVEN">
+          <ScalarProperty Name="VendedorCode" ColumnName="VendedorCode" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PED1">
+      <EntityTypeMapping TypeName="COLONOSDBModel.PED1">
+        <MappingFragment StoreEntitySet="PED1">
+          <ScalarProperty Name="DocEntry" ColumnName="DocEntry" />
+          <ScalarProperty Name="DocLinea" ColumnName="DocLinea" />
+          <ScalarProperty Name="LineaEstado" ColumnName="LineaEstado" />
+          <ScalarProperty Name="SkuCode" ColumnName="SkuCode" />
+          <ScalarProperty Name="SkuNombre" ColumnName="SkuNombre" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="PrecioLista" ColumnName="PrecioLista" />
+          <ScalarProperty Name="PrecioFinal" ColumnName="PrecioFinal" />
+          <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+          <ScalarProperty Name="Pendiente" ColumnName="Pendiente" />
+          <ScalarProperty Name="BaseEntry" ColumnName="BaseEntry" />
+          <ScalarProperty Name="BaseLinea" ColumnName="BaseLinea" />
+          <ScalarProperty Name="BodegaCode" ColumnName="BodegaCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCP1">
+      <EntityTypeMapping TypeName="COLONOSDBModel.SCP1">
+        <MappingFragment StoreEntitySet="SCP1">
+          <ScalarProperty Name="DireccionCode" ColumnName="DireccionCode" />
+          <ScalarProperty Name="DireccionTipo" ColumnName="DireccionTipo" />
+          <ScalarProperty Name="SocioCode" ColumnName="SocioCode" />
+          <ScalarProperty Name="Calle" ColumnName="Calle" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="ComunaCode" ColumnName="ComunaCode" />
+          <ScalarProperty Name="CiudadCode" ColumnName="CiudadCode" />
+          <ScalarProperty Name="RegionCode" ColumnName="RegionCode" />
+          <ScalarProperty Name="ComunaNombre" ColumnName="ComunaNombre" />
+          <ScalarProperty Name="CiudadNombre" ColumnName="CiudadNombre" />
+          <ScalarProperty Name="RegionNombre" ColumnName="RegionNombre" />
+          <ScalarProperty Name="HorarioAtencion" ColumnName="HorarioAtencion" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="EmailDriveIn" ColumnName="EmailDriveIn" />
+          <ScalarProperty Name="PorDefecto" ColumnName="PorDefecto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCP2">
+      <EntityTypeMapping TypeName="COLONOSDBModel.SCP2">
+        <MappingFragment StoreEntitySet="SCP2">
+          <ScalarProperty Name="ContactoCode" ColumnName="ContactoCode" />
+          <ScalarProperty Name="SocioCode" ColumnName="SocioCode" />
+          <ScalarProperty Name="ContactoTipo" ColumnName="ContactoTipo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCP3">
+      <EntityTypeMapping TypeName="COLONOSDBModel.SCP3">
+        <MappingFragment StoreEntitySet="SCP3">
+          <ScalarProperty Name="CondicionCode" ColumnName="CondicionCode" />
+          <ScalarProperty Name="CondicionNombre" ColumnName="CondicionNombre" />
+          <ScalarProperty Name="Dias" ColumnName="Dias" />
+          <ScalarProperty Name="Orden" ColumnName="Orden" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCP4">
+      <EntityTypeMapping TypeName="COLONOSDBModel.SCP4">
+        <MappingFragment StoreEntitySet="SCP4">
+          <ScalarProperty Name="SocioCode" ColumnName="SocioCode" />
+          <ScalarProperty Name="FechaCarpeta" ColumnName="FechaCarpeta" />
+          <ScalarProperty Name="FechaDicom" ColumnName="FechaDicom" />
+          <ScalarProperty Name="Cod20" ColumnName="Cod20" />
+          <ScalarProperty Name="Cod142" ColumnName="Cod142" />
+          <ScalarProperty Name="Cod537" ColumnName="Cod537" />
+          <ScalarProperty Name="Cod538" ColumnName="Cod538" />
+          <ScalarProperty Name="Cod1400" ColumnName="Cod1400" />
+          <ScalarProperty Name="Cod1410" ColumnName="Cod1410" />
+          <ScalarProperty Name="Cod1430" ColumnName="Cod1430" />
+          <ScalarProperty Name="Cod1610" ColumnName="Cod1610" />
+          <ScalarProperty Name="Cod1629" ColumnName="Cod1629" />
+          <ScalarProperty Name="Cod1657" ColumnName="Cod1657" />
+          <ScalarProperty Name="Cod1661" ColumnName="Cod1661" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCP5">
+      <EntityTypeMapping TypeName="COLONOSDBModel.SCP5">
+        <MappingFragment StoreEntitySet="SCP5">
+          <ScalarProperty Name="RubroCode" ColumnName="RubroCode" />
+          <ScalarProperty Name="RubroNombre" ColumnName="RubroNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCP6">
+      <EntityTypeMapping TypeName="COLONOSDBModel.SCP6">
+        <MappingFragment StoreEntitySet="SCP6">
+          <ScalarProperty Name="SocioTipo" ColumnName="SocioTipo" />
+          <ScalarProperty Name="SocioTipoNombre" ColumnName="SocioTipoNombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCP7">
+      <EntityTypeMapping TypeName="COLONOSDBModel.SCP7">
+        <MappingFragment StoreEntitySet="SCP7">
+          <ScalarProperty Name="EstadoOperativo" ColumnName="EstadoOperativo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

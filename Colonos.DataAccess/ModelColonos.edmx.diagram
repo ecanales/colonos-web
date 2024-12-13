@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c57bb95e080a4108b72b0d547dc8912a" Name="Diagram1">
+        <EntityTypeShape EntityType="COLONOSDBModel.JsonProductos" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.JsonClientes" Width="1.5" PointX="3.375" PointY="2.875" />
+        <EntityTypeShape EntityType="COLONOSDBModel.JsonProveedores" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.JsonBodegas" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.OITM" Width="1.5" PointX="1.25" PointY="0.875" />
+        <EntityTypeShape EntityType="COLONOSDBModel.OSCP" Width="1.5" PointX="5.375" PointY="2.625" />
+        <EntityTypeShape EntityType="COLONOSDBModel.SCP1" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.ITM1" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.ITM2" Width="1.5" PointX="2.75" PointY="7.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.ITM3" Width="1.5" PointX="4.75" PointY="7.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.ITM4" Width="1.5" PointX="7.75" PointY="5.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.ITM5" Width="1.5" PointX="6.75" PointY="8.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.ITM6" Width="1.5" PointX="8.75" PointY="8.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.ITM7" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.ITM8" Width="1.5" PointX="9.75" PointY="3.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.OBOD" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.OITB" Width="1.5" PointX="2.75" PointY="10.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.OPED" Width="1.5" PointX="10.75" PointY="6.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.OVEN" Width="1.5" PointX="10.75" PointY="10.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.PED1" Width="1.5" PointX="11.75" PointY="0.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.SCP2" Width="1.5" PointX="4.75" PointY="11.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.SCP3" Width="1.5" PointX="6.75" PointY="11.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.SCP4" Width="1.5" PointX="12.75" PointY="5.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.SCP5" Width="1.5" PointX="12.75" PointY="10.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.SCP6" Width="1.5" PointX="13.75" PointY="0.75" />
+        <EntityTypeShape EntityType="COLONOSDBModel.SCP7" Width="1.5" PointX="0.75" PointY="13.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

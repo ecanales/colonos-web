@@ -1,0 +1,26 @@
+2024-10-13 19:18:07.8089 loggerfile metodo:documentos/list, bodegacode:TOLEDO, doctipo:10 
+2024-10-13 19:18:08.0174 loggerfile  
+2024-10-13 19:18:12.2702 loggerfile metodo:documentos/list, bodegacode:TOLEDO, doctipo:16 
+2024-10-13 19:18:12.2702 loggerfile  
+2024-10-13 20:15:33.2502 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-10-13 20:15:44.9065 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/4QN0B4OYNHCS3JS8AGFKX8YJJ  
+2024-10-13 20:17:11.6749 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-10-13 20:17:14.7244 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/NI18TRUFIBM62YNET1NTXE8FE  
+2024-10-13 20:26:42.1902 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-10-13 20:27:04.8318 loggerfile Error Generando PDF Message: Se ha producido un error durante el procesamiento local de informes. 
+2024-10-13 20:27:04.8318 loggerfile Error Generando PDF InnerException: La definición del informe 'D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc' no es válida. 
+2024-10-13 20:27:48.0657 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-10-13 20:29:21.8228 loggerfile Error Generando PDF Message: Se ha producido un error durante el procesamiento local de informes. 
+2024-10-13 20:29:21.8228 loggerfile Error Generando PDF InnerException: La definición del informe 'D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc' no es válida. 
+2024-10-13 20:36:08.2532 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-10-13 20:36:46.0441 loggerfile Error Generando PDF Message: Se ha producido un error durante el procesamiento local de informes. 
+2024-10-13 20:36:46.0441 loggerfile Error Generando PDF InnerException: La definición del informe 'D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc' no es válida. 
+2024-10-13 20:38:09.0865 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-10-13 20:38:16.7125 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/U116LQCK6VX4ZN9E7176ARMI0  
+2024-10-13 20:45:13.2730 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-10-13 20:45:30.6231 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/D5X3RZZR30FP7TYPQW9H43HPL  
+2024-10-13 20:50:13.9818 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-10-13 20:50:27.8798 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/7B5GB521OHZ9CHOVXRMJ9VVRZ  
+2024-10-13 20:52:32.4118 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-10-13 20:52:37.1500 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/MNJ72P8FKRPPB6CA69FZ9E6SW  
+2024-10-13 23:56:55.7930 loggerfile se ha generado error al grabar Transacción de inventario: Ya Existe un picking activo 

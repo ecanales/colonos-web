@@ -1,0 +1,8 @@
+2024-08-17 22:18:41.1578 loggerfile se ha generado un error al cerrar picking:5176, Referencia a objeto no establecida como instancia de un objeto. 
+2024-08-17 22:18:41.3337 loggerfile picking:5176,    en Colonos.Web.confirmar_picking.Guardar(Boolean confirmado, Boolean& seguir) 
+2024-08-17 22:18:48.1068 loggerfile se ha generado un error al cerrar picking:5176, Referencia a objeto no establecida como instancia de un objeto. 
+2024-08-17 22:18:48.1068 loggerfile picking:5176,    en Colonos.Web.confirmar_picking.Guardar(Boolean confirmado, Boolean& seguir) 
+2024-08-17 22:19:14.6644 loggerfile se ha generado un error al cerrar picking:5176, Referencia a objeto no establecida como instancia de un objeto. 
+2024-08-17 22:19:14.6644 loggerfile picking:5176,    en Colonos.Web.confirmar_picking.Guardar(Boolean confirmado, Boolean& seguir) 
+2024-08-17 22:19:44.1542 loggerfile se ha generado un error al cerrar picking:5176, Referencia a objeto no establecida como instancia de un objeto. 
+2024-08-17 22:19:44.1542 loggerfile picking:5176,    en Colonos.Web.confirmar_picking.Guardar(Boolean confirmado, Boolean& seguir) 

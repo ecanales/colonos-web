@@ -1,0 +1,15 @@
+2024-09-04 08:50:01.0614 loggerfile Select Cliente Error:Unexpected character encountered while parsing value: <. Path '', line 0, position 0. 
+2024-09-04 08:50:47.5584 loggerfile Select Cliente Error:Unexpected character encountered while parsing value: <. Path '', line 0, position 0. 
+2024-09-04 08:51:06.3829 loggerfile Select Cliente Error:Unexpected character encountered while parsing value: <. Path '', line 0, position 0. 
+2024-09-04 09:00:26.1831 loggerfile Select Cliente Error:Unexpected character encountered while parsing value: <. Path '', line 0, position 0. 
+2024-09-04 09:00:29.1552 loggerfile Select Cliente Error:Unexpected character encountered while parsing value: <. Path '', line 0, position 0. 
+2024-09-04 16:15:25.2095 loggerfile se ha generado error al grabar Transacción de inventario: productos no tienes stock para generar el Picking 
+2024-09-04 16:15:37.3590 loggerfile se ha generado error al grabar Transacción de inventario: productos no tienes stock para generar el Picking 
+2024-09-04 16:20:35.5854 loggerfile se ha generado error al grabar Transacción de inventario: productos no tienes stock para generar el Picking 
+2024-09-04 16:20:50.6226 loggerfile se ha generado error al grabar Transacción de inventario: productos no tienes stock para generar el Picking 
+2024-09-04 16:26:15.1410 loggerfile se ha generado error al grabar Transacción de inventario: productos no tienes stock para generar el Picking 
+2024-09-04 16:26:36.0980 loggerfile se ha generado error al grabar Transacción de inventario: productos no tienes stock para generar el Picking 
+2024-09-04 16:26:58.2445 loggerfile se ha generado error al grabar Transacción de inventario: productos no tienes stock para generar el Picking 
+2024-09-04 16:30:02.1820 loggerfile No fue posible generar transacción 
+2024-09-04 17:55:15.6235 loggerfile No fue posible generar transacción 
+2024-09-04 18:06:20.5036 loggerfile se ha generado error al grabar Transacción de inventario: productos no tienen stock para generar el Picking 

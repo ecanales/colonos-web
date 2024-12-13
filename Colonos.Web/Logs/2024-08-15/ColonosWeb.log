@@ -1,0 +1,4 @@
+2024-08-15 16:50:44.7159 loggerfile No fue posible generar transacción 
+2024-08-15 16:50:44.9114 loggerfile Guardar Pedido Error: No fue posible generar transacción 
+2024-08-15 16:50:44.9852 loggerfile Guardar Pedido StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 151
+   en Colonos.Web.venta_pedido.Guardar_Event(Object sender, EventArgs e) 

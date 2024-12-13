@@ -1,0 +1,10 @@
+2024-08-16 04:17:32.9503 loggerfile No fue posible generar transacción 
+2024-08-16 04:17:33.1601 loggerfile Generar Factura. Se ha generado el siguiente error: \n No fue posible generar transacción 
+2024-08-16 04:17:33.2587 loggerfile Generar Factura. : \n    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 151
+   en Colonos.Web.bandeja_facturacion.Generar_Event(Object sender, EventArgs e) 
+2024-08-16 04:17:41.2770 loggerfile Error Listando doctipo: 10, No es posible conectar con el servidor remoto 
+2024-08-16 04:21:05.6093 loggerfile se ha generado error al grabar Transacción de inventario: El índice (basado en cero) debe ser mayor o igual a cero y menor que el tamaño de la lista de argumentos. 
+2024-08-16 04:21:05.6346 loggerfile Generar Factura. Se ha generado el siguiente error: \n El índice (basado en cero) debe ser mayor o igual a cero y menor que el tamaño de la lista de argumentos. 
+2024-08-16 04:21:05.6346 loggerfile Generar Factura. : \n    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 144
+   en Colonos.Web.bandeja_facturacion.Generar_Event(Object sender, EventArgs e) 
+2024-08-16 04:28:35.2103 loggerfile se ha generado error al grabar Transacción de inventario: Ya Existe un picking activo 

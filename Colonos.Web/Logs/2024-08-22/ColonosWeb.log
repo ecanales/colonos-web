@@ -1,0 +1,14 @@
+2024-08-22 17:48:19.6634 loggerfile se ha generado error al grabar Transacción de inventario: Factura no pudo ser generada en DF: Inventario > Error al crear el detalle del documento de inventario. Error: An error occurred while updating the entries. See the inner exception for details. 
+2024-08-22 17:48:19.7961 loggerfile Generar Factura. Se ha generado el siguiente error: \n Factura no pudo ser generada en DF: Inventario > Error al crear el detalle del documento de inventario. Error: An error occurred while updating the entries. See the inner exception for details. 
+2024-08-22 17:48:19.8420 loggerfile Generar Factura. : \n    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 144
+   en Colonos.Web.bandeja_facturacion.Generar_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-facturacion.aspx.cs:línea 230 
+2024-08-22 18:35:31.2814 loggerfile No fue posible generar transacción 
+2024-08-22 18:35:31.7501 loggerfile Generar Factura. Se ha generado el siguiente error: \n No fue posible generar transacción 
+2024-08-22 18:35:32.6957 loggerfile Generar Factura. : \n    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 151
+   en Colonos.Web.bandeja_facturacion.Generar_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-facturacion.aspx.cs:línea 230 
+2024-08-22 18:35:36.7104 loggerfile Error Listando doctipo: 10, No es posible conectar con el servidor remoto 
+2024-08-22 18:46:36.5854 loggerfile No fue posible generar transacción 
+2024-08-22 18:46:36.6752 loggerfile Generar Factura. Se ha generado el siguiente error: \n No fue posible generar transacción 
+2024-08-22 18:46:36.6951 loggerfile Generar Factura. : \n    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 151
+   en Colonos.Web.bandeja_facturacion.Generar_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-facturacion.aspx.cs:línea 230 
+2024-08-22 18:46:40.7103 loggerfile Error Listando doctipo: 10, No es posible conectar con el servidor remoto 

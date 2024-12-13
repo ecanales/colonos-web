@@ -1,0 +1,22 @@
+{
+    "success": true,
+    "message": "Productos obtenidos exitosamente",
+    "exceptionMessage": null,
+    "totalItems": 7436,
+    "pageNumber": 1,
+    "itemsPerPage": 2,
+    "productList": [
+        {
+            "productID": "AGANGA1003",
+            "active": "S",
+            "stock": 372.56000000,
+            "priceListDetail": []
+        },
+        {
+            "productID": "AGANGA1004",
+            "active": "S",
+            "stock": 697.01000000,
+            "priceListDetail": []
+        }
+    ]
+}

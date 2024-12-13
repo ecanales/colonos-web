@@ -1,0 +1,20 @@
+2024-08-19 14:22:45.7558 loggerfile se ha generado un error al cerrar picking:5184, La cadena de entrada no tiene el formato correcto. 
+2024-08-19 14:22:46.2688 loggerfile picking:5184,    en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDecimal(String value)
+   en Colonos.Web.confirmar_picking.Guardar(Boolean confirmado, Boolean& seguir) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\confirmar-picking.aspx.cs:línea 354 
+2024-08-19 14:22:58.2627 loggerfile se ha generado un error al cerrar picking:5184, La cadena de entrada no tiene el formato correcto. 
+2024-08-19 14:22:58.2627 loggerfile picking:5184,    en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDecimal(String value)
+   en Colonos.Web.confirmar_picking.Guardar(Boolean confirmado, Boolean& seguir) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\confirmar-picking.aspx.cs:línea 354 
+2024-08-19 21:57:13.7715 loggerfile se ha generado un error al cerrar picking:5185, La cadena de entrada no tiene el formato correcto. 
+2024-08-19 21:57:14.0414 loggerfile picking:5185,    en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDecimal(String value)
+   en Colonos.Web.confirmar_picking.Guardar(Boolean confirmado, Boolean& seguir) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\confirmar-picking.aspx.cs:línea 354 
+2024-08-19 21:57:43.6180 loggerfile se ha generado un error al cerrar picking:5185, La cadena de entrada no tiene el formato correcto. 
+2024-08-19 21:57:43.6180 loggerfile picking:5185,    en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDecimal(String value)
+   en Colonos.Web.confirmar_picking.Guardar(Boolean confirmado, Boolean& seguir) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\confirmar-picking.aspx.cs:línea 354 

@@ -1,0 +1,11 @@
+2024-10-01 05:20:58.1277 loggerfile se ha generado un error al cerrar picking:5535, El articulo CECER22009 no existe.
+ 
+2024-10-01 05:20:58.3557 loggerfile picking:5535,    en Colonos.Manager.ManagerDocumentos.Actualizar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 202
+   en Colonos.Web.confirmar_picking.Guardar(Boolean confirmado, Boolean& seguir) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\confirmar-picking.aspx.cs:línea 413 
+2024-10-01 12:25:49.4164 loggerfile se ha generado un error al cerrar picking:5807, Referencia a objeto no establecida como instancia de un objeto. 
+2024-10-01 12:25:59.7076 loggerfile picking:5807,    en Colonos.Manager.ManagerDocumentos.Actualizar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 192
+   en Colonos.Web.confirmar_picking.Guardar(Boolean confirmado, Boolean& seguir) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\confirmar-picking.aspx.cs:línea 413 
+2024-10-01 15:24:27.4566 loggerfile se ha generado un error al cerrar picking:5658, No existen productos a marcar
+ 
+2024-10-01 15:24:27.7894 loggerfile picking:5658,    en Colonos.Manager.ManagerDocumentos.Actualizar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 202
+   en Colonos.Web.confirmar_picking.Guardar(Boolean confirmado, Boolean& seguir) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\confirmar-picking.aspx.cs:línea 413 

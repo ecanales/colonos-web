@@ -1,0 +1,22 @@
+2024-09-01 04:51:18.4614 loggerfile DataBinding: 'Colonos.Entidades.DocumentosResult' no contiene una propiedad con el nombre 'VendedorNombre'. 
+2024-09-01 04:51:18.7414 loggerfile    en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   en ASP.bandeja_pedidos_aspx.__DataBinding__control62(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-pedidos.aspx:línea 85
+   en System.Web.UI.Control.OnDataBinding(EventArgs e)
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en Colonos.Web.bandeja_pedidos.Consultar() en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-pedidos.aspx.cs:línea 138 
+2024-09-01 05:45:24.8719 loggerfile Select Cliente Error:'cboVendedor' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value 
+2024-09-01 05:47:27.6350 loggerfile Select Cliente Error:'cboVendedor' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value 
+2024-09-01 06:06:23.9032 loggerfile Select Cliente Error:'cboVendedor' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value 

@@ -1,0 +1,24 @@
+2024-10-15 22:11:42.0142 loggerfile se ha generado error al grabar Transacción de inventario: Pedido de venta ya tiene una solicitud de producción generada 
+2024-10-15 22:11:42.2047 loggerfile Guardar Orden de Produccion Error: Pedido de venta ya tiene una solicitud de producción generada 
+2024-10-15 22:11:42.2827 loggerfile Orden de Produccion StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.bandeja_toledo.GenerarOrdenProduccion() en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-toledo.aspx.cs:línea 778 
+2024-10-15 22:14:54.7451 loggerfile se ha generado error al grabar Transacción de inventario: Pedido de venta ya tiene una solicitud de producción generada 
+2024-10-15 22:14:54.7744 loggerfile Guardar Orden de Produccion Error: Pedido de venta ya tiene una solicitud de producción generada 
+2024-10-15 22:14:54.7744 loggerfile Orden de Produccion StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.bandeja_toledo.GenerarOrdenProduccion() en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-toledo.aspx.cs:línea 778 
+2024-10-15 22:15:30.1098 loggerfile se ha generado error al grabar Transacción de inventario: Pedido de venta ya tiene una solicitud de producción generada 
+2024-10-15 22:15:30.1542 loggerfile Guardar Orden de Produccion Error: Pedido de venta ya tiene una solicitud de producción generada 
+2024-10-15 22:15:30.1542 loggerfile Orden de Produccion StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.bandeja_toledo.GenerarOrdenProduccion() en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-toledo.aspx.cs:línea 778 
+2024-10-15 22:18:06.3931 loggerfile se ha generado error al grabar Transacción de inventario: Pedido de venta 411003 ya tiene una Solicitud de Producción generada: 20262 
+2024-10-15 22:18:06.4263 loggerfile Guardar Orden de Produccion Error: Pedido de venta 411003 ya tiene una Solicitud de Producción generada: 20262 
+2024-10-15 22:18:06.4263 loggerfile Orden de Produccion StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.bandeja_toledo.GenerarOrdenProduccion() en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-toledo.aspx.cs:línea 778 
+2024-10-15 22:18:54.0304 loggerfile se ha generado error al grabar Transacción de inventario: Pedido: 411003 ya tiene una Solicitud de Producción generada: 20262 
+2024-10-15 22:18:54.0596 loggerfile Guardar Orden de Produccion Error: Pedido: 411003 ya tiene una Solicitud de Producción generada: 20262 
+2024-10-15 22:18:54.0596 loggerfile Orden de Produccion StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.bandeja_toledo.GenerarOrdenProduccion() en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-toledo.aspx.cs:línea 778 
+2024-10-15 22:21:45.6939 loggerfile se ha generado error al grabar Transacción de inventario: Pedido: 410813 ya tiene una Solicitud de Producción generada: 20285 
+2024-10-15 22:21:45.7203 loggerfile Guardar Orden de Produccion Error: Pedido: 410813 ya tiene una Solicitud de Producción generada: 20285 
+2024-10-15 22:21:45.7203 loggerfile Orden de Produccion StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.bandeja_toledo.GenerarOrdenProduccion() en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-toledo.aspx.cs:línea 778 

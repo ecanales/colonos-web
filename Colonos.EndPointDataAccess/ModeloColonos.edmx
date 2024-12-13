@@ -1,0 +1,926 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="COLONOSDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ITM1">
+          <Key>
+            <PropertyRef Name="MedidaCode" />
+          </Key>
+          <Property Name="MedidaCode" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="MedidaNombre" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="ITM2">
+          <Key>
+            <PropertyRef Name="CategoriaCode" />
+          </Key>
+          <Property Name="CategoriaCode" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CategoriaNombre" Type="varchar" MaxLength="150" />
+          <Property Name="Orden" Type="int" />
+        </EntityType>
+        <EntityType Name="ITM3">
+          <Key>
+            <PropertyRef Name="TipoCode" />
+          </Key>
+          <Property Name="TipoCode" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="TipoNombre" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="ITM4">
+          <Key>
+            <PropertyRef Name="FamiliaCode" />
+          </Key>
+          <Property Name="FamiliaCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FamiliaNombre" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="ITM5">
+          <Key>
+            <PropertyRef Name="AnimalCode" />
+          </Key>
+          <Property Name="AnimalCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AnimalNombre" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="ITM6">
+          <Key>
+            <PropertyRef Name="FormatoCode" />
+          </Key>
+          <Property Name="FormatoCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FormatoNombre" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="ITM7">
+          <Key>
+            <PropertyRef Name="RefrigeraCode" />
+          </Key>
+          <Property Name="RefrigeraCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RefrigeraNombre" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="ITM8">
+          <Key>
+            <PropertyRef Name="FrmtoVentaCode" />
+          </Key>
+          <Property Name="FrmtoVentaCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FrmtoVentaNombre" Type="varchar" MaxLength="150" />
+          <Property Name="Peso" Type="numeric" Precision="18" Scale="4" />
+        </EntityType>
+        <EntityType Name="JsonBodegas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="json" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="JsonClientes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="json" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="JsonProductos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="json" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="JsonProveedores">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="json" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="OBOD">
+          <Key>
+            <PropertyRef Name="BodegaCode" />
+          </Key>
+          <Property Name="BodegaCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="BodegaNombre" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="OITB">
+          <Key>
+            <PropertyRef Name="SkuCode" />
+            <PropertyRef Name="BodegaCode" />
+          </Key>
+          <Property Name="SkuCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="BodegaCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Stock" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Asignado" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Ordenado" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Costo" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="OITM">
+          <Key>
+            <PropertyRef Name="ProdCode" />
+          </Key>
+          <Property Name="ProdCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProdNombre" Type="varchar" MaxLength="150" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="500" />
+          <Property Name="CategoriaCode" Type="int" />
+          <Property Name="TipoCode" Type="char" MaxLength="1" />
+          <Property Name="FamiliaCode" Type="int" />
+          <Property Name="AnimalCode" Type="int" />
+          <Property Name="FormatoCode" Type="int" />
+          <Property Name="RefrigeraCode" Type="int" />
+          <Property Name="Activo" Type="char" MaxLength="1" />
+          <Property Name="SocioCode" Type="varchar" MaxLength="50" />
+          <Property Name="MarcaCode" Type="int" />
+          <Property Name="ProcedenciaCode" Type="int" />
+          <Property Name="Medida" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="OPED">
+          <Key>
+            <PropertyRef Name="DocEntry" />
+          </Key>
+          <Property Name="DocEntry" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DocNum" Type="int" />
+          <Property Name="DocFecha" Type="date" />
+          <Property Name="SocioCode" Type="varchar" MaxLength="50" />
+          <Property Name="ContactoCode" Type="int" />
+          <Property Name="CondicionCode" Type="int" />
+          <Property Name="DireccionCode" Type="int" />
+          <Property Name="VendedorCode" Type="int" />
+          <Property Name="UsuarioCode" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="OSCP">
+          <Key>
+            <PropertyRef Name="SocioCode" />
+          </Key>
+          <Property Name="SocioCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Rut" Type="varchar" MaxLength="50" />
+          <Property Name="RazonSocial" Type="varchar" MaxLength="200" />
+          <Property Name="NombreFantasia" Type="varchar" MaxLength="200" />
+          <Property Name="SocioTipo" Type="char" MaxLength="1" />
+          <Property Name="EmailSII" Type="varchar" MaxLength="150" />
+          <Property Name="Giro" Type="varchar" MaxLength="200" />
+          <Property Name="RubroCode" Type="int" />
+          <Property Name="RubroName" Type="varchar" MaxLength="150" />
+          <Property Name="CondicionCode" Type="int" />
+          <Property Name="CondicionName" Type="varchar" MaxLength="150" />
+          <Property Name="VendedorCode" Type="varchar" MaxLength="50" />
+          <Property Name="MatrizSocio" Type="varchar" MaxLength="50" />
+          <Property Name="CreditoAutorizado" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="CreditoUtiliado" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="EstadoOperativo" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="OVEN">
+          <Key>
+            <PropertyRef Name="VendedorCode" />
+          </Key>
+          <Property Name="VendedorCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="150" />
+          <Property Name="Email" Type="varchar" MaxLength="150" />
+          <Property Name="Celular" Type="varchar" MaxLength="20" />
+          <Property Name="Telefono" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="PED1">
+          <Key>
+            <PropertyRef Name="DocEntry" />
+            <PropertyRef Name="DocLinea" />
+          </Key>
+          <Property Name="DocEntry" Type="int" Nullable="false" />
+          <Property Name="DocLinea" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LineaEstado" Type="char" MaxLength="1" />
+          <Property Name="SkuCode" Type="varchar" MaxLength="50" />
+          <Property Name="SkuNombre" Type="varchar" MaxLength="150" />
+          <Property Name="Cantidad" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="PrecioLista" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="PrecioFinal" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Descuento" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="Pendiente" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="BaseEntry" Type="int" />
+          <Property Name="BaseLinea" Type="int" />
+          <Property Name="BodegaCode" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SCP1">
+          <Key>
+            <PropertyRef Name="DireccionCode" />
+          </Key>
+          <Property Name="DireccionCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DireccionTipo" Type="char" MaxLength="1" />
+          <Property Name="SocioCode" Type="varchar" MaxLength="50" />
+          <Property Name="Calle" Type="varchar" MaxLength="150" />
+          <Property Name="Numero" Type="varchar" MaxLength="50" />
+          <Property Name="ComunaCode" Type="int" />
+          <Property Name="CiudadCode" Type="int" />
+          <Property Name="RegionCode" Type="int" />
+          <Property Name="ComunaNombre" Type="varchar" MaxLength="150" />
+          <Property Name="CiudadNombre" Type="varchar" MaxLength="150" />
+          <Property Name="RegionNombre" Type="varchar" MaxLength="150" />
+          <Property Name="HorarioAtencion" Type="varchar" MaxLength="50" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="150" />
+          <Property Name="EmailDriveIn" Type="varchar" MaxLength="150" />
+          <Property Name="PorDefecto" Type="bit" />
+        </EntityType>
+        <EntityType Name="SCP2">
+          <Key>
+            <PropertyRef Name="ContactoCode" />
+          </Key>
+          <Property Name="ContactoCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SocioCode" Type="varchar" MaxLength="50" />
+          <Property Name="ContactoTipo" Type="char" MaxLength="1" />
+          <Property Name="Email" Type="varchar" MaxLength="150" />
+          <Property Name="Celular" Type="varchar" MaxLength="20" />
+          <Property Name="Telefono" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="SCP3">
+          <Key>
+            <PropertyRef Name="CondicionCode" />
+          </Key>
+          <Property Name="CondicionCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CondicionNombre" Type="varchar" MaxLength="150" />
+          <Property Name="Dias" Type="int" />
+          <Property Name="Orden" Type="int" />
+        </EntityType>
+        <EntityType Name="SCP4">
+          <Key>
+            <PropertyRef Name="SocioCode" />
+          </Key>
+          <Property Name="SocioCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FechaCarpeta" Type="date" />
+          <Property Name="FechaDicom" Type="date" />
+          <Property Name="Cod20" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Cod142" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Cod537" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Cod538" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Cod1400" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Cod1410" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Cod1430" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Cod1610" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Cod1629" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Cod1657" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Cod1661" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="SCP5">
+          <Key>
+            <PropertyRef Name="RubroCode" />
+          </Key>
+          <Property Name="RubroCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RubroNombre" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="SCP6">
+          <Key>
+            <PropertyRef Name="SocioTipo" />
+          </Key>
+          <Property Name="SocioTipo" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="SocioTipoNombre" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SCP7">
+          <Key>
+            <PropertyRef Name="EstadoOperativo" />
+          </Key>
+          <Property Name="EstadoOperativo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityContainer Name="COLONOSDBModelStoreContainer">
+          <EntitySet Name="ITM1" EntityType="Self.ITM1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ITM2" EntityType="Self.ITM2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ITM3" EntityType="Self.ITM3" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ITM4" EntityType="Self.ITM4" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ITM5" EntityType="Self.ITM5" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ITM6" EntityType="Self.ITM6" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ITM7" EntityType="Self.ITM7" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ITM8" EntityType="Self.ITM8" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="JsonBodegas" EntityType="Self.JsonBodegas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="JsonClientes" EntityType="Self.JsonClientes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="JsonProductos" EntityType="Self.JsonProductos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="JsonProveedores" EntityType="Self.JsonProveedores" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OBOD" EntityType="Self.OBOD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OITB" EntityType="Self.OITB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OITM" EntityType="Self.OITM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OPED" EntityType="Self.OPED" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OSCP" EntityType="Self.OSCP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OVEN" EntityType="Self.OVEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PED1" EntityType="Self.PED1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SCP1" EntityType="Self.SCP1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SCP2" EntityType="Self.SCP2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SCP3" EntityType="Self.SCP3" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SCP4" EntityType="Self.SCP4" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SCP5" EntityType="Self.SCP5" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SCP6" EntityType="Self.SCP6" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SCP7" EntityType="Self.SCP7" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="COLONOSDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ITM1">
+          <Key>
+            <PropertyRef Name="MedidaCode" />
+          </Key>
+          <Property Name="MedidaCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MedidaNombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ITM2">
+          <Key>
+            <PropertyRef Name="CategoriaCode" />
+          </Key>
+          <Property Name="CategoriaCode" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CategoriaNombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Orden" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ITM3">
+          <Key>
+            <PropertyRef Name="TipoCode" />
+          </Key>
+          <Property Name="TipoCode" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TipoNombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ITM4">
+          <Key>
+            <PropertyRef Name="FamiliaCode" />
+          </Key>
+          <Property Name="FamiliaCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FamiliaNombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ITM5">
+          <Key>
+            <PropertyRef Name="AnimalCode" />
+          </Key>
+          <Property Name="AnimalCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AnimalNombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ITM6">
+          <Key>
+            <PropertyRef Name="FormatoCode" />
+          </Key>
+          <Property Name="FormatoCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FormatoNombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ITM7">
+          <Key>
+            <PropertyRef Name="RefrigeraCode" />
+          </Key>
+          <Property Name="RefrigeraCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RefrigeraNombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ITM8">
+          <Key>
+            <PropertyRef Name="FrmtoVentaCode" />
+          </Key>
+          <Property Name="FrmtoVentaCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FrmtoVentaNombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Peso" Type="Decimal" Precision="18" Scale="4" />
+        </EntityType>
+        <EntityType Name="JsonBodegas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="json" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="JsonClientes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="json" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="JsonProductos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="json" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="JsonProveedores">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="json" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="OBOD">
+          <Key>
+            <PropertyRef Name="BodegaCode" />
+          </Key>
+          <Property Name="BodegaCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BodegaNombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="OITB">
+          <Key>
+            <PropertyRef Name="SkuCode" />
+            <PropertyRef Name="BodegaCode" />
+          </Key>
+          <Property Name="SkuCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BodegaCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Stock" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Asignado" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Ordenado" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Costo" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="OITM">
+          <Key>
+            <PropertyRef Name="ProdCode" />
+          </Key>
+          <Property Name="ProdCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProdNombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="CategoriaCode" Type="Int32" />
+          <Property Name="TipoCode" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="FamiliaCode" Type="Int32" />
+          <Property Name="AnimalCode" Type="Int32" />
+          <Property Name="FormatoCode" Type="Int32" />
+          <Property Name="RefrigeraCode" Type="Int32" />
+          <Property Name="Activo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SocioCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MarcaCode" Type="Int32" />
+          <Property Name="ProcedenciaCode" Type="Int32" />
+          <Property Name="Medida" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="OPED">
+          <Key>
+            <PropertyRef Name="DocEntry" />
+          </Key>
+          <Property Name="DocEntry" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DocNum" Type="Int32" />
+          <Property Name="DocFecha" Type="DateTime" Precision="0" />
+          <Property Name="SocioCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ContactoCode" Type="Int32" />
+          <Property Name="CondicionCode" Type="Int32" />
+          <Property Name="DireccionCode" Type="Int32" />
+          <Property Name="VendedorCode" Type="Int32" />
+          <Property Name="UsuarioCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="OSCP">
+          <Key>
+            <PropertyRef Name="SocioCode" />
+          </Key>
+          <Property Name="SocioCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Rut" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RazonSocial" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="NombreFantasia" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SocioTipo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="EmailSII" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Giro" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="RubroCode" Type="Int32" />
+          <Property Name="RubroName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="CondicionCode" Type="Int32" />
+          <Property Name="CondicionName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="VendedorCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MatrizSocio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreditoAutorizado" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CreditoUtiliado" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="EstadoOperativo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="OVEN">
+          <Key>
+            <PropertyRef Name="VendedorCode" />
+          </Key>
+          <Property Name="VendedorCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Celular" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PED1">
+          <Key>
+            <PropertyRef Name="DocEntry" />
+            <PropertyRef Name="DocLinea" />
+          </Key>
+          <Property Name="DocEntry" Type="Int32" Nullable="false" />
+          <Property Name="DocLinea" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LineaEstado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SkuCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SkuNombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Cantidad" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="PrecioLista" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="PrecioFinal" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Descuento" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Pendiente" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="BaseEntry" Type="Int32" />
+          <Property Name="BaseLinea" Type="Int32" />
+          <Property Name="BodegaCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SCP1">
+          <Key>
+            <PropertyRef Name="DireccionCode" />
+          </Key>
+          <Property Name="DireccionCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DireccionTipo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SocioCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Calle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Numero" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ComunaCode" Type="Int32" />
+          <Property Name="CiudadCode" Type="Int32" />
+          <Property Name="RegionCode" Type="Int32" />
+          <Property Name="ComunaNombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="CiudadNombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="RegionNombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="HorarioAtencion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Observaciones" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="EmailDriveIn" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="PorDefecto" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="SCP2">
+          <Key>
+            <PropertyRef Name="ContactoCode" />
+          </Key>
+          <Property Name="ContactoCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SocioCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ContactoTipo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Celular" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SCP3">
+          <Key>
+            <PropertyRef Name="CondicionCode" />
+          </Key>
+          <Property Name="CondicionCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CondicionNombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Dias" Type="Int32" />
+          <Property Name="Orden" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SCP4">
+          <Key>
+            <PropertyRef Name="SocioCode" />
+          </Key>
+          <Property Name="SocioCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FechaCarpeta" Type="DateTime" Precision="0" />
+          <Property Name="FechaDicom" Type="DateTime" Precision="0" />
+          <Property Name="Cod20" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Cod142" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Cod537" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Cod538" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Cod1400" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Cod1410" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Cod1430" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Cod1610" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Cod1629" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Cod1657" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Cod1661" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="SCP5">
+          <Key>
+            <PropertyRef Name="RubroCode" />
+          </Key>
+          <Property Name="RubroCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RubroNombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SCP6">
+          <Key>
+            <PropertyRef Name="SocioTipo" />
+          </Key>
+          <Property Name="SocioTipo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="SocioTipoNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SCP7">
+          <Key>
+            <PropertyRef Name="EstadoOperativo" />
+          </Key>
+          <Property Name="EstadoOperativo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="cnnDatos" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ITM1" EntityType="Self.ITM1" />
+          <EntitySet Name="ITM2" EntityType="Self.ITM2" />
+          <EntitySet Name="ITM3" EntityType="Self.ITM3" />
+          <EntitySet Name="ITM4" EntityType="Self.ITM4" />
+          <EntitySet Name="ITM5" EntityType="Self.ITM5" />
+          <EntitySet Name="ITM6" EntityType="Self.ITM6" />
+          <EntitySet Name="ITM7" EntityType="Self.ITM7" />
+          <EntitySet Name="ITM8" EntityType="Self.ITM8" />
+          <EntitySet Name="JsonBodegas" EntityType="Self.JsonBodegas" />
+          <EntitySet Name="JsonClientes" EntityType="Self.JsonClientes" />
+          <EntitySet Name="JsonProductos" EntityType="Self.JsonProductos" />
+          <EntitySet Name="JsonProveedores" EntityType="Self.JsonProveedores" />
+          <EntitySet Name="OBOD" EntityType="Self.OBOD" />
+          <EntitySet Name="OITB" EntityType="Self.OITB" />
+          <EntitySet Name="OITM" EntityType="Self.OITM" />
+          <EntitySet Name="OPED" EntityType="Self.OPED" />
+          <EntitySet Name="OSCP" EntityType="Self.OSCP" />
+          <EntitySet Name="OVEN" EntityType="Self.OVEN" />
+          <EntitySet Name="PED1" EntityType="Self.PED1" />
+          <EntitySet Name="SCP1" EntityType="Self.SCP1" />
+          <EntitySet Name="SCP2" EntityType="Self.SCP2" />
+          <EntitySet Name="SCP3" EntityType="Self.SCP3" />
+          <EntitySet Name="SCP4" EntityType="Self.SCP4" />
+          <EntitySet Name="SCP5" EntityType="Self.SCP5" />
+          <EntitySet Name="SCP6" EntityType="Self.SCP6" />
+          <EntitySet Name="SCP7" EntityType="Self.SCP7" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="COLONOSDBModelStoreContainer" CdmEntityContainer="cnnDatos">
+          <EntitySetMapping Name="ITM1">
+            <EntityTypeMapping TypeName="COLONOSDBModel.ITM1">
+              <MappingFragment StoreEntitySet="ITM1">
+                <ScalarProperty Name="MedidaCode" ColumnName="MedidaCode" />
+                <ScalarProperty Name="MedidaNombre" ColumnName="MedidaNombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ITM2">
+            <EntityTypeMapping TypeName="COLONOSDBModel.ITM2">
+              <MappingFragment StoreEntitySet="ITM2">
+                <ScalarProperty Name="CategoriaCode" ColumnName="CategoriaCode" />
+                <ScalarProperty Name="CategoriaNombre" ColumnName="CategoriaNombre" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ITM3">
+            <EntityTypeMapping TypeName="COLONOSDBModel.ITM3">
+              <MappingFragment StoreEntitySet="ITM3">
+                <ScalarProperty Name="TipoCode" ColumnName="TipoCode" />
+                <ScalarProperty Name="TipoNombre" ColumnName="TipoNombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ITM4">
+            <EntityTypeMapping TypeName="COLONOSDBModel.ITM4">
+              <MappingFragment StoreEntitySet="ITM4">
+                <ScalarProperty Name="FamiliaCode" ColumnName="FamiliaCode" />
+                <ScalarProperty Name="FamiliaNombre" ColumnName="FamiliaNombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ITM5">
+            <EntityTypeMapping TypeName="COLONOSDBModel.ITM5">
+              <MappingFragment StoreEntitySet="ITM5">
+                <ScalarProperty Name="AnimalCode" ColumnName="AnimalCode" />
+                <ScalarProperty Name="AnimalNombre" ColumnName="AnimalNombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ITM6">
+            <EntityTypeMapping TypeName="COLONOSDBModel.ITM6">
+              <MappingFragment StoreEntitySet="ITM6">
+                <ScalarProperty Name="FormatoCode" ColumnName="FormatoCode" />
+                <ScalarProperty Name="FormatoNombre" ColumnName="FormatoNombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ITM7">
+            <EntityTypeMapping TypeName="COLONOSDBModel.ITM7">
+              <MappingFragment StoreEntitySet="ITM7">
+                <ScalarProperty Name="RefrigeraCode" ColumnName="RefrigeraCode" />
+                <ScalarProperty Name="RefrigeraNombre" ColumnName="RefrigeraNombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ITM8">
+            <EntityTypeMapping TypeName="COLONOSDBModel.ITM8">
+              <MappingFragment StoreEntitySet="ITM8">
+                <ScalarProperty Name="FrmtoVentaCode" ColumnName="FrmtoVentaCode" />
+                <ScalarProperty Name="FrmtoVentaNombre" ColumnName="FrmtoVentaNombre" />
+                <ScalarProperty Name="Peso" ColumnName="Peso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JsonBodegas">
+            <EntityTypeMapping TypeName="COLONOSDBModel.JsonBodegas">
+              <MappingFragment StoreEntitySet="JsonBodegas">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="json" ColumnName="json" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JsonClientes">
+            <EntityTypeMapping TypeName="COLONOSDBModel.JsonClientes">
+              <MappingFragment StoreEntitySet="JsonClientes">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="json" ColumnName="json" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JsonProductos">
+            <EntityTypeMapping TypeName="COLONOSDBModel.JsonProductos">
+              <MappingFragment StoreEntitySet="JsonProductos">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="json" ColumnName="json" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JsonProveedores">
+            <EntityTypeMapping TypeName="COLONOSDBModel.JsonProveedores">
+              <MappingFragment StoreEntitySet="JsonProveedores">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="json" ColumnName="json" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OBOD">
+            <EntityTypeMapping TypeName="COLONOSDBModel.OBOD">
+              <MappingFragment StoreEntitySet="OBOD">
+                <ScalarProperty Name="BodegaCode" ColumnName="BodegaCode" />
+                <ScalarProperty Name="BodegaNombre" ColumnName="BodegaNombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OITB">
+            <EntityTypeMapping TypeName="COLONOSDBModel.OITB">
+              <MappingFragment StoreEntitySet="OITB">
+                <ScalarProperty Name="SkuCode" ColumnName="SkuCode" />
+                <ScalarProperty Name="BodegaCode" ColumnName="BodegaCode" />
+                <ScalarProperty Name="Stock" ColumnName="Stock" />
+                <ScalarProperty Name="Asignado" ColumnName="Asignado" />
+                <ScalarProperty Name="Ordenado" ColumnName="Ordenado" />
+                <ScalarProperty Name="Costo" ColumnName="Costo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OITM">
+            <EntityTypeMapping TypeName="COLONOSDBModel.OITM">
+              <MappingFragment StoreEntitySet="OITM">
+                <ScalarProperty Name="ProdCode" ColumnName="ProdCode" />
+                <ScalarProperty Name="ProdNombre" ColumnName="ProdNombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="CategoriaCode" ColumnName="CategoriaCode" />
+                <ScalarProperty Name="TipoCode" ColumnName="TipoCode" />
+                <ScalarProperty Name="FamiliaCode" ColumnName="FamiliaCode" />
+                <ScalarProperty Name="AnimalCode" ColumnName="AnimalCode" />
+                <ScalarProperty Name="FormatoCode" ColumnName="FormatoCode" />
+                <ScalarProperty Name="RefrigeraCode" ColumnName="RefrigeraCode" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="SocioCode" ColumnName="SocioCode" />
+                <ScalarProperty Name="MarcaCode" ColumnName="MarcaCode" />
+                <ScalarProperty Name="ProcedenciaCode" ColumnName="ProcedenciaCode" />
+                <ScalarProperty Name="Medida" ColumnName="Medida" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OPED">
+            <EntityTypeMapping TypeName="COLONOSDBModel.OPED">
+              <MappingFragment StoreEntitySet="OPED">
+                <ScalarProperty Name="DocEntry" ColumnName="DocEntry" />
+                <ScalarProperty Name="DocNum" ColumnName="DocNum" />
+                <ScalarProperty Name="DocFecha" ColumnName="DocFecha" />
+                <ScalarProperty Name="SocioCode" ColumnName="SocioCode" />
+                <ScalarProperty Name="ContactoCode" ColumnName="ContactoCode" />
+                <ScalarProperty Name="CondicionCode" ColumnName="CondicionCode" />
+                <ScalarProperty Name="DireccionCode" ColumnName="DireccionCode" />
+                <ScalarProperty Name="VendedorCode" ColumnName="VendedorCode" />
+                <ScalarProperty Name="UsuarioCode" ColumnName="UsuarioCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OSCP">
+            <EntityTypeMapping TypeName="COLONOSDBModel.OSCP">
+              <MappingFragment StoreEntitySet="OSCP">
+                <ScalarProperty Name="SocioCode" ColumnName="SocioCode" />
+                <ScalarProperty Name="Rut" ColumnName="Rut" />
+                <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+                <ScalarProperty Name="NombreFantasia" ColumnName="NombreFantasia" />
+                <ScalarProperty Name="SocioTipo" ColumnName="SocioTipo" />
+                <ScalarProperty Name="EmailSII" ColumnName="EmailSII" />
+                <ScalarProperty Name="Giro" ColumnName="Giro" />
+                <ScalarProperty Name="RubroCode" ColumnName="RubroCode" />
+                <ScalarProperty Name="RubroName" ColumnName="RubroName" />
+                <ScalarProperty Name="CondicionCode" ColumnName="CondicionCode" />
+                <ScalarProperty Name="CondicionName" ColumnName="CondicionName" />
+                <ScalarProperty Name="VendedorCode" ColumnName="VendedorCode" />
+                <ScalarProperty Name="MatrizSocio" ColumnName="MatrizSocio" />
+                <ScalarProperty Name="CreditoAutorizado" ColumnName="CreditoAutorizado" />
+                <ScalarProperty Name="CreditoUtiliado" ColumnName="CreditoUtiliado" />
+                <ScalarProperty Name="EstadoOperativo" ColumnName="EstadoOperativo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OVEN">
+            <EntityTypeMapping TypeName="COLONOSDBModel.OVEN">
+              <MappingFragment StoreEntitySet="OVEN">
+                <ScalarProperty Name="VendedorCode" ColumnName="VendedorCode" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Celular" ColumnName="Celular" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PED1">
+            <EntityTypeMapping TypeName="COLONOSDBModel.PED1">
+              <MappingFragment StoreEntitySet="PED1">
+                <ScalarProperty Name="DocEntry" ColumnName="DocEntry" />
+                <ScalarProperty Name="DocLinea" ColumnName="DocLinea" />
+                <ScalarProperty Name="LineaEstado" ColumnName="LineaEstado" />
+                <ScalarProperty Name="SkuCode" ColumnName="SkuCode" />
+                <ScalarProperty Name="SkuNombre" ColumnName="SkuNombre" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="PrecioLista" ColumnName="PrecioLista" />
+                <ScalarProperty Name="PrecioFinal" ColumnName="PrecioFinal" />
+                <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+                <ScalarProperty Name="Pendiente" ColumnName="Pendiente" />
+                <ScalarProperty Name="BaseEntry" ColumnName="BaseEntry" />
+                <ScalarProperty Name="BaseLinea" ColumnName="BaseLinea" />
+                <ScalarProperty Name="BodegaCode" ColumnName="BodegaCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SCP1">
+            <EntityTypeMapping TypeName="COLONOSDBModel.SCP1">
+              <MappingFragment StoreEntitySet="SCP1">
+                <ScalarProperty Name="DireccionCode" ColumnName="DireccionCode" />
+                <ScalarProperty Name="DireccionTipo" ColumnName="DireccionTipo" />
+                <ScalarProperty Name="SocioCode" ColumnName="SocioCode" />
+                <ScalarProperty Name="Calle" ColumnName="Calle" />
+                <ScalarProperty Name="Numero" ColumnName="Numero" />
+                <ScalarProperty Name="ComunaCode" ColumnName="ComunaCode" />
+                <ScalarProperty Name="CiudadCode" ColumnName="CiudadCode" />
+                <ScalarProperty Name="RegionCode" ColumnName="RegionCode" />
+                <ScalarProperty Name="ComunaNombre" ColumnName="ComunaNombre" />
+                <ScalarProperty Name="CiudadNombre" ColumnName="CiudadNombre" />
+                <ScalarProperty Name="RegionNombre" ColumnName="RegionNombre" />
+                <ScalarProperty Name="HorarioAtencion" ColumnName="HorarioAtencion" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="EmailDriveIn" ColumnName="EmailDriveIn" />
+                <ScalarProperty Name="PorDefecto" ColumnName="PorDefecto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SCP2">
+            <EntityTypeMapping TypeName="COLONOSDBModel.SCP2">
+              <MappingFragment StoreEntitySet="SCP2">
+                <ScalarProperty Name="ContactoCode" ColumnName="ContactoCode" />
+                <ScalarProperty Name="SocioCode" ColumnName="SocioCode" />
+                <ScalarProperty Name="ContactoTipo" ColumnName="ContactoTipo" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Celular" ColumnName="Celular" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SCP3">
+            <EntityTypeMapping TypeName="COLONOSDBModel.SCP3">
+              <MappingFragment StoreEntitySet="SCP3">
+                <ScalarProperty Name="CondicionCode" ColumnName="CondicionCode" />
+                <ScalarProperty Name="CondicionNombre" ColumnName="CondicionNombre" />
+                <ScalarProperty Name="Dias" ColumnName="Dias" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SCP4">
+            <EntityTypeMapping TypeName="COLONOSDBModel.SCP4">
+              <MappingFragment StoreEntitySet="SCP4">
+                <ScalarProperty Name="SocioCode" ColumnName="SocioCode" />
+                <ScalarProperty Name="FechaCarpeta" ColumnName="FechaCarpeta" />
+                <ScalarProperty Name="FechaDicom" ColumnName="FechaDicom" />
+                <ScalarProperty Name="Cod20" ColumnName="Cod20" />
+                <ScalarProperty Name="Cod142" ColumnName="Cod142" />
+                <ScalarProperty Name="Cod537" ColumnName="Cod537" />
+                <ScalarProperty Name="Cod538" ColumnName="Cod538" />
+                <ScalarProperty Name="Cod1400" ColumnName="Cod1400" />
+                <ScalarProperty Name="Cod1410" ColumnName="Cod1410" />
+                <ScalarProperty Name="Cod1430" ColumnName="Cod1430" />
+                <ScalarProperty Name="Cod1610" ColumnName="Cod1610" />
+                <ScalarProperty Name="Cod1629" ColumnName="Cod1629" />
+                <ScalarProperty Name="Cod1657" ColumnName="Cod1657" />
+                <ScalarProperty Name="Cod1661" ColumnName="Cod1661" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SCP5">
+            <EntityTypeMapping TypeName="COLONOSDBModel.SCP5">
+              <MappingFragment StoreEntitySet="SCP5">
+                <ScalarProperty Name="RubroCode" ColumnName="RubroCode" />
+                <ScalarProperty Name="RubroNombre" ColumnName="RubroNombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SCP6">
+            <EntityTypeMapping TypeName="COLONOSDBModel.SCP6">
+              <MappingFragment StoreEntitySet="SCP6">
+                <ScalarProperty Name="SocioTipo" ColumnName="SocioTipo" />
+                <ScalarProperty Name="SocioTipoNombre" ColumnName="SocioTipoNombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SCP7">
+            <EntityTypeMapping TypeName="COLONOSDBModel.SCP7">
+              <MappingFragment StoreEntitySet="SCP7">
+                <ScalarProperty Name="EstadoOperativo" ColumnName="EstadoOperativo" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

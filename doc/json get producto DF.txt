@@ -1,0 +1,17 @@
+{
+    "product": {
+        "usesLotes": false,
+        "usesSerial": false,
+        "isArticle": true,
+        "isService": false,
+        "code": "AGANGA1003",
+        "name": "1 CP APB V PUNTA PICANA ANGUS",
+        "purchaseCurrencyId": "PESO",
+        "inventoryMeasureUnitId": "KG",
+        "isActive": true,
+        "price": 11100.00000000
+    },
+    "success": true,
+    "message": "",
+    "exceptionMessage": null
+}

@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="COLONOSDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ITM1">
+    <Key>
+      <PropertyRef Name="MedidaCode" />
+    </Key>
+    <Property Name="MedidaCode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MedidaNombre" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="ITM2">
+    <Key>
+      <PropertyRef Name="CategoriaCode" />
+    </Key>
+    <Property Name="CategoriaCode" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="CategoriaNombre" Type="varchar" MaxLength="150" />
+    <Property Name="Orden" Type="int" />
+  </EntityType>
+  <EntityType Name="ITM3">
+    <Key>
+      <PropertyRef Name="TipoCode" />
+    </Key>
+    <Property Name="TipoCode" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="TipoNombre" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="ITM4">
+    <Key>
+      <PropertyRef Name="FamiliaCode" />
+    </Key>
+    <Property Name="FamiliaCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FamiliaNombre" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="ITM5">
+    <Key>
+      <PropertyRef Name="AnimalCode" />
+    </Key>
+    <Property Name="AnimalCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AnimalNombre" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="ITM6">
+    <Key>
+      <PropertyRef Name="FormatoCode" />
+    </Key>
+    <Property Name="FormatoCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FormatoNombre" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="ITM7">
+    <Key>
+      <PropertyRef Name="RefrigeraCode" />
+    </Key>
+    <Property Name="RefrigeraCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RefrigeraNombre" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="ITM8">
+    <Key>
+      <PropertyRef Name="FrmtoVentaCode" />
+    </Key>
+    <Property Name="FrmtoVentaCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FrmtoVentaNombre" Type="varchar" MaxLength="150" />
+    <Property Name="Peso" Type="numeric" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="JsonBodegas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="json" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="JsonClientes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="json" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="JsonProductos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="json" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="JsonProveedores">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="json" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="OBOD">
+    <Key>
+      <PropertyRef Name="BodegaCode" />
+    </Key>
+    <Property Name="BodegaCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BodegaNombre" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="OITB">
+    <Key>
+      <PropertyRef Name="SkuCode" />
+      <PropertyRef Name="BodegaCode" />
+    </Key>
+    <Property Name="SkuCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BodegaCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Stock" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Asignado" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Ordenado" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Costo" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="OITM">
+    <Key>
+      <PropertyRef Name="ProdCode" />
+    </Key>
+    <Property Name="ProdCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProdNombre" Type="varchar" MaxLength="150" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="500" />
+    <Property Name="CategoriaCode" Type="int" />
+    <Property Name="TipoCode" Type="char" MaxLength="1" />
+    <Property Name="FamiliaCode" Type="int" />
+    <Property Name="AnimalCode" Type="int" />
+    <Property Name="FormatoCode" Type="int" />
+    <Property Name="RefrigeraCode" Type="int" />
+    <Property Name="Activo" Type="char" MaxLength="1" />
+    <Property Name="SocioCode" Type="varchar" MaxLength="50" />
+    <Property Name="MarcaCode" Type="int" />
+    <Property Name="ProcedenciaCode" Type="int" />
+    <Property Name="Medida" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="OPED">
+    <Key>
+      <PropertyRef Name="DocEntry" />
+    </Key>
+    <Property Name="DocEntry" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocNum" Type="int" />
+    <Property Name="DocFecha" Type="date" />
+    <Property Name="SocioCode" Type="varchar" MaxLength="50" />
+    <Property Name="ContactoCode" Type="int" />
+    <Property Name="CondicionCode" Type="int" />
+    <Property Name="DireccionCode" Type="int" />
+    <Property Name="VendedorCode" Type="int" />
+    <Property Name="UsuarioCode" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="OSCP">
+    <Key>
+      <PropertyRef Name="SocioCode" />
+    </Key>
+    <Property Name="SocioCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Rut" Type="varchar" MaxLength="50" />
+    <Property Name="RazonSocial" Type="varchar" MaxLength="200" />
+    <Property Name="NombreFantasia" Type="varchar" MaxLength="200" />
+    <Property Name="SocioTipo" Type="char" MaxLength="1" />
+    <Property Name="EmailSII" Type="varchar" MaxLength="150" />
+    <Property Name="Giro" Type="varchar" MaxLength="200" />
+    <Property Name="RubroCode" Type="int" />
+    <Property Name="RubroName" Type="varchar" MaxLength="150" />
+    <Property Name="CondicionCode" Type="int" />
+    <Property Name="CondicionName" Type="varchar" MaxLength="150" />
+    <Property Name="VendedorCode" Type="varchar" MaxLength="50" />
+    <Property Name="MatrizSocio" Type="varchar" MaxLength="50" />
+    <Property Name="CreditoAutorizado" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="CreditoUtiliado" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="EstadoOperativo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="OVEN">
+    <Key>
+      <PropertyRef Name="VendedorCode" />
+    </Key>
+    <Property Name="VendedorCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="150" />
+    <Property Name="Email" Type="varchar" MaxLength="150" />
+    <Property Name="Celular" Type="varchar" MaxLength="20" />
+    <Property Name="Telefono" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PED1">
+    <Key>
+      <PropertyRef Name="DocEntry" />
+      <PropertyRef Name="DocLinea" />
+    </Key>
+    <Property Name="DocEntry" Type="int" Nullable="false" />
+    <Property Name="DocLinea" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LineaEstado" Type="char" MaxLength="1" />
+    <Property Name="SkuCode" Type="varchar" MaxLength="50" />
+    <Property Name="SkuNombre" Type="varchar" MaxLength="150" />
+    <Property Name="Cantidad" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="PrecioLista" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="PrecioFinal" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Descuento" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="Pendiente" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="BaseEntry" Type="int" />
+    <Property Name="BaseLinea" Type="int" />
+    <Property Name="BodegaCode" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SCP1">
+    <Key>
+      <PropertyRef Name="DireccionCode" />
+    </Key>
+    <Property Name="DireccionCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DireccionTipo" Type="char" MaxLength="1" />
+    <Property Name="SocioCode" Type="varchar" MaxLength="50" />
+    <Property Name="Calle" Type="varchar" MaxLength="150" />
+    <Property Name="Numero" Type="varchar" MaxLength="50" />
+    <Property Name="ComunaCode" Type="int" />
+    <Property Name="CiudadCode" Type="int" />
+    <Property Name="RegionCode" Type="int" />
+    <Property Name="ComunaNombre" Type="varchar" MaxLength="150" />
+    <Property Name="CiudadNombre" Type="varchar" MaxLength="150" />
+    <Property Name="RegionNombre" Type="varchar" MaxLength="150" />
+    <Property Name="HorarioAtencion" Type="varchar" MaxLength="50" />
+    <Property Name="Observaciones" Type="varchar" MaxLength="150" />
+    <Property Name="EmailDriveIn" Type="varchar" MaxLength="150" />
+    <Property Name="PorDefecto" Type="bit" />
+  </EntityType>
+  <EntityType Name="SCP2">
+    <Key>
+      <PropertyRef Name="ContactoCode" />
+    </Key>
+    <Property Name="ContactoCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SocioCode" Type="varchar" MaxLength="50" />
+    <Property Name="ContactoTipo" Type="char" MaxLength="1" />
+    <Property Name="Email" Type="varchar" MaxLength="150" />
+    <Property Name="Celular" Type="varchar" MaxLength="20" />
+    <Property Name="Telefono" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="SCP3">
+    <Key>
+      <PropertyRef Name="CondicionCode" />
+    </Key>
+    <Property Name="CondicionCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CondicionNombre" Type="varchar" MaxLength="150" />
+    <Property Name="Dias" Type="int" />
+    <Property Name="Orden" Type="int" />
+  </EntityType>
+  <EntityType Name="SCP4">
+    <Key>
+      <PropertyRef Name="SocioCode" />
+    </Key>
+    <Property Name="SocioCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaCarpeta" Type="date" />
+    <Property Name="FechaDicom" Type="date" />
+    <Property Name="Cod20" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Cod142" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Cod537" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Cod538" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Cod1400" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Cod1410" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Cod1430" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Cod1610" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Cod1629" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Cod1657" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Cod1661" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="SCP5">
+    <Key>
+      <PropertyRef Name="RubroCode" />
+    </Key>
+    <Property Name="RubroCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RubroNombre" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="SCP6">
+    <Key>
+      <PropertyRef Name="SocioTipo" />
+    </Key>
+    <Property Name="SocioTipo" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="SocioTipoNombre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SCP7">
+    <Key>
+      <PropertyRef Name="EstadoOperativo" />
+    </Key>
+    <Property Name="EstadoOperativo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityContainer Name="COLONOSDBModelStoreContainer">
+    <EntitySet Name="ITM1" EntityType="Self.ITM1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ITM2" EntityType="Self.ITM2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ITM3" EntityType="Self.ITM3" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ITM4" EntityType="Self.ITM4" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ITM5" EntityType="Self.ITM5" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ITM6" EntityType="Self.ITM6" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ITM7" EntityType="Self.ITM7" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ITM8" EntityType="Self.ITM8" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JsonBodegas" EntityType="Self.JsonBodegas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JsonClientes" EntityType="Self.JsonClientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JsonProductos" EntityType="Self.JsonProductos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JsonProveedores" EntityType="Self.JsonProveedores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OBOD" EntityType="Self.OBOD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OITB" EntityType="Self.OITB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OITM" EntityType="Self.OITM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OPED" EntityType="Self.OPED" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OSCP" EntityType="Self.OSCP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OVEN" EntityType="Self.OVEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PED1" EntityType="Self.PED1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SCP1" EntityType="Self.SCP1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SCP2" EntityType="Self.SCP2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SCP3" EntityType="Self.SCP3" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SCP4" EntityType="Self.SCP4" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SCP5" EntityType="Self.SCP5" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SCP6" EntityType="Self.SCP6" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SCP7" EntityType="Self.SCP7" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

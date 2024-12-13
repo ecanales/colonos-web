@@ -1,0 +1,4 @@
+2024-11-27 06:37:25.0040 loggerfile VerBandeja_Event Error:Referencia a objeto no establecida como instancia de un objeto. 
+2024-11-27 06:37:25.1452 loggerfile VerBandeja_Event Error:   en Colonos.Web.bandeja_facturacion.VerBandeja_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-facturacion.aspx.cs:línea 101 
+2024-11-27 07:55:51.5598 loggerfile Error Procesar informe pedidos del día 
+2024-11-27 07:58:21.6825 loggerfile Error Procesar informe pedidos del día 

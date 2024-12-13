@@ -1,0 +1,48 @@
+﻿.TabContainer {
+    /*font: bold 0.75em Verdana;*/
+    width: 60em;
+    margin-top: 1.5em;
+    /*padding-top: 2em;*/
+}
+
+.TabItemInactive {
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid #aaaaaa;
+    border-bottom: none;
+    background-color: #d3d3d3;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    color: #2a2e33;
+    width: 20px;
+    border-top-left-radius: 25px 25px;
+}
+
+    .TabItemInactive:hover {
+        background: #808080;
+    }
+
+.TabItemActive {
+    border-top: 1px solid white;
+    border-left: none;
+    border-right: 1px solid #aaaaaa;
+    border-bottom: none;
+    text-decoration: none;
+    background-color: #2a2e33;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    border-top-left-radius: 25px 25px;
+}
+
+.ContentPanel {
+    margin-top:10px;
+    background-color:whitesmoke;
+    padding: 10px 10px 10px 10px;
+    /*width: 60em;*/
+    /*         font: 0.8em Verdana;*/
+    margin-top: 10px;
+    /*height: 60vh;*/
+    border-top: 2px solid lightgrey;
+}

@@ -1,0 +1,520 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Principal.master.cs" Inherits="Colonos.Web.Principal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+    <link href="Content/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="Content/bootstrap/js/bootstrap.js"></script>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <%--<link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>--%>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Oswald:wght@200;300&family=Raleway&display=swap" rel="stylesheet">
+    <link href="Content/css/customcss.css" rel="stylesheet" />
+    <link href="Content/css/customgrid2.css" rel="stylesheet" />
+    <link href="Content/css/customtab.css" rel="stylesheet" />
+    <link href="Content/css/custommodal.css" rel="stylesheet" />
+    <script src="Content/js/funcionesjavascript.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+	   /* Common Styles - Can ignore*/
+	   body{
+	     font-family: 'Oswald', sans-serif;
+         padding:0;
+         margin:0;
+         background-color:white;
+	   }
+	</style>
+
+    <style>
+        ul { list-style: none; }
+        a { text-decoration: none; color: white;}
+
+        #menu-wrapper {
+            overflow: hidden;
+            max-width:100%;
+            cursor: pointer;
+            background-color:black;
+        }
+
+        #menu-dashboard {
+            overflow: hidden;
+            max-width:100%;
+            /*cursor: pointer;
+            background-color:#2a2e33;*/
+            text-align:center;
+            color:transparent;
+            background-color:transparent;
+        }
+
+        #menu-dashboard a {
+            /*font-size: x-large;*/
+            /*width: 25px;
+            height: 20px;
+            color: white;*/
+        }
+
+        .div-btn
+        {
+            color:red;
+        }
+        .div-btn  :hover {
+            color: black;
+            background-color:yellow;
+        }
+
+        #menu-wrapper #hamburger-menu {
+            position: relative;
+            width: 25px;
+            height: 20px;
+            margin: 15px;
+        }
+
+        #menu-wrapper #hamburger-menu span {
+            opacity: 1;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 2px;
+            border-radius: 10px;
+            color: black;
+            background-color: white;
+            position: absolute;
+            transform: rotate(0deg);
+            transition: .4s ease-in-out;
+        }
+
+        #menu-wrapper #hamburger-menu span:nth-child(1) {
+            top: 0;
+        }
+        #menu-wrapper #hamburger-menu span:nth-child(2) {
+            top: 9px;
+        }
+        #menu-wrapper #hamburger-menu span:nth-child(3) {
+            top: 18px;
+        }
+        #menu-wrapper #hamburger-menu.open span:nth-child(1) {
+            transform: translateY(9px) rotate(135deg);
+        }
+        #menu-wrapper #hamburger-menu.open span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-60px);
+        }
+        #menu-wrapper #hamburger-menu.open span:nth-child(3) {
+            transform: translateY(-9px) rotate(-135deg);
+        }
+
+        #menu-container .menu-list .menu-submenu {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        #menu-container .menu-list {
+            padding-left: 0;
+            display: block;
+            position: absolute;
+            width: 100%;
+            max-width: 450px;
+            background: #2a2e33;
+            box-shadow: rgba(100,100,100,0.2) 6px 2px 10px;
+            z-index: 999;
+            overflow-y: auto;
+            overflow-x: hidden;
+            left: -600%;
+        }
+
+        #menu-container .menu-list li.accordion-toggle, #menu-container .menu-list .menu-login {
+            font-size: 16px;
+            padding: 20px;
+            text-transform: uppercase;
+            border-top: 1px solid #dbdcd2;
+        }
+        #menu-container .menu-list li:first-of-type {
+            border-top: 0;
+        }
+
+        #menu-container .menu-list li:hover {
+            background: #ac272c; /*#848386;*/
+            
+        }
+        
+        #menu-container .menu-list li a:hover {
+            color:white;
+            
+        }
+
+        .accordion-toggle, .accordion-content {
+            cursor: pointer;
+            font-size: 16px;
+            position: relative;
+            letter-spacing: 1px;
+        }
+
+          .accordion-content {
+            display: none;
+        }
+
+        .accordion-toggle a:before, .accordion-toggle a:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            width: 15px;
+            height: 2px;
+            margin-top: -1px;
+            background-color: white;
+            transform-origin: 50% 50%;
+            transition: all 0.3s ease-out;
+        }
+
+        .accordion-toggle a:before {
+            transform: rotate(-90deg);
+            opacity: 1;
+            z-index: 2;
+        }
+
+        .accordion-toggle.active-tab {
+          background: #848386;/*yellowgreen;*/
+          transition: all 0.3s ease;
+        }
+        .accordion-toggle a.active:before {
+            transform: rotate(0deg);
+            background: #fff !important;
+        }
+
+        .accordion-toggle a.active:after {
+            transform: rotate(180deg);
+            background: #fff !important;
+            opacity: 0;
+        }
+    </style>
+
+    <style>
+        @font-face {
+	        font-family: 'ecoico';
+	        src:url('../fonts/ecoico.eot');
+	        src:url('../fonts/ecoico.eot?#iefix') format('embedded-opentype'),
+		        url('../fonts/ecoico.woff') format('woff'),
+		        url('../fonts/ecoico.ttf') format('truetype'),
+		        url('../fonts/ecoico.svg#ecoico') format('svg');
+	        font-weight: normal;
+	        font-style: normal;
+        }
+
+        .cbp-vimenu {
+	        position:sticky;
+	        overflow: hidden;
+	        top: 4rem;
+	        left: 0;
+	        /*height: 100%;*/
+	        list-style-type: none;
+	        margin: 0;
+	        padding: 0;
+            width: 3.5rem;
+	        /*background: #f7f7f7;*/
+        }
+
+        .cbp-vimenu li a {
+	        display: block;
+	        /*text-indent: -500em;*/
+	       /* height: 4.5em;*/
+	        width: 100%;
+	        /*line-height: 5em;*/
+	        text-align: center;
+	        color: #ededed;
+	        position: relative;
+	        border-bottom: 1px solid rgba(0,0,0,0.05);
+	        -webkit-transition: background 0.1s ease-in-out;
+	        -moz-transition: background 0.1s ease-in-out;
+	        transition: background 0.1s ease-in-out;
+            padding-top:5px;
+            border-bottom: 1px solid #1c1c1c;
+            background-color:#a6182c;
+        }
+
+        .cbp-vimenu li a:hover
+        {
+	        background: #D9534F;/*#47a3da;*/
+	        color: #fff;
+        }
+        .cbp-vimenu li:first-child a{
+	        /*background: #47a3da;
+	        color: #fff;*/
+        }
+
+        /* class for current item */
+        .cbp-vimenu li.cbp-vicurrent a {
+	        background: #fff;
+	        color: #47a3da;
+        }
+
+        .cbp-vimenu li a:before {
+	        font-family: 'ecoico';
+	        speak: none;
+	        font-style: normal;
+	        font-weight: normal;
+	        text-indent: 0em;
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        width: 100%;
+	        height: 100%;
+	        font-size: 1.4em;
+	        -webkit-font-smoothing: antialiased;
+        }
+
+        .cbp-vimenu li a.icon-logo:before {
+	        content: "C";
+	        font-weight: 700;
+	        font-size: 300%;
+	        font-family: 'Lato', Calibri, Arial, sans-serif;
+        }
+
+        .icon-search:before {
+	        content: "e004";
+        }
+
+        .icon-archive:before {
+	        content: "e005";
+        }
+
+        .icon-download:before {
+	        content: "e006";
+        }
+
+        .icon-location:before {
+	        content: "e007";
+        }
+
+        .icon-images:before {
+	        content: "e009";
+        }
+
+        .icon-pencil:before {
+	        content: "e008";
+        }
+
+        /* Example for media query (depends on total height of menu) */
+        @media screen and (max-height: 34.9375em) { 
+
+	        .cbp-vimenu {
+		        font-size: 70%;
+	        }
+
+        }
+    </style>
+    <script>
+        $(function () {
+            function slideMenu() {
+                var activeState = $("#menu-container .menu-list").hasClass("active");
+                $("#menu-container .menu-list").animate({ left: activeState ? "0%" : "0%" }, 400);
+            }
+            $("#menu-wrapper").click(function (event) {
+                event.stopPropagation();
+                /*$("#hamburger-menu").toggleClass("open");*/
+                $("#menu-container .menu-list").toggleClass("active");
+                slideMenu();
+
+                $("body").toggleClass("overflow-hidden");
+            });
+
+            $(".menu-list").find(".accordion-toggle").click(function () {
+                $(this).next().toggleClass("open").slideToggle("fast");
+                $(this).toggleClass("active-tab").find(".menu-link").toggleClass("active");
+
+                $(".menu-list .accordion-content").not($(this).next()).slideUp("fast").removeClass("open");
+                $(".menu-list .accordion-toggle").not(jQuery(this)).removeClass("active-tab").find(".menu-link").removeClass("active");
+            });
+        }); // jQuery load
+
+    </script>
+     <style type="text/css">
+        .divfondo {
+
+        background:url(Content/img/fondo2.png) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    </style>    
+</head>
+<body style="background-color: #2a2e33;">
+    <form id="form1" runat="server" style="font-family: 'Oswald', sans-serif;">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+        <asp:LoginStatus ID="LoginStatus1" runat="server" Visible="false" />
+
+        <header class="w-100" style="background-color:black;height: 4em;z-index: 1003;color:white;display:flex;border-top: 0.5em solid #a6182c;position:fixed;">
+            <div style="z-index: 830; min-width: 40px; word-wrap: break-word; box-shadow: var(--shadow-panel-eyw753,0 1px 1px 0 rgba(0,28,36,.3),1px 1px 1px 0 rgba(0,28,36,.15),-1px 1px 1px 0 rgba(0,28,36,.15)); flex-shrink: 0; position: relative;background-color: black;">
+                <div id="menu-wrapper" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                    <div id="hamburger-menu"><span></span><span></span><span></span></div>
+                </div>
+            </div>
+            <div class="d-flex w-100" style="justify-content: space-between">
+                <div >
+                    <a href="index.aspx">
+                        <img src="Content/img/logoColonos.png" style="height: -webkit-fill-available;padding:5px;" />
+                    </a>
+                </div>
+                <div style="display:flex; align-items:center;background-color: #2a2e33;padding: 5px;margin-right: 2px;border: 1px solid #2a2e33;" >
+                    <div style="padding-right:20px;">
+                        <asp:Label ID="lblNombreUsuario" Font-Size="Large" ForeColor="#FFEB3B" CssClass="d-block" runat="server" Text=""></asp:Label>
+                        <asp:Label ID="lblGrupo" Font-Size="small" ForeColor="#f8f9fa" CssClass="d-block" runat="server" Text=""></asp:Label>
+
+                        <%--<label style="font-size:large;color:#ffe500" class="d-block" >Eliecer Canales</label>
+                        <label style="font-size:small;color:#ffe500" class="d-block">Administradores</label>--%>
+                    </div>
+                    <div style="padding:5px;">
+                        <asp:LinkButton ID="btnLogout" CssClass="btn btn-sm btn-danger d-block pt-0 pb-0" OnClick="Logout_Event" runat="server">Salir</asp:LinkButton>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container-fluid divfondo3 " style="padding:0;margin:0; overflow:auto;height:100vh;">
+            <div class="divfondo" style="align-items: stretch; display: flex; flex: 1 1 auto;height:100%;">
+                <div style="z-index: 830; min-width: 40px;top:4rem; word-wrap: break-word; box-shadow: var(--shadow-panel-eyw753,0 1px 1px 0 rgba(0,28,36,.3),1px 1px 1px 0 rgba(0,28,36,.15),-1px 1px 1px 0 rgba(0,28,36,.15)); flex-shrink: 0; height: calc(100vh - 4rem);position: relative; background-color: #2a2e33;">
+                    <ul class="cbp-vimenu">
+                        <asp:Literal ID="lblAccesoDirecto" runat="server"></asp:Literal>
+	                    <%--<li><asp:LinkButton ID="btnMiDashboard" runat="server">                                        <i class="fas fa-tachometer-alt font-size-x-large">  </i><div class="font-size-small">DashBoard</div></asp:LinkButton></li>
+                        <li><asp:LinkButton ID="btnNuevaVenta" runat="server" PostBackUrl="bandeja-pedidos.aspx"><div><i class="fas fa-hand-holding-usd font-size-x-large"></i></div><div class="font-size-small">Venta</div></asp:LinkButton></li>
+	                    <li><asp:LinkButton ID="btnAutorizarCredito" runat="server" PostBackUrl="bandeja-credito.aspx"><i class="far fa-thumbs-up font-size-x-large"></i><div class="font-size-small">Crédito</div></asp:LinkButton></li>
+                        <li><asp:LinkButton ID="btnAutorizarPrecios" runat="server" PostBackUrl="bandeja-precios.aspx"><i class="far fa-thumbs-up font-size-x-large"></i><div class="font-size-small">Precios</div></asp:LinkButton></li>
+                        <li><asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="bandeja-toledo.aspx"><i class="fas fa-dolly-flatbed font-size-x-large"></i><div class="font-size-small">Bandeja Toledo</div></asp:LinkButton></li>
+	                    <li><asp:LinkButton ID="btnMarcarPreparacion" runat="server" PostBackUrl="confirmar-picking.aspx?bodegapicking=TOLEDO"><i class="fas fa-tasks font-size-x-large"></i><div class="font-size-small">Marcado Toledo</div></asp:LinkButton></li>
+                        <li><asp:LinkButton ID="LinkButton2"  runat="server" PostBackUrl="bandeja-produccion.aspx"><i class="fas fa-puzzle-piece font-size-x-large"></i><div class="font-size-small">Bandeja Producción</div></asp:LinkButton></li>
+                        <li><asp:LinkButton ID="btnMarcarProduccion"  runat="server" PostBackUrl="confirmar-picking.aspx?bodegapicking=PRODUCCION"><i class="fas fa-tasks font-size-x-large"></i><div class="font-size-small">Marcado Producción</div></asp:LinkButton></li>
+                        <li><asp:LinkButton ID="btnFacturacion"  runat="server" PostBackUrl="bandeja-facturacion.aspx"><i class="fas fa-file-invoice-dollar font-size-x-large"></i><div class="font-size-small">Facturación</div></asp:LinkButton></li>
+                        <li><asp:LinkButton ID="btnLogistica"    runat="server" PostBackUrl="bandeja-logistica.aspx">  <i class="fas fa-shipping-fast font-size-x-large"></i>      <div class="font-size-small">Logística</div></asp:LinkButton></li>--%>
+                    </ul>
+                    <div id="menu-dashboard" class="d-none">
+                    </div>
+                    <div class="offcanvas offcanvas-start overflow-auto" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                      <div class="offcanvas-header" style="background-color:#ac272c;color:white;">
+                        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Menú Principal</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body" style="background-color:#2a2e33;">
+                        <div id="menu-container">
+                            <ul class="menu-list accordion">
+                                <asp:Literal ID="lblMenu" runat="server"></asp:Literal>
+                                <%--<li id="nav1" class="toggle accordion-toggle">
+                                    <span class="icon-plus"></span>
+                                    <a class="menu-link" href="#">Ventas</a>
+                                </li>
+                                <ul class="menu-submenu accordion-content">
+                                    <li style="padding: 5px;"><a id="A11" href="pedido-de-ventas.aspx" runat="server"><i class="fas fa-circle fa-xs"></i><span style="padding-left: 10px;">Dashboard de Ventas</span></a></li>
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuPedidodeVenta" runat="server" PostBackUrl="venta-pedido.aspx?nuevo=SI"><i class="fas fa-circle fa-xs p-1"></i>Pedido de Venta</asp:LinkButton></li>
+                                </ul>
+                                <li id="nav2" class="toggle accordion-toggle">
+                                    <span class="icon-plus"></span>
+                                    <a class="menu-link" href="#">Autorizar</a>
+                                </li>
+                                <ul class="menu-submenu accordion-content">
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuBandejaCredito" runat="server" PostBackUrl="bandeja-credito.aspx"><i class="fas fa-circle fa-xs p-1"></i>Bandeja Crédito</asp:LinkButton></li>
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuBandejaPrecios" runat="server" PostBackUrl="bandeja-precios.aspx"><i class="fas fa-circle fa-xs p-1"></i>Bandeja Precios</asp:LinkButton></li>
+                                </ul>
+                                <li id="nav3" class="toggle accordion-toggle">
+                                    <span class="icon-plus"></span>
+                                    <a class="menu-link" href="#">Toledo</a>
+                                </li>
+                                <ul class="menu-submenu accordion-content">
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuBandejaToledo" runat="server" PostBackUrl="bandeja-toledo.aspx"><i class="fas fa-circle fa-xs p-1"></i>Bandeja Toledo</asp:LinkButton></li>
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuConfirmarPicking" runat="server" PostBackUrl="confirmar-picking.aspx?bodegapicking=TOLEDO"><i class="fas fa-circle fa-xs p-1"></i>Marcar Pedido</asp:LinkButton></li>
+                                </ul>
+                                <li id="nav4" class="toggle accordion-toggle">
+                                    <span class="icon-plus"></span>
+                                    <a class="menu-link" href="#">Producción</a>
+                                </li>
+                                <ul class="menu-submenu accordion-content">
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuBandejaProduccion" runat="server" PostBackUrl="bandeja-produccion.aspx"><i class="fas fa-circle fa-xs p-1"></i>Bandeja Producción</asp:LinkButton></li>
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuConfirmarPickingProduccion" runat="server" PostBackUrl="confirmar-picking.aspx?bodegapicking=PRODUCCION"><i class="fas fa-circle fa-xs p-1"></i>Marcar Pedido</asp:LinkButton></li>
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuBandejaSolicitudMP" runat="server" PostBackUrl="bandeja-solicitudmp.aspx"><i class="fas fa-circle fa-xs p-1"></i>Solicitud de MP</asp:LinkButton></li>
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuInformeProduccion" runat="server" PostBackUrl="#"><i class="fas fa-circle fa-xs p-1"></i>Informe Producción</asp:LinkButton></li>
+                                </ul>
+                                <li id="nav5" class="toggle accordion-toggle">
+                                    <span class="icon-plus"></span>
+                                    <a class="menu-link" href="#">Facturación</a>
+                                </li>
+                                <ul class="menu-submenu accordion-content">
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuBandejaFacturacion" runat="server" PostBackUrl="bandeja-facturacion.aspx"><i class="fas fa-circle fa-xs p-1"></i>Generar Facturas</asp:LinkButton></li>
+                                </ul>
+                                <li id="nav6" class="toggle accordion-toggle">
+                                    <span class="icon-plus"></span>
+                                    <a class="menu-link" href="#">Logística</a>
+                                </li>
+                                <ul class="menu-submenu accordion-content">
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuBandejaLogistica" runat="server" PostBackUrl="bandeja-logistica.aspx"><i class="fas fa-circle fa-xs p-1"></i>Bandeja Logística</asp:LinkButton></li>
+                                </ul>
+                                <li id="nav7" class="toggle accordion-toggle">
+                                    <span class="icon-plus"></span>
+                                    <a class="menu-link" href="#">Compras</a>
+                                </li>
+                                <ul class="menu-submenu accordion-content">
+                                    <li style="padding: 5px;"><a id="A1" href="#" runat="server"><i class="fas fa-circle fa-xs"></i><span style="padding-left: 10px;">Generar Orden de Compra</span></a></li>
+                                    <li style="padding: 5px;"><a id="A5" href="#" runat="server"><i class="fas fa-circle fa-xs"></i><span style="padding-left: 10px;">Recepcionar Orden</span></a></li>
+                                </ul>
+                                <li id="nav8" class="toggle accordion-toggle">
+                                    <span class="icon-plus"></span>
+                                    <a class="menu-link" href="#">Inventario</a>
+                                </li>
+                                <ul class="menu-submenu accordion-content">
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuMantendorProductos" runat="server" PostBackUrl="maestro-productos.aspx"><i class="fas fa-circle fa-xs"></i>Maestro Productos</asp:LinkButton></li>
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuMantendorRecetas" runat="server" PostBackUrl="mantenedor-recetas.aspx"><i class="fas fa-circle fa-xs"></i>Mantenedor Recetas</asp:LinkButton></li>
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuMantendorAnimal" runat="server" PostBackUrl="mantenedor-animal.aspx"><i class="fas fa-circle fa-xs p-1"></i>Mantenedor Animal</asp:LinkButton></li>
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuMantendorFamilia" runat="server" PostBackUrl="mantenedor-familia.aspx"><i class="fas fa-circle fa-xs p-1"></i>Mantenedor Familia</asp:LinkButton></li>
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuMantenedorAjustes" runat="server" PostBackUrl="maestro-ajustes.aspx"><i class="fas fa-circle fa-xs p-1"></i>Ajustes de Inventario</asp:LinkButton></li>
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuMantenedorConsultaStock" runat="server" PostBackUrl="consulta-stock.aspx"><i class="fas fa-circle fa-xs p-1"></i>Consulta de Stock</asp:LinkButton></li>
+                                </ul>
+                            
+                                <li id="nav9" class="toggle accordion-toggle">
+                                    <span class="icon-plus"></span>
+                                    <a class="menu-link" href="#">Socios de Negocio</a>
+                                </li>
+                                <ul class="menu-submenu accordion-content">
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuMantenedorSocios" runat="server" PostBackUrl="maestro-socios.aspx"><i class="fas fa-circle fa-xs p-1"></i>Maestro Socios</asp:LinkButton></li>
+                                </ul>
+                                <li id="nav10" class="toggle accordion-toggle">
+                                    <span class="icon-plus"></span>
+                                    <a class="menu-link" href="#">Gerencia</a>
+                                </li>
+                                <ul class="menu-submenu accordion-content">
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuInfoControlPrecios" runat="server" PostBackUrl="info-controlprecios.aspx"><i class="fas fa-circle fa-xs p-1"></i>Info. Control Precios</asp:LinkButton></li>
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuInfoSeguimientoOpe" runat="server" PostBackUrl="info-seguimientoperacion.aspx"><i class="fas fa-circle fa-xs p-1"></i>Info. Seguimiento Operación</asp:LinkButton></li>
+                                </ul>
+                                <li id="nav11" class="toggle accordion-toggle">
+                                    <span class="icon-plus"></span>
+                                <a class="menu-link" href="#">Parámetros</a>
+                                </li>
+                                <ul class="menu-submenu accordion-content">
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuParamParametros" runat="server" PostBackUrl="parametros-generales.aspx"><i class="fas fa-circle fa-xs p-1"></i>Parámetros Generales</asp:LinkButton></li>
+                                    <li style="padding: 5px;"><asp:LinkButton ID="mnuParamGrupos" runat="server" PostBackUrl="mantenedor-grupos.aspx"><i class="fas fa-circle fa-xs p-1"></i>Grupos de usuario</asp:LinkButton></li>
+                                </ul>--%>
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div style="flex: 1; min-width: 0; position: relative; display: block; padding:5px;">
+                    <div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

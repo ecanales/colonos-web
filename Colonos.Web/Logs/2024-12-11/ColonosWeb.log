@@ -1,0 +1,61 @@
+2024-12-11 13:40:23.7105 loggerfile CerrarRutas: Json de entrada Incorrecto 
+2024-12-11 13:40:24.0531 loggerfile CerrarRutas:    en Colonos.Manager.ManagerDocumentos.Actualizar(String metodo, List`1 items) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 234
+   en Colonos.Web.confirmar_rutas.CerrarRutas(GridView gv, String rutaexistosa, String custodio, String tipocustodio) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\confirmar-rutas.aspx.cs:línea 363 
+2024-12-11 13:41:21.5417 loggerfile CerrarRutas: Json de entrada Incorrecto 
+2024-12-11 13:41:21.5417 loggerfile CerrarRutas:    en Colonos.Manager.ManagerDocumentos.Actualizar(String metodo, List`1 items) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 234
+   en Colonos.Web.confirmar_rutas.CerrarRutas(GridView gv, String rutaexistosa, String custodio, String tipocustodio) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\confirmar-rutas.aspx.cs:línea 363 
+2024-12-11 13:42:50.1760 loggerfile CerrarRutas: Json de entrada Incorrecto 
+2024-12-11 13:42:50.1760 loggerfile CerrarRutas:    en Colonos.Manager.ManagerDocumentos.Actualizar(String metodo, List`1 items) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 234
+   en Colonos.Web.confirmar_rutas.CerrarRutas(GridView gv, String rutaexistosa, String custodio, String tipocustodio) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\confirmar-rutas.aspx.cs:línea 363 
+2024-12-11 13:44:23.2029 loggerfile CerrarRutas: Json de entrada Incorrecto 
+2024-12-11 13:44:23.2029 loggerfile CerrarRutas:    en Colonos.Manager.ManagerDocumentos.Actualizar(String metodo, List`1 items) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 234
+   en Colonos.Web.confirmar_rutas.CerrarRutas(GridView gv, String rutaexistosa, String custodio, String tipocustodio) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\confirmar-rutas.aspx.cs:línea 363 
+2024-12-11 13:50:41.6701 loggerfile CerrarRutas: Json de entrada Incorrecto 
+2024-12-11 13:50:41.6701 loggerfile CerrarRutas:    en Colonos.Manager.ManagerDocumentos.Actualizar(String metodo, List`1 items) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 234
+   en Colonos.Web.confirmar_rutas.CerrarRutas(GridView gv, String rutaexistosa, String custodio, String tipocustodio) 
+2024-12-11 15:10:36.0405 loggerfile CerrarRutas: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details. 
+2024-12-11 15:10:36.2737 loggerfile CerrarRutas:    en Colonos.Manager.ManagerDocumentos.Actualizar(String metodo, List`1 items) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 234
+   en Colonos.Web.confirmar_rutas.CerrarRutas(GridView gv, String rutaexistosa, String custodio, String tipocustodio) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\confirmar-rutas.aspx.cs:línea 407 
+2024-12-11 15:20:46.5330 loggerfile CerrarRutas: Referencia a objeto no establecida como instancia de un objeto. 
+2024-12-11 15:20:46.5330 loggerfile CerrarRutas:    en Colonos.Manager.ManagerDocumentos.Actualizar(String metodo, List`1 items) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 226
+   en Colonos.Web.confirmar_rutas.CerrarRutas(GridView gv, String rutaexistosa, String custodio, String tipocustodio) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\confirmar-rutas.aspx.cs:línea 407 
+2024-12-11 16:31:50.1367 loggerfile Agente Endpoint. ConsultaPedido:  
+2024-12-11 16:45:07.5931 loggerfile VerBandeja_Event Error:Referencia a objeto no establecida como instancia de un objeto. 
+2024-12-11 16:45:07.8180 loggerfile VerBandeja_Event Error:   en Colonos.Manager.ManagerDocumentos.Consultar(String metodo, Int32 docentry, Int32 doctipo) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 241
+   en Colonos.Web.bandeja_logistica.CargaDetalleRCTRCC(Int32 docentry, String razonsocial) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-logistica.aspx.cs:línea 203
+   en Colonos.Web.bandeja_logistica.CargaDetalleRCTRCC_Evnet(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-logistica.aspx.cs:línea 186 
+2024-12-11 17:03:18.8683 loggerfile VerBandeja_Event Error:La cadena de entrada no tiene el formato correcto. 
+2024-12-11 17:03:19.1192 loggerfile VerBandeja_Event Error:   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Convert.ToInt32(String value)
+   en Colonos.Web.bandeja_logistica.CargaDetalleRCTRCC_Evnet(Object sender, EventArgs e) 
+2024-12-11 17:03:40.1263 loggerfile VerBandeja_Event Error:La cadena de entrada no tiene el formato correcto. 
+2024-12-11 17:03:40.1263 loggerfile VerBandeja_Event Error:   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Convert.ToInt32(String value)
+   en Colonos.Web.bandeja_logistica.CargaDetalleRCTRCC_Evnet(Object sender, EventArgs e) 
+2024-12-11 17:03:45.5115 loggerfile VerBandeja_Event Error:La cadena de entrada no tiene el formato correcto. 
+2024-12-11 17:03:45.5115 loggerfile VerBandeja_Event Error:   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Convert.ToInt32(String value)
+   en Colonos.Web.bandeja_logistica.CargaDetalleRCTRCC_Evnet(Object sender, EventArgs e) 
+2024-12-11 17:05:15.3040 loggerfile VerBandeja_Event Error:La cadena de entrada no tiene el formato correcto. 
+2024-12-11 17:05:15.3040 loggerfile VerBandeja_Event Error:   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Convert.ToInt32(String value)
+   en Colonos.Web.bandeja_logistica.CargaDetalleRCTRCC_Evnet(Object sender, EventArgs e) 
+2024-12-11 17:11:59.9193 loggerfile VerBandeja_Event Error:El valor no puede ser nulo.
+Nombre del parámetro: source 
+2024-12-11 17:11:59.9193 loggerfile VerBandeja_Event Error:   en System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)
+   en Colonos.Web.bandeja_logistica.CargaDetalleRCTRCC(Int32 docentry, String razonsocial)
+   en Colonos.Web.bandeja_logistica.CargaDetalleRCTRCC_Evnet(Object sender, EventArgs e) 
+2024-12-11 17:13:01.0354 loggerfile VerBandeja_Event Error:El valor no puede ser nulo.
+Nombre del parámetro: source 
+2024-12-11 17:13:01.0647 loggerfile VerBandeja_Event Error:   en System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)
+   en Colonos.Web.bandeja_logistica.CargaDetalleRCTRCC(Int32 docentry, String razonsocial)
+   en Colonos.Web.bandeja_logistica.CargaDetalleRCTRCC_Evnet(Object sender, EventArgs e) 
+2024-12-11 17:14:14.6159 loggerfile VerBandeja_Event Error:El valor no puede ser nulo.
+Nombre del parámetro: source 
+2024-12-11 17:14:14.6159 loggerfile VerBandeja_Event Error:   en System.Linq.Enumerable.Any[TSource](IEnumerable`1 source)
+   en Colonos.Web.bandeja_logistica.CargaDetalleRCTRCC(Int32 docentry, String razonsocial)
+   en Colonos.Web.bandeja_logistica.CargaDetalleRCTRCC_Evnet(Object sender, EventArgs e) 

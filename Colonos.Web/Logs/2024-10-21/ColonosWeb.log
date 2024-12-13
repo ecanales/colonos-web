@@ -1,0 +1,33 @@
+2024-10-21 00:25:01.4318 loggerfile se ha generado error al grabar Transacción de inventario: El articulo VCFIL21005 no existe. 
+2024-10-21 00:25:01.7409 loggerfile Guardar Ajuste Error: El articulo VCFIL21005 no existe. 
+2024-10-21 00:25:01.8835 loggerfile Guardar Ajuste StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.maestro_ajustes.Guardar_Event(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\maestro-ajustes.aspx.cs:línea 345 
+2024-10-21 00:29:16.7471 loggerfile se ha generado error al grabar Transacción de inventario: Pedido: 411031 ya tiene una Solicitud de Producción generada: 20299 
+2024-10-21 00:29:16.7850 loggerfile Guardar Orden de Produccion Error: Pedido: 411031 ya tiene una Solicitud de Producción generada: 20299 
+2024-10-21 00:29:16.7850 loggerfile Orden de Produccion StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.bandeja_toledo.GenerarOrdenProduccion() en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-toledo.aspx.cs:línea 800 
+2024-10-21 01:22:53.8709 loggerfile se ha generado error al grabar Transacción de inventario: Pedido: 411050 ya tiene una Solicitud de Producción generada: 20293 
+2024-10-21 01:22:54.0705 loggerfile Guardar Orden de Produccion Error: Pedido: 411050 ya tiene una Solicitud de Producción generada: 20293 
+2024-10-21 01:22:54.0814 loggerfile Orden de Produccion StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.bandeja_toledo.GenerarOrdenProduccion() 
+2024-10-21 01:23:03.8236 loggerfile se ha generado error al grabar Transacción de inventario: Pedido: 411050 ya tiene una Solicitud de Producción generada: 20293 
+2024-10-21 01:23:03.8536 loggerfile Guardar Orden de Produccion Error: Pedido: 411050 ya tiene una Solicitud de Producción generada: 20293 
+2024-10-21 01:23:03.8536 loggerfile Orden de Produccion StackTrace:    en Colonos.Manager.ManagerDocumentos.Guardar(String metodo, Documento item) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 146
+   en Colonos.Web.bandeja_toledo.GenerarOrdenProduccion() 
+2024-10-21 03:13:02.3491 loggerfile {"Message":"El recurso solicitado no admite el método http 'PATCH'."} 
+2024-10-21 17:54:18.9469 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\picking-toledo.rdlc 
+2024-10-21 17:54:27.0416 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/N8XCRB9BTHTBD2QTJXKEUWKRS  
+2024-10-21 17:54:52.6466 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\picking-produccion-orizontal.rdlc 
+2024-10-21 17:54:54.7630 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/BA1SPY03Y8VN5H698T7J4X6P0  
+2024-10-21 17:55:41.9972 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-10-21 17:55:48.1275 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/ETCWJAVHCF2SURY26DNEYU3FI  
+2024-10-21 18:05:39.1692 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-10-21 18:05:51.4493 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/1DPDJ7469UDG07WNJ35XDQBR2  
+2024-10-21 18:10:42.0328 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-10-21 18:13:02.4633 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/LXZMOZM0ITSHSN6GIGD17QALV  
+2024-10-21 18:17:04.7184 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-10-21 18:17:06.7930 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/1ZPEPXF9F4RH9MEGJ5TFT038O  
+2024-10-21 18:17:44.7965 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-10-21 18:17:46.3867 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/YLFGU1SYVGV37L2Q8EMFOVO83  
+2024-10-21 18:25:33.5030 loggerfile reportViewer1.ReportPath: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\Documentos\pedido-de-venta.rdlc 
+2024-10-21 18:25:43.0362 loggerfile Crea directorio: D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\files/CGQN0IQPI4FF9T9N4FSRUYQSH  

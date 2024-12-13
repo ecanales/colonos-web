@@ -1,0 +1,52 @@
+2024-11-21 20:56:55.2138 loggerfile DataBinding: 'Colonos.Entidades.DocumentosResult' no contiene una propiedad con el nombre 'Comuna'. 
+2024-11-21 20:56:56.9709 loggerfile    en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   en ASP.bandeja_pedidos_aspx.__DataBinding__control66(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-pedidos.aspx:línea 90
+   en System.Web.UI.Control.OnDataBinding(EventArgs e)
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en Colonos.Web.bandeja_pedidos.Consultar() en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-pedidos.aspx.cs:línea 148 
+2024-11-21 20:57:08.8043 loggerfile DataBinding: 'Colonos.Entidades.DocumentosResult' no contiene una propiedad con el nombre 'Comuna'. 
+2024-11-21 20:57:08.8131 loggerfile    en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   en ASP.bandeja_pedidos_aspx.__DataBinding__control66(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-pedidos.aspx:línea 90
+   en System.Web.UI.Control.OnDataBinding(EventArgs e)
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en Colonos.Web.bandeja_pedidos.Consultar() en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-pedidos.aspx.cs:línea 148 
+2024-11-21 20:57:23.7174 loggerfile DataBinding: 'Colonos.Entidades.DocumentosResult' no contiene una propiedad con el nombre 'Comuna'. 
+2024-11-21 20:57:23.7174 loggerfile    en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   en ASP.bandeja_pedidos_aspx.__DataBinding__control66(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-pedidos.aspx:línea 90
+   en System.Web.UI.Control.OnDataBinding(EventArgs e)
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en Colonos.Web.bandeja_pedidos.Consultar() en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-pedidos.aspx.cs:línea 148 
+2024-11-21 23:17:09.3216 loggerfile Error Listando doctipo: 10, No es posible conectar con el servidor remoto 
+2024-11-21 23:17:09.8982 loggerfile No es posible conectar con el servidor remoto 
+2024-11-21 23:17:10.1405 loggerfile    en Colonos.Manager.ManagerDocumentos.ListPedidos(String metodo, Int32 doctipo, String estado, String estadooperativo, Int32 pendiente, String usuario, String desde, String hasta) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 80
+   en Colonos.Web.bandeja_pedidos.Consultar() en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-pedidos.aspx.cs:línea 145 

@@ -1,0 +1,20 @@
+2024-08-12 06:52:54.8232 loggerfile DataBinding: 'Colonos.Entidades.DocumentosResult' no contiene una propiedad con el nombre 'UsuarioNombre'. 
+2024-08-12 06:52:55.0057 loggerfile    en System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   en System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   en ASP.bandeja_pedidos_aspx.__DataBinding__control52(Object sender, EventArgs e) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-pedidos.aspx:línea 81
+   en System.Web.UI.Control.OnDataBinding(EventArgs e)
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.Control.DataBindChildren()
+   en System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   en System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   en System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   en System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   en System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   en Colonos.Web.bandeja_pedidos.Consultar() 
+2024-08-12 07:30:04.5703 loggerfile Error Listando doctipo: 10, No es posible conectar con el servidor remoto 
+2024-08-12 07:30:43.6080 loggerfile No es posible conectar con el servidor remoto 
+2024-08-12 07:30:44.0860 loggerfile    en Colonos.Manager.ManagerDocumentos.ListPedidos(String metodo, Int32 doctipo, String estado, String estadooperativo, Int32 pendiente, String usuario, String desde, String hasta) en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 78
+   en Colonos.Web.bandeja_pedidos.Consultar() en D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.Web\bandeja-pedidos.aspx.cs:línea 115 
