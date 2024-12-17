@@ -28,39 +28,39 @@
                                                 aria-label="Search"
                                                 aria-describedby="search-addon" />--%>
                                             <div class="navbar-brand d-flex input-group w-auto">
-                                            <asp:TextBox ID="txtBuscar" runat="server" CssClass="form-control" placeholder="Buscar"></asp:TextBox>
-                                            <asp:LinkButton ID="btnBuscar" CssClass="color-rojo input-group-text border-0" runat="server" OnClick="BuscarPedidoNav_Event" ><i class="fas fa-search"></i></asp:LinkButton>
-                                        </div>
+                                                <asp:TextBox ID="txtBuscar" runat="server" CssClass="form-control" placeholder="Buscar"></asp:TextBox>
+                                                <asp:LinkButton ID="btnBuscar" CssClass="color-rojo input-group-text border-0" runat="server" OnClick="BuscarPedidoNav_Event" ><i class="fas fa-search"></i></asp:LinkButton>
+                                            </div>
 
-                                        <ul class="navbar-nav m-1">
+                                            <ul class="navbar-nav m-1">
                                             
-                                            <li class="nav-item m-1">
-                                                <div class="input-group input-group-sm mb-1">
-                                                    <span class="input-group-text label-caption color-rojo" >Vendedor</span>
-                                                    <asp:DropDownList ID="cboVendedor" CssClass="form-select" runat="server" Width="150"></asp:DropDownList>
-                                                </div>
-                                            </li>
-                                            <li class="nav-item m-1">
-                                                <div class="input-group input-group-sm mb-1">
-                                                    <span class="input-group-text label-caption color-rojo" >Fecha Inicio</span>
-                                                    <asp:TextBox ID="txtFechaIni" runat="server" TextMode="Date" CssClass="form-control" Width="150"></asp:TextBox>
-                                                </div>
-                                            </li>
-                                            <li class="nav-item m-1">
-                                                <div class="input-group input-group-sm mb-1">
-                                                    <span class="input-group-text label-caption color-rojo">Fecha Final</span>
-                                                    <asp:TextBox ID="txtFechaFin" runat="server" TextMode="Date" CssClass="form-control" Width="150"></asp:TextBox>
-                                                </div>
-                                            </li>
-                                            <li class="nav-item">
-                                                <asp:LinkButton ID="btnConsultar" CssClass="btn btn-nav" runat="server" OnClick="Consultar_Event"><i class="fas fa-sync-alt p-1"></i>Consultar</asp:LinkButton>
-                                            </li>
-                                            <li class="nav-item" style="margin-left: 5px;">
-                                                <asp:LinkButton ID="btnNuevo" CssClass="btn btn-danger" runat="server" OnClick="Nuevo_Event"><i class="fas fa-file-invoice-dollar p-1"></i>Nueva Venta</asp:LinkButton>
-                                            </li>
-                                        </ul>
+                                                <li class="nav-item m-1">
+                                                    <div class="input-group input-group-sm mb-1">
+                                                        <span class="input-group-text label-caption color-rojo" >Vendedor</span>
+                                                        <asp:DropDownList ID="cboVendedor" CssClass="form-select" runat="server" Width="150"></asp:DropDownList>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item m-1">
+                                                    <div class="input-group input-group-sm mb-1">
+                                                        <span class="input-group-text label-caption color-rojo" >Fecha Inicio</span>
+                                                        <asp:TextBox ID="txtFechaIni" runat="server" TextMode="Date" CssClass="form-control" Width="150"></asp:TextBox>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item m-1">
+                                                    <div class="input-group input-group-sm mb-1">
+                                                        <span class="input-group-text label-caption color-rojo">Fecha Final</span>
+                                                        <asp:TextBox ID="txtFechaFin" runat="server" TextMode="Date" CssClass="form-control" Width="150"></asp:TextBox>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <asp:LinkButton ID="btnConsultar" CssClass="btn btn-nav" runat="server" OnClick="Consultar_Event"><i class="fas fa-sync-alt p-1"></i>Consultar</asp:LinkButton>
+                                                </li>
+                                                <li class="nav-item" style="margin-left: 5px;">
+                                                    <asp:LinkButton ID="btnNuevo" CssClass="btn btn-danger" runat="server" OnClick="Nuevo_Event"><i class="fas fa-file-invoice-dollar p-1"></i>Nueva Venta</asp:LinkButton>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
                             </nav>
                             <div class="table-responsive p-1" style="font-size: 13px; border-top: 2px solid black; overflow-y: auto;max-height: calc(100vh - 80px - 180px);">
                                 <asp:GridView ID="gvBandeja"

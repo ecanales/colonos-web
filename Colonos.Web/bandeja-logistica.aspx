@@ -9,7 +9,16 @@
         function ShowPopup() {
             $("#btnShowPopup").click();
         }
+        function SetActivaBoton(idboton) {
+            console.log("llamada a SetActivaBoton");
+            console.log(idboton);
+            document.getElementById("ContentPlaceHolder1_btnFiltroHoy").style.backgroundColor = "greenyellow";
+        }
+
     </script>  
+    
+      
+        
     <div class="loading-overlay" id="loadingOverlay" style="z-index:100000;">
         <div class="loading-spinner"></div>
     </div>
@@ -238,14 +247,21 @@
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <Triggers>
                     <asp:PostBackTrigger ControlID="btnExport" />
+                    
                 </Triggers>
                 <ContentTemplate>
                     
                     <div class="card card-top">
-                        <div class="card-header fw-bold font-size-xx-large">
+                        <div class="card-header fw-bold font-size-xx-large" style="display: flex;justify-content: flex-start;">
+                            <div>
                             <span>Bandeja LOGÍSTICA
                                 <asp:Label ID="lblTotalRegistrosBandeja" runat="server" CssClass="badge bg-danger font-size-large position-absolute m-1"  Text="0"></asp:Label>
                             </span>
+                            </div>
+                            <div>
+                                <asp:Label ID="lblFiltro" runat="server" CssClass="btn-filtro" Text=""></asp:Label>
+                            </div>
+
                         </div>
                         <div class="card-body">
                             <nav class="navbar navbar-expand-lg navbar-light nav-toolbar p-0">
@@ -262,6 +278,7 @@
                                                 aria-label="Search"
                                                 aria-describedby="search-addon" />
                                             <asp:LinkButton ID="btnBuscar" CssClass="color-rojo input-group-text border-0" runat="server"><i class="fas fa-search"></i></asp:LinkButton>
+                                            </div>
                                             <ul class="navbar-nav">
                                                 <li class="nav-item">
                                                     <asp:LinkButton ID="btnRefresh" CssClass="btn btn-nav" runat="server" OnClick="Refresh_Event"><i class="fas fa-sync-alt p-1"></i>Actualizar</asp:LinkButton>
@@ -272,8 +289,33 @@
                                                 <li class="nav-item">
                                                     <asp:LinkButton ID="btnExport" CssClass="btn btn-nav" runat="server" OnClick="ExportToExcel"><i class="fas fa-file-excel p-1"></i>Exportar</asp:LinkButton>
                                                 </li>
+                                                <li class="nav-item">
+                                                    <asp:LinkButton ID="btnFiltroHoy" CssClass="btn btn-nav" runat="server" OnClick="Filtrar_Event"><i class="fas fa-filter p-1"></i>
+                                                        Entregas Hoy
+                                                        <asp:Label ID="lblHoy" runat="server" CssClass="badge text-bg-secondary bg-danger" Text=""></asp:Label>
+                                                    </asp:LinkButton>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <asp:LinkButton ID="btnFiltroMañana" CssClass="btn btn-nav" runat="server" OnClick="Filtrar_Event"><i class="fas fa-filter p-1"></i>
+                                                        Entregas Mañana
+                                                        <asp:Label ID="lblMañana" runat="server" CssClass="badge text-bg-secondary bg-danger" Text=""></asp:Label>
+                                                    </asp:LinkButton>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <asp:LinkButton ID="btnFiltroPosterior" CssClass="btn btn-nav" runat="server" OnClick="Filtrar_Event"><i class="fas fa-filter p-1"></i>
+                                                        Entregas Posterior
+                                                        <asp:Label ID="lblPosterior" runat="server" CssClass="badge text-bg-secondary bg-danger" Text=""></asp:Label>
+                                                    </asp:LinkButton>
+                                                </li>
+                                                <li class="nav-item" style="margin-left:4rem;">
+                                                    <asp:LinkButton ID="btnVerSeleccion" runat="server" CssClass="btn btn-danger rounded-circle m-2 float-md-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling2" aria-controls="offcanvasScrolling">
+                                                        <i class="fas fa-th p-0 font-size-large"></i>
+                                                        <asp:Label ID="TotalItems" runat="server" Text="" Visible="false" class="position-absolute translate-middle badge rounded-pill" Style="top: 15px; margin-left: 11px; color: black; background-color: gold"></asp:Label>
+                                                    </asp:LinkButton>
+
+                                                </li>
                                             </ul>
-                                        </div>
+                                        
                                         <ul class="navbar-nav">
                                             <li class="nav-item">
                                                 <button type="button" style="display: none;" id="btnShowPopup" class="btn btn-primary btn-lg"
@@ -283,15 +325,9 @@
                                             </li>
                                         </ul>
                                         
-                                        <ul class="navbar-nav d-block" style="width: 70%;">
-                                            <li class="nav-item">
-                                                <asp:LinkButton ID="btnVerSeleccion" runat="server" CssClass="btn btn-danger rounded-circle m-2 float-md-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling2" aria-controls="offcanvasScrolling">
-                                                    <i class="fas fa-th p-0 font-size-large"></i>
-                                                    <asp:Label ID="TotalItems" runat="server" Text="" Visible="false" class="position-absolute translate-middle badge rounded-pill" Style="top: 15px; margin-left: 11px; color: black; background-color: gold"></asp:Label>
-                                                </asp:LinkButton>
-
-                                            </li>
-                                        </ul>
+                                        <%--<ul class="navbar-nav d-block" style="width: 70%;">
+                                            
+                                        </ul>--%>
                                     </div>
                                 </div>
                             </nav>

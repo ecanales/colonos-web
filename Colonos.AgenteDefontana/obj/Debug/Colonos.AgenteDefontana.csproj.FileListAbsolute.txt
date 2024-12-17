@@ -12,3 +12,17 @@ D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.AgenteDefontana\obj\Debug\Colo
 D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.AgenteDefontana\obj\Debug\Colonos.AgenteDefontana.csproj.CopyComplete
 D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.AgenteDefontana\obj\Debug\Colonos.AgenteDefontana.dll
 D:\GitKraken\psb-romani\RomaniAPI\Colonos\Colonos.AgenteDefontana\obj\Debug\Colonos.AgenteDefontana.pdb
+C:\esystem\Fuentes\Colonos\colonos-web\Colonos.AgenteDefontana\bin\Debug\NLog.config
+C:\esystem\Fuentes\Colonos\colonos-web\Colonos.AgenteDefontana\bin\Debug\Colonos.AgenteDefontana.dll
+C:\esystem\Fuentes\Colonos\colonos-web\Colonos.AgenteDefontana\bin\Debug\Colonos.AgenteDefontana.pdb
+C:\esystem\Fuentes\Colonos\colonos-web\Colonos.AgenteDefontana\bin\Debug\Newtonsoft.Json.dll
+C:\esystem\Fuentes\Colonos\colonos-web\Colonos.AgenteDefontana\bin\Debug\NLog.dll
+C:\esystem\Fuentes\Colonos\colonos-web\Colonos.AgenteDefontana\bin\Debug\RestSharp.dll
+C:\esystem\Fuentes\Colonos\colonos-web\Colonos.AgenteDefontana\bin\Debug\Newtonsoft.Json.xml
+C:\esystem\Fuentes\Colonos\colonos-web\Colonos.AgenteDefontana\bin\Debug\NLog.xml
+C:\esystem\Fuentes\Colonos\colonos-web\Colonos.AgenteDefontana\bin\Debug\RestSharp.xml
+C:\esystem\Fuentes\Colonos\colonos-web\Colonos.AgenteDefontana\obj\Debug\Colonos.AgenteDefontana.csproj.AssemblyReference.cache
+C:\esystem\Fuentes\Colonos\colonos-web\Colonos.AgenteDefontana\obj\Debug\Colonos.AgenteDefontana.csproj.CoreCompileInputs.cache
+C:\esystem\Fuentes\Colonos\colonos-web\Colonos.AgenteDefontana\obj\Debug\Colonos..9C5E248B.Up2Date
+C:\esystem\Fuentes\Colonos\colonos-web\Colonos.AgenteDefontana\obj\Debug\Colonos.AgenteDefontana.dll
+C:\esystem\Fuentes\Colonos\colonos-web\Colonos.AgenteDefontana\obj\Debug\Colonos.AgenteDefontana.pdb

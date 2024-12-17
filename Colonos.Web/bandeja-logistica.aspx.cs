@@ -64,10 +64,14 @@ namespace Colonos.Web
             ManagerDocumentos mng = new ManagerDocumentos(urlbase, logger);
             var list = mng.List("documentos/list", 12, "A");
             list = list.FindAll(x => x.EstadoOperativo != "RUTA").ToList();
+            //lblTituloBandeja.Text = "Bandeja LOGÍSTICA";
             lblTotalRegistrosBandeja.Text = String.Format("{0}", list.Count);
             gvBandeja.DataSource = list;
             gvBandeja.DataBind();
-
+            lblHoy.Text= list.FindAll(x => x.FechaEntrega <= DateTime.Now.Date).Count.ToString();
+            lblMañana.Text = list.FindAll(x => x.FechaEntrega == DateTime.Now.Date.AddDays(1)).Count.ToString() ;
+            lblPosterior.Text = list.FindAll(x => x.FechaEntrega > DateTime.Now.Date.AddDays(1)).Count.ToString();
+            lblFiltro.Text = "";
             gvSeleccionados.DataSource = new List<DocumentosResult>();
             gvSeleccionados.DataBind();
 
@@ -518,13 +522,39 @@ namespace Colonos.Web
         {
             string urlbase = ConfigurationManager.AppSettings.Get("urlbase");
             ManagerDocumentos mng = new ManagerDocumentos(urlbase, logger);
-            var list = mng.List("documentos/list", 12, "A");
-            list = list.FindAll(x => x.EstadoOperativo != "RUTA").ToList();
+            //var list = mng.List("documentos/list", 12, "A");
+            //list = list.FindAll(x => x.EstadoOperativo != "RUTA").ToList();
+            var list = (List<DocumentosResult>)HttpContext.Current.Session["listfacturas"];
             var list2 = Utility.DynamicSort1<DocumentosResult>(list, sortExpression, direction);
             gvBandeja.DataSource = list2;
             gvBandeja.DataBind();
 
         }
+
+        protected void Filtrar_Event(object sender, EventArgs e)
+        {
+            var btn = (sender as LinkButton).ID;
+            var list = (List<DocumentosResult>)HttpContext.Current.Session["listfacturas"];
+            switch (btn)
+            {
+                case "btnFiltroHoy":
+                    list = list.FindAll(x => x.FechaEntrega <= DateTime.Now.Date);
+                    lblFiltro.Text = "Entregas Hoy";
+                    break;
+                case "btnFiltroMañana":
+                    list = list.FindAll(x => x.FechaEntrega == DateTime.Now.Date.AddDays(1));
+                    lblFiltro.Text = "Entregas Mañana";
+                    break;
+                case "btnFiltroPosterior":
+                    list = list.FindAll(x => x.FechaEntrega > DateTime.Now.Date.AddDays(1));
+                    lblFiltro.Text = "Entregas Posterior";
+                    break;
+            }
+            lblTotalRegistrosBandeja.Text = String.Format("{0}", list.Count);
+            gvBandeja.DataSource = list;
+            gvBandeja.DataBind();
+        }
+
 
         protected void ExportToExcel(object sender, EventArgs e)
         {

@@ -17,6 +17,10 @@
     resize: none;
 }
 
+.btn-filtro {
+    color: #2320a9;
+    margin-left: 4rem;
+}
 .btn-nav {
     color: #000000;
     background-color: transparent;

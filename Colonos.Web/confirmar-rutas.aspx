@@ -317,7 +317,7 @@
                     <div class="card card-top" style="overflow:hidden;">
                         <div class="card-header fw-bold font-size-xx-large">
                             <span>Bandeja CONFIRMAR RUTAS
-                                <asp:Label ID="lblTotalRegistrosBandeja" runat="server" CssClass="badge bg-danger font-size-large position-absolute m-1"  Text="0"></asp:Label>
+                                <asp:Label ID="lblTotalRegistrosBandeja"  runat="server" CssClass="badge bg-danger font-size-large position-absolute m-1"  Text="0"></asp:Label>
                             </span>
                         </div>
                         <div class="card-body">
