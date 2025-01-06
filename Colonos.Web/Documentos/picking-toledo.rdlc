@@ -696,7 +696,7 @@
   <Width>8.46608in</Width>
   <Page>
     <PageHeader>
-      <Height>5.54302cm</Height>
+      <Height>5.96635cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -1512,7 +1512,7 @@
           <rd:DefaultName>Instrucciones</rd:DefaultName>
           <Top>4.1372cm</Top>
           <Left>9.11599cm</Left>
-          <Height>1.31939cm</Height>
+          <Height>1.65276cm</Height>
           <Width>12.18057cm</Width>
           <ZIndex>30</ZIndex>
           <Style>
@@ -2053,6 +2053,82 @@
           <Height>0.44125cm</Height>
           <Width>4.57874cm</Width>
           <ZIndex>51</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox55">
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>OC Cliente</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox18</rd:DefaultName>
+          <Top>4.58135cm</Top>
+          <Left>0.20202cm</Left>
+          <Height>0.44125cm</Height>
+          <Width>3.16146cm</Width>
+          <ZIndex>52</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox56">
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>:</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox18</rd:DefaultName>
+          <Top>4.58135cm</Top>
+          <Left>3.38377cm</Left>
+          <Height>0.44125cm</Height>
+          <Width>0.25766cm</Width>
+          <ZIndex>53</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Textbox>
+        <Textbox Name="Observaciones">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!Observaciones.Value, "Cabecera")</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Observaciones</rd:DefaultName>
+          <Top>4.54607cm</Top>
+          <Left>3.67671cm</Left>
+          <Height>0.47653cm</Height>
+          <Width>4.56198cm</Width>
+          <ZIndex>54</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>

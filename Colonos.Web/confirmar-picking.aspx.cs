@@ -1072,7 +1072,11 @@ namespace Colonos.Web
 
                 objRDLC.DataSources.Clear();
                 ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
-                byte[] byteViewer = reportViewer1.Render("PDF", null, out v_mimetype, out v_encoding, out v_filename_extension, out v_streamids, out warnings);
+                string deviceInfo = @"<DeviceInfo>
+                                        <EmbedFonts>None</EmbedFonts>
+                                    </DeviceInfo>";
+                //byte[] byteViewer = reportViewer1.Render("PDF", null, out v_mimetype, out v_encoding, out v_filename_extension, out v_streamids, out warnings);
+                byte[] byteViewer = reportViewer1.Render("PDF", deviceInfo, out v_mimetype, out v_encoding, out v_filename_extension, out v_streamids, out warnings);
                 //string savePath = tempPath;
 
 

@@ -1,0 +1,8 @@
+2025-01-06 04:03:40.6372 loggerfile VerBandeja_Event Error:No se puede convertir un objeto de tipo 'System.Web.UI.WebControls.ContentPlaceHolder' al tipo 'System.Web.UI.WebControls.GridViewRow'. 
+2025-01-06 04:03:40.7509 loggerfile VerBandeja_Event Error:   en Colonos.Web.confirmar_rutas.VerBandeja_Event(Object sender, EventArgs e) en C:\esystem\Fuentes\Colonos\colonos-web\Colonos.Web\confirmar-rutas.aspx.cs:línea 73 
+2025-01-06 04:03:43.7375 loggerfile VerBandeja_Event Error:No se puede convertir un objeto de tipo 'System.Web.UI.WebControls.ContentPlaceHolder' al tipo 'System.Web.UI.WebControls.GridViewRow'. 
+2025-01-06 04:03:43.7425 loggerfile VerBandeja_Event Error:   en Colonos.Web.confirmar_rutas.VerBandeja_Event(Object sender, EventArgs e) en C:\esystem\Fuentes\Colonos\colonos-web\Colonos.Web\confirmar-rutas.aspx.cs:línea 73 
+2025-01-06 04:03:49.8677 loggerfile VerBandeja_Event Error:No se puede convertir un objeto de tipo 'System.Web.UI.WebControls.ContentPlaceHolder' al tipo 'System.Web.UI.WebControls.GridViewRow'. 
+2025-01-06 04:03:49.8677 loggerfile VerBandeja_Event Error:   en Colonos.Web.confirmar_rutas.VerBandeja_Event(Object sender, EventArgs e) en C:\esystem\Fuentes\Colonos\colonos-web\Colonos.Web\confirmar-rutas.aspx.cs:línea 73 
+2025-01-06 04:03:51.4826 loggerfile VerBandeja_Event Error:No se puede convertir un objeto de tipo 'System.Web.UI.WebControls.ContentPlaceHolder' al tipo 'System.Web.UI.WebControls.GridViewRow'. 
+2025-01-06 04:03:51.4826 loggerfile VerBandeja_Event Error:   en Colonos.Web.confirmar_rutas.VerBandeja_Event(Object sender, EventArgs e) en C:\esystem\Fuentes\Colonos\colonos-web\Colonos.Web\confirmar-rutas.aspx.cs:línea 73 

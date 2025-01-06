@@ -706,7 +706,7 @@
   <Width>8.47303in</Width>
   <Page>
     <PageHeader>
-      <Height>7.30065cm</Height>
+      <Height>7.74162cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -1172,7 +1172,7 @@
           <Top>6.65868cm</Top>
           <Left>4.10445cm</Left>
           <Height>0.44125cm</Height>
-          <Width>11.62993cm</Width>
+          <Width>10.02479cm</Width>
           <ZIndex>16</ZIndex>
           <Style>
             <Border>
@@ -1486,7 +1486,7 @@
           <Top>4.64966cm</Top>
           <Left>4.09216cm</Left>
           <Height>0.4539cm</Height>
-          <Width>11.62993cm</Width>
+          <Width>10.03708cm</Width>
           <ZIndex>28</ZIndex>
           <Style>
             <Border>
@@ -1552,7 +1552,10 @@
               <TextRuns>
                 <TextRun>
                   <Value>=First(Fields!EstadoCliente.Value, "Cabecera")</Value>
-                  <Style />
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>=IIF(First(Fields!EstadoCliente.Value, "Cabecera")&lt;&gt;"ACTIVO" and First(Fields!EstadoCliente.Value, "Cabecera")&lt;&gt;"ESPECIAL","White","Black")</Color>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
@@ -1562,12 +1565,13 @@
           <Top>3.42903cm</Top>
           <Left>4.10445cm</Left>
           <Height>0.44478cm</Height>
-          <Width>12.28634cm</Width>
+          <Width>3.83611cm</Width>
           <ZIndex>31</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
             </Border>
+            <BackgroundColor>=IIF(First(Fields!EstadoCliente.Value, "Cabecera")&lt;&gt;"ACTIVO" and First(Fields!EstadoCliente.Value, "Cabecera")&lt;&gt;"ESPECIAL","Red","White")</BackgroundColor>
           </Style>
         </Textbox>
         <Textbox Name="Textbox28">
@@ -2243,9 +2247,9 @@
           </Paragraphs>
           <rd:DefaultName>Instrucciones1</rd:DefaultName>
           <Top>5.15149cm</Top>
-          <Left>16.09404cm</Left>
-          <Height>1.94844cm</Height>
-          <Width>5.10547cm</Width>
+          <Left>14.34375cm</Left>
+          <Height>2.41374cm</Height>
+          <Width>6.85576cm</Width>
           <ZIndex>57</ZIndex>
           <Style>
             <Border>
@@ -2272,7 +2276,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox18</rd:DefaultName>
           <Top>4.63968cm</Top>
-          <Left>16.09404cm</Left>
+          <Left>14.37954cm</Left>
           <Height>0.44125cm</Height>
           <Width>4.2324cm</Width>
           <ZIndex>58</ZIndex>
@@ -2366,7 +2370,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>0.63501cm</Height>
+      <Height>0.59973cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>

@@ -544,3 +544,5 @@ C:\esystem\Fuentes\Colonos\colonos-web\Colonos.Web\obj\Debug\Colonos.Web.csproj.
 C:\esystem\Fuentes\Colonos\colonos-web\Colonos.Web\obj\Debug\Colonos..C2AB1624.Up2Date
 C:\esystem\Fuentes\Colonos\colonos-web\Colonos.Web\obj\Debug\Colonos.Web.dll
 C:\esystem\Fuentes\Colonos\colonos-web\Colonos.Web\obj\Debug\Colonos.Web.pdb
+C:\esystem\Fuentes\Colonos\colonos-web\Colonos.Web\bin\stdole.dll
+C:\esystem\Fuentes\Colonos\colonos-web\Colonos.Web\bin\Microsoft.MSXML.dll

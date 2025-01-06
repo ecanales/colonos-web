@@ -839,7 +839,7 @@ namespace Colonos.Web
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this, this.Page.GetType(), "SetOcultarclonar", "SetOcultarclonar();", true);
+                    //ScriptManager.RegisterStartupScript(this, this.Page.GetType(), "SetOcultarclonar", "SetOcultarclonar();", true);
                     //
                 }
 
@@ -872,6 +872,9 @@ namespace Colonos.Web
                     txtSocioName.Text = item.RazonSocial;
                     txtRut.Text = item.Rut;
                     txtEstadoCliente.Text = item.EstadoOperativo;
+                    txtEstadoCliente.Font.Bold = true;
+                    txtEstadoCliente.ForeColor = System.Drawing.Color.Green;
+                    txtEstadoCliente.BackColor = System.Drawing.Color.White;
                     lblClienteBar.Text = item.RazonSocial;
                     switch (txtEstadoCliente.Text)
                     {
@@ -1020,6 +1023,20 @@ namespace Colonos.Web
                 txtMagenDetalle.Text = String.Format("{0:P1}", carro.Margen);
                 txtEstado.Text = pedido.EstadoOperativo;
                 txtEstadoCliente.Text = pedido.EstadoCliente;
+                txtEstadoCliente.ForeColor = System.Drawing.Color.Green;
+                txtEstadoCliente.BackColor = System.Drawing.Color.White;
+                switch (txtEstadoCliente.Text)
+                {
+                    case "MOROSIDAD":
+                    case "BLOQUEO":
+                    case "BETADO":
+                    case "INACTIVO":
+                        txtEstadoCliente.BackColor = System.Drawing.Color.Red;
+                        txtEstadoCliente.ForeColor = System.Drawing.Color.White;
+                        txtEstadoCliente.Font.Bold = true;
+                        break;
+                }
+
                 txtFecha.Text =String.Format("{0:yyyy-MM-dd}",  pedido.DocFecha);
                 chkRetiraCliente.Checked = Convert.ToBoolean(pedido.RetiraCliente);
                 txtSocioCode.Text = pedido.SocioCode;
@@ -1365,7 +1382,12 @@ namespace Colonos.Web
 
                 objRDLC.DataSources.Clear();
                 ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
-                byte[] byteViewer = reportViewer1.Render("PDF", null, out v_mimetype, out v_encoding, out v_filename_extension, out v_streamids, out warnings);
+                string deviceInfo = @"<DeviceInfo>
+                                        <EmbedFonts>None</EmbedFonts>
+                                    </DeviceInfo>";
+
+                //byte[] byteViewer = reportViewer1.Render("PDF", null, out v_mimetype, out v_encoding, out v_filename_extension, out v_streamids, out warnings);
+                byte[] byteViewer = reportViewer1.Render("PDF", deviceInfo, out v_mimetype, out v_encoding, out v_filename_extension, out v_streamids, out warnings);
                 //string savePath = tempPath;
 
 

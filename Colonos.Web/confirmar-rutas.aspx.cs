@@ -2,6 +2,7 @@
 using Colonos.Manager;
 using Colonos.Web.Content.Utilidades;
 using NLog;
+using Org.BouncyCastle.Bcpg.OpenPgp;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Interop;
 
 namespace Colonos.Web
 {
@@ -97,10 +99,12 @@ namespace Colonos.Web
                 HiddenFieldDocentry.Value = docentry.ToString();
                 lblRazonSocion.Text = pedido.RazonSocial;
                 txtRazonSocial.Text = pedido.RazonSocial;
-                txtNumeroPedido.Text = pedido.DocEntry.ToString();
+                txtDocEntry.Text = pedido.DocEntry.ToString();
+                txtFactura.Text = pedido.FolioDF.ToString();
+                txtNumeroPedido.Text = pedido.BaseEntry.ToString();// .DocEntry.ToString();
                 txtFechaPedido.Text = String.Format("{0:dd/MM/yyyy}", pedido.DocFecha);
                 txtFechadeEntrega.Text = String.Format("{0:dd/MM/yyyy}", pedido.FechaEntrega);
-                txtVendedorPedido.Text = pedido.VendedorCode;
+                txtVendedorPedido.Text = pedido.UsuarioNombre; // .VendedorCode;
                 chkRetiraCliente.Checked = Convert.ToBoolean(pedido.RetiraCliente);
                 txtNeto.Text = String.Format("{0:N0}", pedido.Neto);
                 txtIVA.Text = String.Format("{0:N0}", pedido.Iva);
@@ -130,6 +134,23 @@ namespace Colonos.Web
             foreach (GridViewRow row in gvBandeja.Rows)
             {
                 CheckBox chckrw = (CheckBox)row.FindControl("chkSeleccionado");
+                if (chckheader.Checked == true)
+                {
+                    chckrw.Checked = true;
+
+                }
+                else
+                {
+                    chckrw.Checked = false;
+                }
+            }
+        }
+        protected void CheckAllDet(object sender, EventArgs e)
+        {
+            CheckBox chckheader = (CheckBox)gvDetalle.HeaderRow.FindControl("checkbox2Det");
+            foreach (GridViewRow row in gvDetalle.Rows)
+            {
+                CheckBox chckrw = (CheckBox)row.FindControl("chkSeleccionadoDet");
                 if (chckheader.Checked == true)
                 {
                     chckrw.Checked = true;
@@ -247,12 +268,44 @@ namespace Colonos.Web
         }
 
 
+        private void LimpiarPopupCierre()
+        {
+            optEntregaTotal.Checked = false;
+            //optRechazoParcial.Checked = false;
+            //optNoEntregado.Checked=false;
+            optOtraEntregaSI.Checked= false;
+            optOtraEntregaNO.Checked = false;
+            optPlanta.Checked=false;
+            optTransporte.Checked=false;
+            optCliente.Checked = false;
+            txtObservacionesCierre.Text = "";
+            txtCustodio.Text = "";
+            txtObservacionesCierreCustodio.Text = "";
+            pnlOpcionesEntrega.Visible = false;
+            lblEntregaTotal.BackColor = System.Drawing.Color.Transparent;
+            optEntregaTotal.BackColor = System.Drawing.Color.Transparent;
+            //lblRechazoParcial.BackColor = System.Drawing.Color.Transparent;
+            //optRechazoParcial.BackColor = System.Drawing.Color.Transparent;
+            //lblNoEntregado.BackColor = System.Drawing.Color.Transparent;
+            //optNoEntregado.BackColor = System.Drawing.Color.Transparent;
+            lblOtraEntregaSI.BackColor = System.Drawing.Color.Transparent;
+            optOtraEntregaSI.BackColor = System.Drawing.Color.Transparent;
+            lblOtraEntregaNO.BackColor = System.Drawing.Color.Transparent;
+            optOtraEntregaNO.BackColor = System.Drawing.Color.Transparent;
+            lblPlanta.BackColor = System.Drawing.Color.Transparent;
+            optPlanta.BackColor = System.Drawing.Color.Transparent;
+            lblTransporte.BackColor = System.Drawing.Color.Transparent;
+            optTransporte.BackColor = System.Drawing.Color.Transparent;
+            lblCliente.BackColor = System.Drawing.Color.Transparent;
+            optCliente.BackColor = System.Drawing.Color.Transparent;
+        }
+
         protected void CerrarRuta_Event(object sender, EventArgs e)
         {
             var listsel = CargaRutasSeleccionadas();
             if (listsel.Any())
             {
-                LimpiaCierre();
+                LimpiarPopupCierre();
                 gvCerrarRutas.DataSource = listsel;
                 gvCerrarRutas.DataBind();
                 popupCerrarRuta.Show();
@@ -344,31 +397,81 @@ namespace Colonos.Web
 
         protected void CerrarRutaOK(object sender, EventArgs e)
         {
-            CerrarRutas(gvCerrarRutas,"SI");
+            string tipoentrega = "";
+            string rutaexitosa = "NO";
+            string otraentrega = "";
+            string tipocustodio = "";
+            string obs = "";
+            if(!optEntregaTotal.Checked)// && !optRechazoParcial.Checked && !optNoEntregado.Checked)
+            {
+                //debe elegir una opción de Entrega
+                popupCerrarRuta.Focus();
+                return;
+            }
+            else
+            {
+                if (optEntregaTotal.Checked)
+                {
+                    tipoentrega = "Total";
+                    rutaexitosa = "SI";
+                }
+                //if (optRechazoParcial.Checked)
+                //    tipoentrega = "Parcial";
+                //if (optNoEntregado.Checked)
+                //    tipoentrega = "NoEntregado";
+            }
+            if (!optEntregaTotal.Checked && !optOtraEntregaSI.Checked && !optOtraEntregaNO.Checked)
+            {
+                //debe elegir una opción de Otra Entrega
+                return;
+            }
+            else
+            {
+                if (optOtraEntregaSI.Checked)
+                    otraentrega = "SI";
+                if (optOtraEntregaNO.Checked)
+                    otraentrega = "NO";
+            }
+            if (!optEntregaTotal.Checked && !optPlanta.Checked && !optTransporte.Checked && !optCliente.Checked)
+            {
+                //debe elegir una opción de Custodio
+                return;
+            }
+            else
+            {
+                if (optPlanta.Checked)
+                    tipocustodio = "PLA";
+                if (optTransporte.Checked)
+                    tipocustodio = "RCT";
+                if (optCliente.Checked)
+                    tipocustodio = "RCC";
+            }
+            obs=txtObservacionesCierre.Text;
+            CerrarRutas(gvCerrarRutas, rutaexitosa,tipoentrega,otraentrega,tipocustodio,"",obs);
             popupCerrarRuta.Hide();
         }
         protected void CerrarRutaNO(object sender, EventArgs e)
         {
-            CerrarRutas(gvCerrarRutas, "NO");
-            popupCerrarRuta.Hide();
+            //CerrarRutas(gvCerrarRutas, "NO");
+            //popupCerrarRuta.Hide();
         }
 
         protected void CerrarRutaRCT(object sender, EventArgs e)
         {
-            if (txtCustodio.Text.Trim().Length > 0)
-            {
-                CerrarRutas(gvCerrarRutasRCTRCC, "NO", txtCustodio.Text, "RCT");
-                popupCerrarRutaRCTRCC.Hide();
-            }
+            //if (txtCustodio.Text.Trim().Length > 0)
+            //{
+            //    CerrarRutas(gvCerrarRutasRCTRCC, "NO", txtCustodio.Text, "RCT");
+            //    popupCerrarRutaRCTRCC.Hide();
+            //}
         }
 
         protected void CerrarRutaRCC(object sender, EventArgs e)
         {
-            if (txtCustodio.Text.Trim().Length > 0)
-            {
-                CerrarRutas(gvCerrarRutasRCTRCC, "NO", txtCustodio.Text, "RCC");
-                popupCerrarRutaRCTRCC.Hide();
-            }
+            //if (txtCustodio.Text.Trim().Length > 0)
+            //{
+            //    CerrarRutas(gvCerrarRutasRCTRCC, "NO", txtCustodio.Text, "RCC");
+            //    popupCerrarRutaRCTRCC.Hide();
+            //}
         }
 
         protected void ClosePopupCerrarRTC(object sender, EventArgs e)
@@ -378,11 +481,130 @@ namespace Colonos.Web
 
         private void LimpiaCierre()
         {
-            txtObservacionesCierre.Text = "";
-            txtCustodio.Text = "";
-            txtObservacionesCierreCustodio.Text = "";
+            
         }
-        private void CerrarRutas(GridView gv, string rutaexistosa, string custodio = "", string tipocustodio="")
+
+        protected void CierreRutaError_Event(object sender, EventArgs e)
+        {
+            string TipoProblema = "";
+            string TipoRechazo = "";
+            string motivo = "";
+            string docentry = "";
+            string rutaexitosa = "";
+            string tipoentrega = "";
+            string otraentrega = "";
+            string tipocustodio = "";
+            string custodio = "";
+            string obs = "";
+
+            if (!optRechazo.Checked && !optNoEntregado.Checked)
+            {
+                return;
+            }
+            else if (optRechazo.Checked)
+            {
+                TipoProblema = "Rechazo";
+            }
+            else if (optRechazo.Checked)
+            {
+                TipoProblema = "NoEntregado";
+            }
+
+            if (!optRechazoTotal.Checked && !optRechazoParcial.Checked)
+            {
+                return;
+            }
+            else if (optRechazoTotal.Checked)
+            {
+                TipoRechazo = "Total";
+            }
+            else if (optRechazoParcial.Checked)
+            {
+                TipoRechazo = "Parcial";
+            }
+
+            if(cboMotivo.Text=="")
+            {
+                return;
+            }
+            else
+            {
+                motivo = cboMotivo.SelectedItem.Text;
+            }
+
+            if (!optEntregaTotal.Checked && !optPlanta.Checked && !optTransporte.Checked && !optCliente.Checked)
+            {
+                //debe elegir una opción de Custodio
+                return;
+            }
+            else
+            {
+                if (optPlanta.Checked)
+                    tipocustodio = "PLA";
+                if (optTransporte.Checked)
+                    tipocustodio = "RCT";
+                if (optCliente.Checked)
+                    tipocustodio = "RCC";
+            }
+
+            if (optNoEntregado.Checked && !optOtraEntregaSI.Checked && !optOtraEntregaNO.Checked)
+            {
+                //debe elegir una opción de Otra Entrega
+                return;
+            }
+            else
+            {
+                if (optOtraEntregaSI.Checked)
+                    otraentrega = "SI";
+                if (optOtraEntregaNO.Checked)
+                    otraentrega = "NO";
+            }
+
+            obs = txtObservaxionesRechazoNoEntregado.Text;
+            CerrarRutaError(txtDocEntry.Text, rutaexitosa, tipoentrega, otraentrega, tipocustodio, "", obs);
+        }
+        private void CerrarRutaError(string docentry, string rutaexistosa, string tipoentrega, string otraentrega, string tipocustodio, string custodio, string obs)
+        {
+            
+            
+            string urlbase = ConfigurationManager.AppSettings.Get("urlbase");
+            ManagerDocumentos mng = new ManagerDocumentos(urlbase, logger);
+            try
+            {
+
+                
+
+                List<Documento> items = new List<Documento>();
+                var olog = mng.Consultar("documentos", Convert.ToInt32(docentry), 14);
+                olog.RutaExitosa = rutaexistosa;
+                olog.TipoEntrega = tipoentrega;
+                olog.OtraEntrega = otraentrega;
+                olog.Custodio = custodio.ToUpper();
+                olog.TipoCustodio = tipocustodio;
+                olog.ObservacionesCierre = obs.ToUpper();
+                olog.DocEstado = "C";
+                items.Add(olog);
+                if (items.Any())
+                {
+                    mng.Actualizar("documentos/sets", items);
+                    var mensaje = "Ruta Actualizada";
+                    System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                    sb.Append("alert('");
+                    sb.Append(mensaje);
+                    sb.Append("');");
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", sb.ToString(), true);
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert2", "closeLoading();false", true);
+                }
+
+                Refresh();
+            }
+            catch(Exception ex)
+            {
+                logger.Error("CerrarRutas: {0}", ex.Message);
+                logger.Error("CerrarRutas: {0}", ex.StackTrace);
+            }
+}
+        private void CerrarRutas(GridView gv, string rutaexistosa, string tipoentrega,string otraentrega, string tipocustodio,string custodio, string obs)
         {
             string urlbase = ConfigurationManager.AppSettings.Get("urlbase");
             ManagerDocumentos mng = new ManagerDocumentos(urlbase, logger);
@@ -394,9 +616,11 @@ namespace Colonos.Web
                     string docentry = (row.FindControl("lblDocEntry") as Label).Text;
                     var olog = mng.Consultar("documentos", Convert.ToInt32(docentry), 14);
                     olog.RutaExitosa = rutaexistosa;
+                    olog.TipoEntrega = tipoentrega;
+                    olog.OtraEntrega = otraentrega;
                     olog.Custodio = custodio.ToUpper();
                     olog.TipoCustodio = tipocustodio;
-                    olog.ObservacionesCierre = tipocustodio == "" ? txtObservacionesCierre.Text.ToUpper() : txtObservacionesCierreCustodio.Text.ToUpper();
+                    olog.ObservacionesCierre = obs.ToUpper();
                     olog.DocEstado = "C";
                     items.Add(olog);
                     
@@ -405,15 +629,16 @@ namespace Colonos.Web
                 if(items.Any())
                 {
                     mng.Actualizar("documentos/sets", items);
+                    var mensaje = "Ruta Actualizada";
+                    System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                    sb.Append("alert('");
+                    sb.Append(mensaje);
+                    sb.Append("');");
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", sb.ToString(), true);
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert2", "closeLoading();false", true);
                 }
 
-                var mensaje = "Ruta Actualizada";
-                System.Text.StringBuilder sb = new System.Text.StringBuilder();
-                sb.Append("alert('");
-                sb.Append(mensaje);
-                sb.Append("');");
-                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", sb.ToString(), true);
-                ScriptManager.RegisterStartupScript(this, GetType(), "showalert2","closeLoading();false", true);
+                
                 
                 Refresh();
             }
@@ -432,6 +657,117 @@ namespace Colonos.Web
         public override void VerifyRenderingInServerForm(Control control)
         {
             /* Confirms that an HtmlForm control is rendered for */
+        }
+
+
+        protected void optRechazo_CheckedChanged(object sender, EventArgs e)
+        {
+            optRechazoParcial.Enabled = true;
+            optRechazoParcial.Checked = false;
+
+            lblRechazo.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
+            optRechazo.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
+            lblNoEntregado.BackColor = System.Drawing.Color.Transparent;
+            optNoEntregado.BackColor = System.Drawing.Color.Transparent;
+            popupDetalleBandeja.Show();
+        }
+
+        protected void optNoEntregado_CheckedChanged(object sender, EventArgs e)
+        {
+            optRechazoParcial.Enabled = false;
+            optRechazoParcial.Checked = false;
+            lblRechazoParcial.BackColor = System.Drawing.Color.Transparent;
+            optRechazoParcial.BackColor = System.Drawing.Color.Transparent;
+
+            lblRechazo.BackColor = System.Drawing.Color.Transparent;
+            optRechazo.BackColor = System.Drawing.Color.Transparent;
+            lblNoEntregado.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
+            optNoEntregado.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
+            popupDetalleBandeja.Show();
+        }
+
+        protected void optRechazoTotal_CheckedChanged(object sender, EventArgs e)
+        {
+            lblRechazoTotal.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
+            optRechazoTotal.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
+            lblRechazoParcial.BackColor = System.Drawing.Color.Transparent;
+            optRechazoParcial.BackColor = System.Drawing.Color.Transparent;
+            popupDetalleBandeja.Show();
+        }
+        protected void optRechazoParcial_CheckedChanged(object sender, EventArgs e)
+        {
+            lblRechazoTotal.BackColor = System.Drawing.Color.Transparent;
+            optRechazoTotal.BackColor = System.Drawing.Color.Transparent;
+            lblRechazoParcial.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
+            optRechazoParcial.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd"); 
+            popupDetalleBandeja.Show();
+        }
+
+
+        protected void optEntregaTotal_CheckedChanged(object sender, EventArgs e)
+        {
+            lblEntregaTotal.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
+            optEntregaTotal.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
+            //lblRechazoParcial.BackColor = System.Drawing.Color.Transparent;
+            //optRechazoParcial.BackColor = System.Drawing.Color.Transparent;
+            //lblNoEntregado.BackColor = System.Drawing.Color.Transparent;
+            //optNoEntregado.BackColor = System.Drawing.Color.Transparent;
+            popupCerrarRuta.Show();
+        }
+
+        
+
+       
+
+        protected void optOtraEntregaSI_CheckedChanged(object sender, EventArgs e)
+        {
+            lblOtraEntregaSI.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
+            optOtraEntregaSI.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
+            lblOtraEntregaNO.BackColor = System.Drawing.Color.Transparent;
+            optOtraEntregaNO.BackColor = System.Drawing.Color.Transparent;
+            popupDetalleBandeja.Show();
+        }
+
+        protected void optOtraEntregaNO_CheckedChanged(object sender, EventArgs e)
+        {
+            lblOtraEntregaSI.BackColor = System.Drawing.Color.Transparent;
+            optOtraEntregaSI.BackColor = System.Drawing.Color.Transparent;
+            lblOtraEntregaNO.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
+            optOtraEntregaNO.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
+            popupDetalleBandeja.Show();
+        }
+
+        protected void optPlata_CheckedChanged(object sender, EventArgs e)
+        {
+            lblPlanta.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
+            optPlanta.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
+            lblTransporte.BackColor = System.Drawing.Color.Transparent;
+            optTransporte.BackColor = System.Drawing.Color.Transparent;
+            lblCliente.BackColor = System.Drawing.Color.Transparent;
+            optCliente.BackColor = System.Drawing.Color.Transparent;
+            popupDetalleBandeja.Show();
+        }
+
+        protected void optTransporte_CheckedChanged(object sender, EventArgs e)
+        {
+            lblPlanta.BackColor = System.Drawing.Color.Transparent;
+            optPlanta.BackColor = System.Drawing.Color.Transparent;
+            lblTransporte.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd"); 
+            optTransporte.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd"); 
+            lblCliente.BackColor = System.Drawing.Color.Transparent;
+            optCliente.BackColor = System.Drawing.Color.Transparent;
+            popupDetalleBandeja.Show();
+        }
+
+        protected void optCliente_CheckedChanged(object sender, EventArgs e)
+        {
+            lblPlanta.BackColor = System.Drawing.Color.Transparent;
+            optPlanta.BackColor = System.Drawing.Color.Transparent;
+            lblTransporte.BackColor = System.Drawing.Color.Transparent;
+            optTransporte.BackColor = System.Drawing.Color.Transparent;
+            lblCliente.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
+            optCliente.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
+            popupDetalleBandeja.Show();
         }
     }
 }

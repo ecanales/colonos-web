@@ -4,6 +4,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script type="text/javascript">
+        function fun() {
+            console.log("dentro");
+            document.getElementById("ContentPlaceHolder1_radEntregaTotal").style.color = "red";
+        }
+    </script>
     <div>
         <div class="loading-overlay" id="loadingOverlay" style="z-index:100000;">
             <div class="loading-spinner"></div>
@@ -11,6 +17,19 @@
         <!-- INI POPUP CERRAR RUTA-->
         <asp:Panel ID="pnlCerrarRuta" runat="server" TabIndex="-1" Style="display: none; width: 50%; max-width: 600px;">
         <asp:UpdatePanel runat="server">
+            <Triggers>
+                <asp:PostBackTrigger ControlID="optEntregaTotal" />
+                <asp:PostBackTrigger ControlID="optEntregaParcial" />
+                <asp:PostBackTrigger ControlID="optNoEntregado" />
+
+                <asp:PostBackTrigger ControlID="optOtraEntregaSI" />
+                <asp:PostBackTrigger ControlID="optOtraEntregaNO" />
+
+                <asp:PostBackTrigger ControlID="optPlanta" />
+                <asp:PostBackTrigger ControlID="optTransporte" />
+                <asp:PostBackTrigger ControlID="optCliente" />
+
+            </Triggers>
             <ContentTemplate>
                 <asp:HiddenField ID="HiddenField1" runat="server" />
                 <div class="window-ficha-modal-sm">
@@ -18,26 +37,86 @@
                         <div class="modal-content">
                             <div class="modal-header" style="background-color: #a9202c; color: white;">
                                 <h2 class="modal-title" id="exampleModalLiveLabel6">
-                                    <span>Cerrar Ruta </span>
+                                    <span>Cerrar Ruta</span>
                                     <asp:Label ID="Label1" runat="server" ForeColor="antiquewhite" Text=""></asp:Label>
                                 </h2>
                                 <asp:LinkButton ID="LinkButton1" CssClass="btn-close" runat="server" OnClick="ClosePopupCerrar"></asp:LinkButton>
                             </div>
-                            <div class="modal-body modal-body-max-height" style="min-height: 300px;">
-                                <div class="row mb-2">
-                                    <div class="col-sm-12" style="display: flex;flex-wrap: wrap;justify-content: space-evenly;">
-                                       <h2><asp:Label ID="Label2" runat="server" Text="¿Ruta Exitosa?"></asp:Label></h2>
+                            <div class="modal-body modal-body-max-height" style="min-height: 300px;height:500px;">
+                                <div class="row mb-2 justify-content-center border-top border-secondary">
+                                    <label class="text-start" >Tipo de Entrega</label>
+                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                        <div class="input-group mb-3 p-1">
+                                          <span class="input-group-text border border-secondary w-75" id="basic-addon1">Entrega Total</span>
+                                            <asp:Label ID="lblEntregaTotal" runat="server" CssClass="m-0 border border-secondary">
+                                                <asp:RadioButton ID="optEntregaTotal" runat="server" GroupName="TipoEntrega" AutoPostBack="true" OnCheckedChanged="optEntregaTotal_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
+                                            </asp:Label>
+                                        </div>
+                                        <div class="input-group mb-3 p-1">
+                                          <span class="input-group-text border border-secondary w-75" id="basic-addon2">Entrega Parcial</span>
+                                          <asp:Label ID="lblEntregaParcial" runat="server" CssClass="m-0 border border-secondary">
+                                              <asp:RadioButton ID="optEntregaParcial" runat="server" GroupName="TipoEntrega" AutoPostBack="true" OnCheckedChanged="optEntregaParcial_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
+                                          </asp:Label>
+                                        </div>
+                                        <div class="input-group mb-3 p-1">
+                                          <span class="input-group-text border border-secondary w-75" id="basic-addon3">No Entregado</span>
+                                            <asp:Label ID="lblNoEntregado" runat="server" CssClass="m-0 border border-secondary">
+                                                <asp:RadioButton ID="optNoEntregado" runat="server" GroupName="TipoEntrega" AutoPostBack="true" OnCheckedChanged="optNoEntrergado_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
+                                            </asp:Label>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="row mb-2">
-                                    <div class="col-sm-12 mb-1" style="display: flex;flex-wrap: wrap;justify-content: space-evenly;">
-                                        <asp:LinkButton ID="btnCerrarRutaPopupOK" runat="server" OnClientClick="showLoading()" OnClick="CerrarRutaOK" CssClass="btn btn-sm btn-success w-25">SI</asp:LinkButton>
-                                        <asp:LinkButton ID="btnCerrarRutaPopupNO" runat="server" OnClientClick="showLoading()" OnClick="CerrarRutaNO" CssClass="btn btn-sm btn-danger w-25">NO</asp:LinkButton>
+                                <asp:Panel ID="pnlOpcionesEntrega" runat="server" Visible="false">
+                                    <div class="row mb-2 justify-content-start border-top border-secondary">
+                                        <label class="text-start" >Requiere Otra Entrega</label>
+                                        <div class="btn-group w-75" role="group" aria-label="Basic radio toggle button group">
+                                            <div class="input-group mb-3 p-1 w-25">
+                                              <span class="input-group-text border border-secondary" id="basic-addon4">SI</span>
+                                                <asp:Label ID="lblOtraEntregaSI" runat="server" CssClass="m-0 border border-secondary">
+                                                    <asp:RadioButton ID="optOtraEntregaSI" runat="server" GroupName="OtraEntrega" AutoPostBack="true" OnCheckedChanged="optOtraEntregaSI_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
+                                                </asp:Label>
+                                            </div>
+                                            <div class="input-group mb-3 p-1 w-25">
+                                              <span class="input-group-text border border-secondary" id="basic-addon5">NO</span>
+                                                <asp:Label ID="lblOtraEntregaNO" runat="server" CssClass="m-0 border border-secondary">
+                                                    <asp:RadioButton ID="optOtraEntregaNO" runat="server" GroupName="OtraEntrega" AutoPostBack="true" OnCheckedChanged="optOtraEntregaNO_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
+                                                </asp:Label>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <asp:Label ID="Label3" runat="server" CssClass="text-center" ForeColor="Maroon" Text="NO = Las Facturas vuelven a Bandeja Logística para ser planificadas"></asp:Label>
-                                </div>
-                                <div class="row mb-2 justify-content-center">
+                                    <div class="row mb-2 justify-content-center border-top border-secondary">
+                                        <label class="text-start" >Dónde quedaron los Productos</label>
+                                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                            <div class="input-group mb-3 p-1">
+                                              <span class="input-group-text border border-secondary w-75" id="basic-addon6">Planta</span>
+                                                <asp:Label ID="lblPlanta" runat="server" CssClass="m-0 border border-secondary">
+                                                    <asp:RadioButton ID="optPlanta" runat="server" GroupName="Custodia" AutoPostBack="true" OnCheckedChanged="optPlata_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
+                                                </asp:Label>
+                                            </div>
+                                            <div class="input-group mb-3 p-1">
+                                              <span class="input-group-text border border-secondary w-75" id="basic-addon7">Transporte</span>
+                                              <asp:Label ID="lblTransporte" runat="server" CssClass="m-0 border border-secondary">
+                                                  <asp:RadioButton ID="optTransporte" runat="server" GroupName="Custodia" AutoPostBack="true" OnCheckedChanged="optTransporte_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
+                                              </asp:Label>
+                                            </div>
+                                            <div class="input-group mb-3 p-1">
+                                              <span class="input-group-text border border-secondary w-75" id="basic-addon8">Cliente</span>
+                                                <asp:Label ID="lblCliente" runat="server" CssClass="m-0 border border-secondary">
+                                                    <asp:RadioButton ID="optCliente" runat="server" GroupName="Custodia" AutoPostBack="true" OnCheckedChanged="optCliente_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
+                                                </asp:Label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </asp:Panel>
+                                <div class="row mb-2 justify-content-center border-top border-secondary">
+                                    <label class="text-start" >Observaciones (Opcional)</label>
+                                    <asp:Label ID="Label3" runat="server" Visible="false" CssClass="text-start w-75" ForeColor="Maroon" Text="Observaciones (Opcional)"></asp:Label>
                                     <asp:TextBox ID="txtObservacionesCierre" runat="server" TextMode="MultiLine" MaxLength="200" Rows="2" CssClass="w-75" ></asp:TextBox>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-sm-12 mb-1" style="display: flex;flex-wrap: wrap;justify-content:center;">
+                                        
+                                    </div>
                                 </div>
                                 <div class="row mb-2">
                                     <div class="col-sm-12">
@@ -69,7 +148,7 @@
 
                             </div>
                             <div class="modal-footer">
-                                <asp:Button ID="Button2" CssClass="btn btn-secondary btn-sm" runat="server" OnClick="ClosePopupCerrar" Text="Cerrar" />
+                                <asp:LinkButton ID="btnCerrarRutaPopupOK" runat="server" OnClientClick="showLoading()" OnClick="CerrarRutaOK" CssClass="btn btn-sm btn-danger">Guardar Cierre</asp:LinkButton>
                             </div>
                         </div>
                     </div>
@@ -89,7 +168,7 @@
                         <div class="modal-content">
                             <div class="modal-header" style="background-color: #a9202c; color: white;">
                                 <h2 class="modal-title" id="exampleModalLiveLabel7">
-                                    <span>Cerrar Ruta </span>
+                                    <span>Cerrar Ruta / NO ENTREGADO </span>
                                     <asp:Label ID="Label4" runat="server" ForeColor="antiquewhite" Text=""></asp:Label>
                                 </h2>
                                 <asp:LinkButton ID="LinkButton2" CssClass="btn-close" runat="server" OnClick="ClosePopupCerrarRTC"></asp:LinkButton>
@@ -317,7 +396,7 @@
                     <div class="card card-top" style="overflow:hidden;">
                         <div class="card-header fw-bold font-size-xx-large">
                             <span>Bandeja CONFIRMAR RUTAS
-                                <asp:Label ID="lblTotalRegistrosBandeja" runat="server" CssClass="badge bg-danger font-size-large position-absolute m-1"  Text="0"></asp:Label>
+                                <asp:Label ID="lblTotalRegistrosBandeja"  runat="server" CssClass="badge bg-danger font-size-large position-absolute m-1"  Text="0"></asp:Label>
                             </span>
                         </div>
                         <div class="card-body">
@@ -393,17 +472,19 @@
                                                             <asp:LinkButton ID="btnCerrarRuta" CssClass="btn btn-sm btn-outline-success m-1" runat="server" OnClick="CerrarRuta_Event"><i class="fas fa-check-circle p-1"></i>Cerrar Ruta</asp:LinkButton>
                                                         </li>
                                                         <li class="nav-item">
-                                                            <asp:LinkButton ID="btnGenerarRCT" CssClass="btn btn-sm btn-outline-danger m-1" runat="server" OnClick="GeneraRCT_Event"><i class="fas fa-exclamation-circle p-1"></i>Cerrar con RCT</asp:LinkButton>
+                                                            <asp:LinkButton ID="btnGenerarRCT" Visible="false" CssClass="btn btn-sm btn-outline-danger m-1" runat="server" OnClick="GeneraRCT_Event"><i class="fas fa-exclamation-circle p-1"></i>Cerrar con RCT</asp:LinkButton>
                                                         </li>
                                                         <li class="nav-item">
-                                                            <asp:LinkButton ID="btnGenerarRCC" CssClass="btn btn-sm btn-outline-danger m-1" runat="server" OnClick="GeneraRCC_Event"><i class="fas fa-exclamation-circle p-1"></i>Cerrar con RCC</asp:LinkButton>
+                                                            <asp:LinkButton ID="btnGenerarRCC" Visible="false" CssClass="btn btn-sm btn-outline-danger m-1" runat="server" OnClick="GeneraRCC_Event"><i class="fas fa-exclamation-circle p-1"></i>Cerrar con RCC</asp:LinkButton>
                                                         </li>
-                                                        
+                                                        <li>
+                                                            <h4><asp:Label ID="lblRutaSeleccionada" Font-Bold="true" runat="server" CssClass="btn btn-sm font-size-large" Text=""></asp:Label></h4>
+                                                        </li>        
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="float-end">
-                                                <h4><asp:Label ID="lblRutaSeleccionada" Font-Bold="true" runat="server" Text=""></asp:Label></h4>
+                                                
                                             </div>
                                         </div>
                                     </nav>

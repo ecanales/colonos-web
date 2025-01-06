@@ -974,7 +974,7 @@ Toledo</Value>
   <Width>10.97556in</Width>
   <Page>
     <PageHeader>
-      <Height>4.53488cm</Height>
+      <Height>5.27713cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -995,7 +995,7 @@ Toledo</Value>
           <rd:DefaultName>Instrucciones</rd:DefaultName>
           <Top>2.75757cm</Top>
           <Left>19.76494cm</Left>
-          <Height>1.31939cm</Height>
+          <Height>2.39467cm</Height>
           <Width>7.93165cm</Width>
           <Style>
             <Border>
@@ -2261,6 +2261,82 @@ Toledo</Value>
             </Border>
           </Style>
         </Textbox>
+        <Textbox Name="Textbox55">
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>OC Cliente</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox18</rd:DefaultName>
+          <Top>4.501cm</Top>
+          <Left>0.25576cm</Left>
+          <Height>0.44125cm</Height>
+          <Width>3.16146cm</Width>
+          <ZIndex>49</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox56">
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>:</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox18</rd:DefaultName>
+          <Top>4.501cm</Top>
+          <Left>3.43751cm</Left>
+          <Height>0.44125cm</Height>
+          <Width>0.25766cm</Width>
+          <ZIndex>50</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Textbox>
+        <Textbox Name="Observaciones">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!Observaciones.Value, "Cabecera")</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Observaciones</rd:DefaultName>
+          <Top>4.501cm</Top>
+          <Left>3.76573cm</Left>
+          <Height>0.44125cm</Height>
+          <Width>4.56375cm</Width>
+          <ZIndex>51</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Textbox>
       </ReportItems>
       <Style>
         <Border>
@@ -2291,7 +2367,7 @@ Toledo</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox45</rd:DefaultName>
-          <Top>0.03521cm</Top>
+          <Top>0.0352cm</Top>
           <Left>21.01125cm</Left>
           <Height>0.44125cm</Height>
           <Width>3.14823cm</Width>
@@ -2321,7 +2397,7 @@ Toledo</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>ExecutionTime</rd:DefaultName>
-          <Top>0.03521cm</Top>
+          <Top>0.0352cm</Top>
           <Left>24.19476cm</Left>
           <Height>0.44125cm</Height>
           <Width>3.31932cm</Width>
@@ -2354,7 +2430,7 @@ Toledo</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox45</rd:DefaultName>
-          <Top>0.10582cm</Top>
+          <Top>0.10581cm</Top>
           <Left>17.15532cm</Left>
           <Height>0.44125cm</Height>
           <Width>1.23cm</Width>
@@ -2386,7 +2462,7 @@ Toledo</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>0.10582cm</Top>
+          <Top>0.10581cm</Top>
           <Left>18.45588cm</Left>
           <Height>0.44125cm</Height>
           <Width>0.56854cm</Width>
@@ -2418,7 +2494,7 @@ Toledo</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox45</rd:DefaultName>
-          <Top>0.10582cm</Top>
+          <Top>0.10581cm</Top>
           <Left>19.0597cm</Left>
           <Height>0.44125cm</Height>
           <Width>0.52885cm</Width>
@@ -2450,7 +2526,7 @@ Toledo</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>TotalPages</rd:DefaultName>
-          <Top>0.10582cm</Top>
+          <Top>0.10581cm</Top>
           <Left>19.62383cm</Left>
           <Height>0.44125cm</Height>
           <Width>0.67972cm</Width>

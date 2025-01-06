@@ -80,6 +80,8 @@ namespace Colonos.Entidades
         public string ObservacionesCierre { get; set; }
         public string TipoCustodio { get; set; }
         public int? BaseEntryLog { get; set; }
-        
+        public string TipoEntrega { get; set; }
+        public string OtraEntrega { get; set; }
+
     }
 }
