@@ -10,6 +10,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+//using System.Windows.Controls;
 using System.Windows.Interop;
 
 namespace Colonos.Web
@@ -27,6 +28,17 @@ namespace Colonos.Web
                 Refresh();
             }
             
+        }
+
+        private void CargaMotivos(int tipo)
+        {
+            string urlbase = ConfigurationManager.AppSettings.Get("urlbase");
+            ManagerDevolucion mng = new ManagerDevolucion(urlbase, logger);
+            var list = mng.ListMotivos("devolucion/motivos");
+            cboMotivo.DataSource = list.FindAll(x => x.TipoMotivo==tipo).ToList();
+            cboMotivo.DataTextField = "Descripcion";
+            cboMotivo.DataValueField = "IdMotivo";
+            cboMotivo.DataBind();
         }
 
         protected void Filtrar_Event(object sender, EventArgs e)
@@ -67,10 +79,17 @@ namespace Colonos.Web
         {
             popupDetalleBandeja.Hide();
         }
+
+        protected void ClosePopupCerrarResumen(object sender, EventArgs e)
+        {
+            popupResumenCierre.Hide();
+            popupDetalleBandeja.Show();
+        }
         protected void VerBandeja_Event(object sender, EventArgs e)
         {
             try
             {
+                LimpiarBandeja();
                 LinkButton btn = (LinkButton)sender;
                 GridViewRow row = (GridViewRow)btn.NamingContainer;
 
@@ -142,6 +161,26 @@ namespace Colonos.Web
                 else
                 {
                     chckrw.Checked = false;
+                }
+            }
+        }
+
+        private void CheckAllDet(bool valor)
+        {
+            foreach (GridViewRow row in gvDetalle.Rows)
+            {
+                CheckBox chckrw = (CheckBox)row.FindControl("chkSeleccionadoDet");
+                chckrw.Checked = valor;
+                if (valor)
+                {
+                    (row.FindControl("txtCantidad") as TextBox).Text = (row.FindControl("lblCantidad") as Label).Text;
+                    (row.FindControl("txtCantidad") as TextBox).ReadOnly = true;
+                    chckrw.Enabled = false;
+                }
+                else
+                {
+                    chckrw.Enabled = true;
+                    (row.FindControl("txtCantidad") as TextBox).ReadOnly=false;
                 }
             }
         }
@@ -484,18 +523,34 @@ namespace Colonos.Web
             
         }
 
+        protected void ConfirmaCierreRutaError_Event(object sender, EventArgs e)
+        {
+            string rutaexitosa = "NO";
+            string docentry = txtDocEntry.Text;
+            string tipoproblema = txtTipoProblemaResumen.Text;
+            string devolucion = txtDevolucionResumen.Text;
+            string motivo = txtMotivoResumen.Text;
+            string tipocustodio = txtCustodioResumen.Text;
+            string otraentrega = txtVolveraEntregarResumen.Text;
+            string obs = txtObservacionResumen.Text;
+            CerrarRutaError(docentry, tipoproblema, devolucion, motivo, tipocustodio, otraentrega, obs, rutaexitosa);
+        }
         protected void CierreRutaError_Event(object sender, EventArgs e)
         {
-            string TipoProblema = "";
-            string TipoRechazo = "";
+            string docentry = txtDocEntry.Text;
+            string tipoproblema = "";
+            string devolucion = ""; //tipoEntrega
             string motivo = "";
-            string docentry = "";
-            string rutaexitosa = "";
-            string tipoentrega = "";
-            string otraentrega = "";
             string tipocustodio = "";
-            string custodio = "";
+            string otraentrega = "";
             string obs = "";
+            string rutaexitosa = "NO";
+
+            //string tipoentrega = "";
+            
+            
+            string custodio = "";
+            
 
             if (!optRechazo.Checked && !optNoEntregado.Checked)
             {
@@ -503,11 +558,11 @@ namespace Colonos.Web
             }
             else if (optRechazo.Checked)
             {
-                TipoProblema = "Rechazo";
+                tipoproblema = "Rechazo";
             }
-            else if (optRechazo.Checked)
+            else if (optNoEntregado.Checked)
             {
-                TipoProblema = "NoEntregado";
+                tipoproblema = "NoEntregado";
             }
 
             if (!optRechazoTotal.Checked && !optRechazoParcial.Checked)
@@ -516,11 +571,11 @@ namespace Colonos.Web
             }
             else if (optRechazoTotal.Checked)
             {
-                TipoRechazo = "Total";
+                devolucion = "Total";
             }
             else if (optRechazoParcial.Checked)
             {
-                TipoRechazo = "Parcial";
+                devolucion = "Parcial";
             }
 
             if(cboMotivo.Text=="")
@@ -560,10 +615,104 @@ namespace Colonos.Web
                     otraentrega = "NO";
             }
 
-            obs = txtObservaxionesRechazoNoEntregado.Text;
-            CerrarRutaError(txtDocEntry.Text, rutaexitosa, tipoentrega, otraentrega, tipocustodio, "", obs);
+            obs = txtObservacionesRechazoNoEntregado.Text;
+            txtTipoProblemaResumen.Text = tipoproblema;
+            txtDevolucionResumen.Text = devolucion;
+            txtMotivoResumen.Text = motivo; 
+            txtCustodioResumen.Text = tipocustodio; 
+            txtVolveraEntregarResumen.Text = otraentrega; 
+            txtObservacionResumen.Text = obs;
+            txtFacturaResumen.Text = txtFactura.Text;
+            txtPedidoResumen.Text = txtNumeroPedido.Text;
+            txtClienteResumen.Text = txtRazonSocial.Text;
+            popupDetalleBandeja.Hide();
+            //---------------------------------
+            var odev=new Documento { Lineas=new List<DocumentoLinea>()};
+
+            foreach (GridViewRow row in gvDetalle.Rows)
+            {
+                if ((row.FindControl("chkSeleccionadoDet") as CheckBox).Checked)
+                {
+                    string lineaitem = (row.FindControl("lblLineaItem") as Label).Text;
+                    string prodcode = (row.FindControl("lblProdCode") as Label).Text;
+                    string prodnombre = (row.FindControl("lblProdNombre") as Label).Text;
+                    string preciofinal = (row.FindControl("lblPrecioFinal") as Label).Text.Replace("$", "").Replace(".", ",").Trim();
+                    string cantidadsol = (row.FindControl("lblCantidad") as Label).Text.Replace("$", "").Replace(".", ",").Trim();
+                    string cantidaddev = (row.FindControl("txtCantidad") as TextBox).Text.Replace("$", "").Replace(".", ",").Trim();
+
+                    if (Convert.ToDecimal(cantidaddev) > Convert.ToDecimal(cantidadsol))
+                    {
+                        var mensaje = "Cantidad devuelta no puede ser mayor a lo solicitado";
+                        System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                        sb.Append("alert('");
+                        sb.Append(mensaje);
+                        sb.Append("');");
+                        ScriptManager.RegisterStartupScript(this, GetType(), "showalert", sb.ToString(), true);
+                        ScriptManager.RegisterStartupScript(this, GetType(), "showalert2", "closeLoading();false", true);
+                        return;
+                    }
+                    odev.Lineas.Add(new DocumentoLinea
+                    {
+                        ProdCode = prodcode,
+                        ProdNombre = prodnombre,
+                        PrecioFinal = Convert.ToDecimal(preciofinal),
+                        CantidadSolicitada = Convert.ToDecimal(cantidaddev)
+                    });
+                }
+            }
+            gvResumen.DataSource = odev.Lineas;
+            gvResumen.DataBind();
+            //---------------------------------
+            popupResumenCierre.Show();
+            //CerrarRutaError(docentry, tipoproblema, devolucion, motivo, tipocustodio, otraentrega, obs, rutaexitosa);
         }
-        private void CerrarRutaError(string docentry, string rutaexistosa, string tipoentrega, string otraentrega, string tipocustodio, string custodio, string obs)
+
+        private void LimpiarBandeja()
+        {
+            optRechazo.Checked = false;
+            lblRechazo.BackColor = System.Drawing.Color.Transparent;
+            optRechazo.BackColor = System.Drawing.Color.Transparent;
+
+            optNoEntregado.Checked = false;
+            lblNoEntregado.BackColor = System.Drawing.Color.Transparent;
+            optNoEntregado.BackColor = System.Drawing.Color.Transparent;
+
+            optRechazoTotal.Checked = false;
+            lblRechazoTotal.BackColor = System.Drawing.Color.Transparent;
+            optRechazoTotal.BackColor = System.Drawing.Color.Transparent;
+
+            optRechazoParcial.Checked = false;
+            lblRechazoParcial.BackColor = System.Drawing.Color.Transparent;
+            optRechazoParcial.BackColor = System.Drawing.Color.Transparent;
+
+            cboMotivo.DataSource = null;
+            cboMotivo.DataBind();
+            cboMotivo.Items.Clear();
+
+            optOtraEntregaNO.Checked = false;
+            lblOtraEntregaNO.BackColor = System.Drawing.Color.Transparent;
+            optOtraEntregaNO.BackColor = System.Drawing.Color.Transparent;
+
+            optOtraEntregaSI.Checked = false;
+            lblOtraEntregaSI.BackColor = System.Drawing.Color.Transparent;
+            optOtraEntregaSI.BackColor = System.Drawing.Color.Transparent;
+
+            optPlanta.Checked = false;
+            lblPlanta.BackColor = System.Drawing.Color.Transparent;
+            optPlanta.BackColor = System.Drawing.Color.Transparent;
+
+            optTransporte.Checked = false;
+            lblTransporte.BackColor = System.Drawing.Color.Transparent;
+            optTransporte.BackColor = System.Drawing.Color.Transparent;
+
+            optCliente.Checked = false;
+            lblCliente.BackColor = System.Drawing.Color.Transparent;
+            optCliente.BackColor = System.Drawing.Color.Transparent;
+
+            txtObservacionesCierre.Text = "";
+            txtObservacionesRechazoNoEntregado.Text = "";
+        }
+        private void CerrarRutaError(string docentry, string tipoproblema, string devolucion, string motivo, string tipocustodio, string otraentrega, string obs, string rutaexitosa)//string docentry, string rutaexistosa, string tipoentrega, string otraentrega, string tipocustodio, string custodio, string obs)
         {
             
             
@@ -571,22 +720,118 @@ namespace Colonos.Web
             ManagerDocumentos mng = new ManagerDocumentos(urlbase, logger);
             try
             {
-
-                
-
                 List<Documento> items = new List<Documento>();
                 var olog = mng.Consultar("documentos", Convert.ToInt32(docentry), 14);
-                olog.RutaExitosa = rutaexistosa;
-                olog.TipoEntrega = tipoentrega;
+                olog.TipoProblema = tipoproblema;
+                olog.RutaExitosa = rutaexitosa;
+                olog.TipoEntrega = devolucion;
+                olog.Devolucion = devolucion;
+                olog.Motivo = motivo;
+                olog.Custodio = tipocustodio;
                 olog.OtraEntrega = otraentrega;
-                olog.Custodio = custodio.ToUpper();
                 olog.TipoCustodio = tipocustodio;
                 olog.ObservacionesCierre = obs.ToUpper();
+
                 olog.DocEstado = "C";
                 items.Add(olog);
+                //crear doc custodio
+                var ocus = new Documento();
+                ocus.DocTipo = olog.TipoCustodio == "RCT" ? 4015 : olog.TipoCustodio == "RCC" ? 4016 : 0; // RCT=4015, RCC=4016
+                ocus.DocEstado = "A";
+                ocus.DocFecha = DateTime.Now.Date;
+                ocus.Custodio = olog.Custodio;
+                ocus.TipoCustodio = olog.TipoCustodio;
+                ocus.ObservacionesCierre = olog.ObservacionesCierre;
+                ocus.EstadoOperativo = "ING";
+                ocus.BaseEntry = olog.BaseRuta;
+                ocus.BaseTipo = 15; //ORUT
+                ocus.FechaRegistro = DateTime.Now;
+                ocus.UsuarioCode = olog.UsuarioCode;
+                ocus.Version = olog.Version;
+                ocus.UsuarioNombre = olog.UsuarioNombre;
+                items.Add(ocus);
+                //crear doc devolucion --------------------
+                var odev = new Documento();
+                odev.DocTipo = 19;
+                odev.DocEstado = "A";
+                odev.DocFecha = DateTime.Now.Date;
+                odev.Custodio = olog.Custodio;
+                odev.TipoCustodio = olog.TipoCustodio;
+                odev.ObservacionesCierre = olog.ObservacionesCierre;
+                odev.EstadoOperativo = "ING";
+                odev.BaseEntry = olog.DocEntry;
+                odev.BaseTipo = olog.DocTipo;
+                odev.FechaRegistro = DateTime.Now;
+                odev.UsuarioCode = olog.UsuarioCode;
+                odev.Version = olog.Version;
+                odev.UsuarioNombre = olog.UsuarioNombre;
+                //----------------------------------------
+                odev.TipoProblema = tipoproblema;
+                odev.RutaExitosa = rutaexitosa;
+                odev.TipoEntrega = devolucion;
+                odev.Devolucion = devolucion;
+                odev.Motivo = motivo;
+                odev.Custodio = tipocustodio;
+                odev.OtraEntrega = otraentrega;
+                odev.TipoCustodio = tipocustodio;
+                odev.ObservacionesCierre = obs.ToUpper();
+                //----------------------------------------
+                odev.Lineas = new List<DocumentoLinea>();
+
+                foreach (GridViewRow row in gvDetalle.Rows)
+                {
+                    if ((row.FindControl("chkSeleccionadoDet") as CheckBox).Checked)
+                    {
+                        string lineaitem = (row.FindControl("lblLineaItem") as Label).Text;
+                        string prodcode = (row.FindControl("lblProdCode") as Label).Text;
+                        string prodnombre = (row.FindControl("lblProdNombre") as Label).Text;
+                        string preciofinal = (row.FindControl("lblPrecioFinal") as Label).Text.Replace("$", "").Replace(".", ",").Trim();
+                        string cantidadsol = (row.FindControl("lblCantidad") as Label).Text.Replace("$", "").Replace(".", ",").Trim();
+                        string cantidaddev = (row.FindControl("txtCantidad") as TextBox).Text.Replace("$", "").Replace(".", ",").Trim();
+
+                        if(Convert.ToDecimal(cantidaddev)> Convert.ToDecimal(cantidadsol))
+                        {
+                            var mensaje = "Cantidad devuelta no puede ser mayor a lo solicitado";
+                            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                            sb.Append("alert('");
+                            sb.Append(mensaje);
+                            sb.Append("');");
+                            ScriptManager.RegisterStartupScript(this, GetType(), "showalert", sb.ToString(), true);
+                            ScriptManager.RegisterStartupScript(this, GetType(), "showalert2", "closeLoading();false", true);
+                            return;
+                        }
+                        odev.Lineas.Add(new DocumentoLinea
+                        {
+                            ProdCode = prodcode,
+                            LineaEstado = "A",
+                            BaseEntry = olog.DocEntry,
+                            BaseTipo = olog.DocTipo,
+                            BaseLinea = Convert.ToInt32(lineaitem),
+                            ProdNombre = prodnombre,
+                            PrecioFinal = Convert.ToDecimal(preciofinal),
+                            CantidadSolicitada = Convert.ToDecimal(cantidadsol),
+                            CantidadEntregada = Convert.ToDecimal(cantidaddev)
+                        });
+                    }
+                }
+                if (odev.Lineas.Any())
+                {
+                    items.Add(odev);
+                }
+                else
+                {
+                    var mensaje = "Debe indicar los items que han sido entregados";
+                    System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                    sb.Append("alert('");
+                    sb.Append(mensaje);
+                    sb.Append("');");
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", sb.ToString(), true);
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert2", "closeLoading();false", true);
+                    return;
+                }
                 if (items.Any())
                 {
-                    mng.Actualizar("documentos/sets", items);
+                    mng.Actualizar("documentos/setserror", items);
                     var mensaje = "Ruta Actualizada";
                     System.Text.StringBuilder sb = new System.Text.StringBuilder();
                     sb.Append("alert('");
@@ -594,6 +839,7 @@ namespace Colonos.Web
                     sb.Append("');");
                     ScriptManager.RegisterStartupScript(this, GetType(), "showalert", sb.ToString(), true);
                     ScriptManager.RegisterStartupScript(this, GetType(), "showalert2", "closeLoading();false", true);
+                    popupDetalleBandeja.Hide();
                 }
 
                 Refresh();
@@ -664,11 +910,20 @@ namespace Colonos.Web
         {
             optRechazoParcial.Enabled = true;
             optRechazoParcial.Checked = false;
+            pnlSINO.Enabled = false;
+            CheckAllDet(false);
+            lblOtraEntregaNO.BackColor = System.Drawing.Color.Transparent;
+            optOtraEntregaNO.BackColor = System.Drawing.Color.Transparent;
+            optOtraEntregaNO.Checked = false;
+            lblOtraEntregaSI.BackColor = System.Drawing.Color.Transparent;
+            optOtraEntregaSI.BackColor = System.Drawing.Color.Transparent;
+            optOtraEntregaSI.Checked = false;
 
             lblRechazo.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
             optRechazo.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
             lblNoEntregado.BackColor = System.Drawing.Color.Transparent;
             optNoEntregado.BackColor = System.Drawing.Color.Transparent;
+            CargaMotivos(1);
             popupDetalleBandeja.Show();
         }
 
@@ -676,6 +931,8 @@ namespace Colonos.Web
         {
             optRechazoParcial.Enabled = false;
             optRechazoParcial.Checked = false;
+            pnlSINO.Enabled = true;
+            CheckAllDet(true);
             lblRechazoParcial.BackColor = System.Drawing.Color.Transparent;
             optRechazoParcial.BackColor = System.Drawing.Color.Transparent;
 
@@ -683,11 +940,14 @@ namespace Colonos.Web
             optRechazo.BackColor = System.Drawing.Color.Transparent;
             lblNoEntregado.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
             optNoEntregado.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
+
+            CargaMotivos(2);
             popupDetalleBandeja.Show();
         }
 
         protected void optRechazoTotal_CheckedChanged(object sender, EventArgs e)
         {
+            CheckAllDet(true);
             lblRechazoTotal.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
             optRechazoTotal.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");
             lblRechazoParcial.BackColor = System.Drawing.Color.Transparent;
@@ -696,6 +956,7 @@ namespace Colonos.Web
         }
         protected void optRechazoParcial_CheckedChanged(object sender, EventArgs e)
         {
+            CheckAllDet(false);
             lblRechazoTotal.BackColor = System.Drawing.Color.Transparent;
             optRechazoTotal.BackColor = System.Drawing.Color.Transparent;
             lblRechazoParcial.BackColor = System.Drawing.ColorTranslator.FromHtml("#0d6efd");

@@ -2,9 +2,11 @@
 using Colonos.Manager;
 using Colonos.Web.Content.Utilidades;
 using NLog;
+using SixLabors.Fonts.Unicode;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Threading;
 using System.Web;
@@ -189,9 +191,10 @@ namespace Colonos.Web
                 string razonsocial = (row.FindControl("lblCliente") as Label).Text;
                 string factura = (row.FindControl("lblFolioDF") as Label).Text;
                 string pedido = (row.FindControl("lblPedido") as LinkButton).Text;
+                string custodio = (row.FindControl("lblTipoCustodio") as LinkButton).Text;
 
                 razonsocial = String.Format(" Pedido: {0} \n Factura: {1} \n Cliente: {2}", pedido, factura, razonsocial);
-                CargaDetalleRCTRCC(Convert.ToInt32(docentry), razonsocial);
+                CargaDetalleRCTRCC(Convert.ToInt32(docentry), razonsocial, custodio);
                 //popupDetalleBandeja.Show();
 
             }
@@ -202,14 +205,27 @@ namespace Colonos.Web
             }
         }
 
-        private void CargaDetalleRCTRCC(int docentry, string razonsocial)
+        private void CargaDetalleRCTRCC(int docentry, string razonsocial, string custodio)
         {
             string urlbase = ConfigurationManager.AppSettings.Get("urlbase");
             ManagerDocumentos mng = new ManagerDocumentos(urlbase, logger);
             LimpiaBandeja();
             //consultar pedido
-            var pedido = mng.Consultar("documentos", docentry, 4015);
+            int tipodoc = 0;
+            switch(custodio)
+            {
+                case "RCT":
+                    tipodoc = 4015;
+                    break;
+                case "RCC":
+                    tipodoc = 4016;
+                    break;
+            }
+            txtObservacionesCierreCustodio.Text = "";
+            txtObservacionesCierreCustodio.Text = String.Format("{0} \n", razonsocial);
+            var pedido = mng.Consultar("documentos", docentry, tipodoc);
             if (pedido != null)
+
             {
 
                 txtCustodio.Text = pedido.Custodio;
@@ -225,8 +241,9 @@ namespace Colonos.Web
                     gvDetalle.DataSource = pedido.Lineas; // detalle;
                     gvDetalle.DataBind();
                 }
-                popupCerrarRutaRCTRCC.Show();
+                
             }
+            popupCerrarRutaRCTRCC.Show();
         }
 
         private void LimpiaBandeja()

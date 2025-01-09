@@ -94,6 +94,7 @@
     <Compile Include="Implement\Colonos\Inventario\Dimensiones\OVEN.cs" />
     <Compile Include="Implement\Colonos\Inventario\ListaPrecioFijo.cs" />
     <Compile Include="Implement\Colonos\Inventario\ListaPrecioFijoList.cs" />
+    <Compile Include="Implement\Colonos\Mantenedores\Devoluciones\Motivo.cs" />
     <Compile Include="Implement\Colonos\Mantenedores\Socios\Dimensiones\SCP11.cs" />
     <Compile Include="Implement\Colonos\Mantenedores\Socios\Dimensiones\SCP12.cs" />
     <Compile Include="Implement\Colonos\Mantenedores\Socios\Dimensiones\SCP3.cs" />

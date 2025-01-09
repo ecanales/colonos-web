@@ -53,6 +53,7 @@
     <Compile Include="Implement\Bandejas\ManagerBandejaPrecios.cs" />
     <Compile Include="Implement\Config\ManagerParametros.cs" />
     <Compile Include="Implement\Config\ManagerUsuario.cs" />
+    <Compile Include="Implement\Devoluciones\ManagerDevolucion.cs" />
     <Compile Include="Implement\Informes\ManagerInformes.cs" />
     <Compile Include="Implement\Logistica\ManagerLogistica.cs" />
     <Compile Include="Implement\ManagerDefontana.cs" />

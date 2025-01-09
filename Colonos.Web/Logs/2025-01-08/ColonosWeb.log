@@ -1,0 +1,38 @@
+2025-01-08 00:29:41.7325 loggerfile CerrarRutas: El valor no puede ser nulo.
+Nombre del parámetro: source 
+2025-01-08 00:29:41.8399 loggerfile CerrarRutas:    en Colonos.Manager.ManagerDocumentos.Actualizar(String metodo, List`1 items) en C:\esystem\Fuentes\Colonos\colonos-web\Colonos.Manager\Implement\Ventas\ManagerDocumentos.cs:línea 233
+   en Colonos.Web.confirmar_rutas.CerrarRutaError(String docentry, String tipoproblema, String devolucion, String motivo, String tipocustodio, String otraentrega, String obs, String rutaexitosa) 
+2025-01-08 02:35:54.5527 loggerfile VerBandeja_Event Error:'cboMotivo' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value 
+2025-01-08 02:35:54.7033 loggerfile VerBandeja_Event Error:   en System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   en System.Web.UI.WebControls.ListControl.set_Text(String value)
+   en Colonos.Web.confirmar_rutas.LimpiarBandeja()
+   en Colonos.Web.confirmar_rutas.VerBandeja_Event(Object sender, EventArgs e) 
+2025-01-08 02:36:00.9500 loggerfile VerBandeja_Event Error:'cboMotivo' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value 
+2025-01-08 02:36:00.9500 loggerfile VerBandeja_Event Error:   en System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   en System.Web.UI.WebControls.ListControl.set_Text(String value)
+   en Colonos.Web.confirmar_rutas.LimpiarBandeja()
+   en Colonos.Web.confirmar_rutas.VerBandeja_Event(Object sender, EventArgs e) 
+2025-01-08 02:36:08.9596 loggerfile VerBandeja_Event Error:'cboMotivo' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value 
+2025-01-08 02:36:08.9596 loggerfile VerBandeja_Event Error:   en System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   en System.Web.UI.WebControls.ListControl.set_Text(String value)
+   en Colonos.Web.confirmar_rutas.LimpiarBandeja()
+   en Colonos.Web.confirmar_rutas.VerBandeja_Event(Object sender, EventArgs e) 
+2025-01-08 02:38:11.3788 loggerfile VerBandeja_Event Error:'cboMotivo' tiene un SelectedValue que no es válido porque no existe en la lista de elementos.
+Nombre del parámetro: value 
+2025-01-08 02:38:11.3788 loggerfile VerBandeja_Event Error:   en System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   en System.Web.UI.WebControls.ListControl.set_Text(String value)
+   en Colonos.Web.confirmar_rutas.LimpiarBandeja()
+   en Colonos.Web.confirmar_rutas.VerBandeja_Event(Object sender, EventArgs e) 
+2025-01-08 03:39:59.6642 loggerfile Agente Endpoint. ConsultaPedido:  
+2025-01-08 03:40:43.2182 loggerfile Agente Endpoint. ConsultaPedido:  
+2025-01-08 03:40:47.9944 loggerfile Agente Endpoint. ConsultaPedido:  
+2025-01-08 03:40:51.7086 loggerfile Agente Endpoint. ConsultaPedido:  
+2025-01-08 03:40:57.0309 loggerfile Agente Endpoint. ConsultaPedido:  
+2025-01-08 03:44:16.7928 loggerfile Agente Endpoint. ConsultaPedido:  
+2025-01-08 03:44:24.6241 loggerfile Agente Endpoint. ConsultaPedido:  
+2025-01-08 03:44:50.1399 loggerfile Agente Endpoint. ConsultaPedido:  
+2025-01-08 03:49:00.8713 loggerfile Agente Endpoint. ConsultaPedido:  
+2025-01-08 03:51:18.9006 loggerfile Agente Endpoint. ConsultaPedido:  

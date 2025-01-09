@@ -14,12 +14,118 @@
         <div class="loading-overlay" id="loadingOverlay" style="z-index:100000;">
             <div class="loading-spinner"></div>
         </div>
+        <!-- INI POPUP RESUMEN CERRE RUTA-->
+        <asp:Panel ID="pnlResumenCierre" runat="server" TabIndex="-1" Style="display: none; width: 90%; max-width: 800px;">
+            <asp:UpdatePanel runat="server">
+                <ContentTemplate>
+                    <div class="window-ficha-modal-sm">
+                        <div class="card-detail-window">
+                            <div class="modal-content">
+                                <div class="modal-header" style="background-color: #a9202c; color: white;">
+                                    <h2 class="modal-title" id="exampleModalLiveLabel8">
+                                        <span>Resumen Cierre Ruta</span>
+                                        <asp:Label ID="Label2" runat="server" ForeColor="antiquewhite" Text=""></asp:Label>
+                                    </h2>
+                                    <asp:LinkButton ID="LinkButton3" CssClass="btn-close" runat="server" OnClick="ClosePopupCerrarResumen"></asp:LinkButton>
+                                </div>
+                                <div class="modal-body modal-body-max-height" style="min-height: 300px; height: 500px;">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="input-group input-group-sm mb-1">
+                                                <span class="input-group-text label-caption-130">Factura</span>
+                                                <asp:TextBox ID="txtFacturaResumen" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="input-group input-group-sm mb-1">
+                                                <span class="input-group-text label-caption-130">Pedido</span>
+                                                <asp:TextBox ID="txtPedidoResumen" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="input-group input-group-sm mb-1">
+                                                <span class="input-group-text label-caption-130">Cliente</span>
+                                                <asp:TextBox ID="txtClienteResumen" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="input-group input-group-sm mb-1">
+                                                <span class="input-group-text label-caption-130">Tipo Problema</span>
+                                                <asp:TextBox ID="txtTipoProblemaResumen" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="input-group input-group-sm mb-1">
+                                                <span class="input-group-text label-caption-130">Devolución</span>
+                                                <asp:TextBox ID="txtDevolucionResumen" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            
+                                            <div class="input-group input-group-sm mb-1">
+                                                <span class="input-group-text label-caption-130">Motivo</span>
+                                                <asp:TextBox ID="txtMotivoResumen" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="input-group input-group-sm mb-1">
+                                                <span class="input-group-text label-caption-130">Custodio</span>
+                                                <asp:TextBox ID="txtCustodioResumen" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="input-group input-group-sm mb-1">
+                                                <span class="input-group-text label-caption-130">Volver a Entregar</span>
+                                                <asp:TextBox ID="txtVolveraEntregarResumen" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
+                                            </div>
+                                            <div class="input-group input-group-sm mb-1">
+                                                <span class="input-group-text label-caption-130">Observación</span>
+                                                <asp:TextBox ID="txtObservacionResumen" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
+                                            </div>
+	                                    </div>
+                                        <div class="col-sm-12">
+                                            <div class="table-responsive p-1" style="border-top: 2px solid black; overflow-y: auto;">
+                                                <asp:GridView ID="gvResumen"
+                                                    CssClass="table table-sm table-bordered table-hover header-grid"
+                                                    AutoGenerateColumns="False"
+                                                    runat="server"
+                                                    AllowPaging="false"
+                                                    RowStyle-CssClass="row-grid-smaller"
+                                                    HeaderStyle-CssClass="header-grid-smaller headfijo"
+                                                    FooterStyle-CssClass="footertable footerfijo"
+                                                    >
+                                                    <Columns>
+                                                        <asp:TemplateField HeaderText="SKU" HeaderStyle-CssClass="">
+                                                            <ItemTemplate>
+                                                                <asp:Label ID="lblProdCode" runat="server" Text='<%# Eval("ProdCode") %>' /></ItemTemplate>
+                                                            <ItemStyle HorizontalAlign="Left" Width="7%"></ItemStyle>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="Descripción" HeaderStyle-CssClass="">
+                                                            <ItemTemplate>
+                                                                <asp:Label ID="lblProdNombre" runat="server" CssClass="text-truncate w-100" Text='<%# Eval("ProdNombre") %>' /></ItemTemplate>
+                                                            <ItemStyle HorizontalAlign="Left" Width="12%"></ItemStyle>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="Devuelto" HeaderStyle-CssClass="">
+                                                            <ItemTemplate>
+                                                                <asp:Label ID="lbDevuelto" Width="70" CssClass="text-end" runat="server" Text='<%# Eval("CantidadSolicitada","{0:N2}") %>'></asp:Label></ItemTemplate>
+                                                            <ItemStyle HorizontalAlign="Right" Width="7%"></ItemStyle>
+                                                        </asp:TemplateField>
+                                                    </Columns>
+                                                    <EmptyDataTemplate>
+                                                        <i class="fas fa-exclamation-circle"></i>
+                                                        <span style="font-size: 15px; font-style: italic; margin-left: 5px;">Ningún registro encontrado...</span>
+                                                    </EmptyDataTemplate>
+                                                    <PagerStyle CssClass="pagination-ys" />
+                                                </asp:GridView>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <asp:LinkButton ID="btnConfirmaCierreError" runat="server" OnClick="ConfirmaCierreRutaError_Event" CssClass="btn btn-sm btn-danger">Guardar Cierre</asp:LinkButton>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </asp:Panel>
+        <!-- FIN POPUP RESUMEN CERRE RUTA-->
+
         <!-- INI POPUP CERRAR RUTA-->
         <asp:Panel ID="pnlCerrarRuta" runat="server" TabIndex="-1" Style="display: none; width: 50%; max-width: 600px;">
         <asp:UpdatePanel runat="server">
             <Triggers>
                 <asp:PostBackTrigger ControlID="optEntregaTotal" />
-                <asp:PostBackTrigger ControlID="optEntregaParcial" />
+                <%--<asp:PostBackTrigger ControlID="optRechazoParcial" />
                 <asp:PostBackTrigger ControlID="optNoEntregado" />
 
                 <asp:PostBackTrigger ControlID="optOtraEntregaSI" />
@@ -27,7 +133,7 @@
 
                 <asp:PostBackTrigger ControlID="optPlanta" />
                 <asp:PostBackTrigger ControlID="optTransporte" />
-                <asp:PostBackTrigger ControlID="optCliente" />
+                <asp:PostBackTrigger ControlID="optCliente" />--%>
 
             </Triggers>
             <ContentTemplate>
@@ -42,85 +148,55 @@
                                 </h2>
                                 <asp:LinkButton ID="LinkButton1" CssClass="btn-close" runat="server" OnClick="ClosePopupCerrar"></asp:LinkButton>
                             </div>
-                            <div class="modal-body modal-body-max-height" style="min-height: 300px;height:500px;">
+                            <div class="modal-body modal-body-max-height" style="min-height: 300px; height: 500px;">
                                 <div class="row mb-2 justify-content-center border-top border-secondary">
-                                    <label class="text-start" >Tipo de Entrega</label>
+                                    <label class="text-start">Tipo de Entrega</label>
                                     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                        
                                         <div class="input-group mb-3 p-1">
-                                          <span class="input-group-text border border-secondary w-75" id="basic-addon1">Entrega Total</span>
+                                            <span class="input-group-text border border-secondary w-75" id="basic-addon1">Entrega Total</span>
                                             <asp:Label ID="lblEntregaTotal" runat="server" CssClass="m-0 border border-secondary">
                                                 <asp:RadioButton ID="optEntregaTotal" runat="server" GroupName="TipoEntrega" AutoPostBack="true" OnCheckedChanged="optEntregaTotal_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
                                             </asp:Label>
                                         </div>
-                                        <div class="input-group mb-3 p-1">
-                                          <span class="input-group-text border border-secondary w-75" id="basic-addon2">Entrega Parcial</span>
-                                          <asp:Label ID="lblEntregaParcial" runat="server" CssClass="m-0 border border-secondary">
-                                              <asp:RadioButton ID="optEntregaParcial" runat="server" GroupName="TipoEntrega" AutoPostBack="true" OnCheckedChanged="optEntregaParcial_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
-                                          </asp:Label>
-                                        </div>
-                                        <div class="input-group mb-3 p-1">
-                                          <span class="input-group-text border border-secondary w-75" id="basic-addon3">No Entregado</span>
-                                            <asp:Label ID="lblNoEntregado" runat="server" CssClass="m-0 border border-secondary">
-                                                <asp:RadioButton ID="optNoEntregado" runat="server" GroupName="TipoEntrega" AutoPostBack="true" OnCheckedChanged="optNoEntrergado_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
-                                            </asp:Label>
-                                        </div>
+                                        
+                                        <%--<asp:Panel ID="pnlRechazo" runat="server" Visible="false">
+                                            <div class="input-group mb-3 p-1">
+                                                <span class="input-group-text border border-secondary w-75" id="basic-addon2">Rechazo Parcial</span>
+                                                <asp:Label ID="lblRechazoParcial" runat="server" CssClass="m-0 border border-secondary">
+                                                    <asp:RadioButton ID="optRechazoParcial" runat="server" GroupName="TipoEntrega" AutoPostBack="true" OnCheckedChanged="optRechazoParcial_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
+                                                </asp:Label>
+                                            </div>
+
+                                            <div class="input-group mb-3 p-1">
+                                                <span class="input-group-text border border-secondary w-75" id="basic-addon3">No Entregado</span>
+                                                <asp:Label ID="lblNoEntregado" runat="server" CssClass="m-0 border border-secondary">
+                                                    <asp:RadioButton ID="optNoEntregado" runat="server" GroupName="TipoEntrega" AutoPostBack="true" OnCheckedChanged="optNoEntrergado_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
+                                                </asp:Label>
+                                            </div>
+                                        </asp:Panel>--%>
                                     </div>
                                 </div>
                                 <asp:Panel ID="pnlOpcionesEntrega" runat="server" Visible="false">
                                     <div class="row mb-2 justify-content-start border-top border-secondary">
-                                        <label class="text-start" >Requiere Otra Entrega</label>
-                                        <div class="btn-group w-75" role="group" aria-label="Basic radio toggle button group">
-                                            <div class="input-group mb-3 p-1 w-25">
-                                              <span class="input-group-text border border-secondary" id="basic-addon4">SI</span>
-                                                <asp:Label ID="lblOtraEntregaSI" runat="server" CssClass="m-0 border border-secondary">
-                                                    <asp:RadioButton ID="optOtraEntregaSI" runat="server" GroupName="OtraEntrega" AutoPostBack="true" OnCheckedChanged="optOtraEntregaSI_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
-                                                </asp:Label>
-                                            </div>
-                                            <div class="input-group mb-3 p-1 w-25">
-                                              <span class="input-group-text border border-secondary" id="basic-addon5">NO</span>
-                                                <asp:Label ID="lblOtraEntregaNO" runat="server" CssClass="m-0 border border-secondary">
-                                                    <asp:RadioButton ID="optOtraEntregaNO" runat="server" GroupName="OtraEntrega" AutoPostBack="true" OnCheckedChanged="optOtraEntregaNO_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
-                                                </asp:Label>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                     <div class="row mb-2 justify-content-center border-top border-secondary">
-                                        <label class="text-start" >Dónde quedaron los Productos</label>
-                                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                            <div class="input-group mb-3 p-1">
-                                              <span class="input-group-text border border-secondary w-75" id="basic-addon6">Planta</span>
-                                                <asp:Label ID="lblPlanta" runat="server" CssClass="m-0 border border-secondary">
-                                                    <asp:RadioButton ID="optPlanta" runat="server" GroupName="Custodia" AutoPostBack="true" OnCheckedChanged="optPlata_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
-                                                </asp:Label>
-                                            </div>
-                                            <div class="input-group mb-3 p-1">
-                                              <span class="input-group-text border border-secondary w-75" id="basic-addon7">Transporte</span>
-                                              <asp:Label ID="lblTransporte" runat="server" CssClass="m-0 border border-secondary">
-                                                  <asp:RadioButton ID="optTransporte" runat="server" GroupName="Custodia" AutoPostBack="true" OnCheckedChanged="optTransporte_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
-                                              </asp:Label>
-                                            </div>
-                                            <div class="input-group mb-3 p-1">
-                                              <span class="input-group-text border border-secondary w-75" id="basic-addon8">Cliente</span>
-                                                <asp:Label ID="lblCliente" runat="server" CssClass="m-0 border border-secondary">
-                                                    <asp:RadioButton ID="optCliente" runat="server" GroupName="Custodia" AutoPostBack="true" OnCheckedChanged="optCliente_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
-                                                </asp:Label>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                 </asp:Panel>
                                 <div class="row mb-2 justify-content-center border-top border-secondary">
-                                    <label class="text-start" >Observaciones (Opcional)</label>
+                                    <label class="text-start">Observaciones (Opcional)</label>
                                     <asp:Label ID="Label3" runat="server" Visible="false" CssClass="text-start w-75" ForeColor="Maroon" Text="Observaciones (Opcional)"></asp:Label>
-                                    <asp:TextBox ID="txtObservacionesCierre" runat="server" TextMode="MultiLine" MaxLength="200" Rows="2" CssClass="w-75" ></asp:TextBox>
+                                    <asp:TextBox ID="txtObservacionesCierre" runat="server" TextMode="MultiLine" MaxLength="200" Rows="2" CssClass="w-75"></asp:TextBox>
                                 </div>
                                 <div class="row mb-2">
-                                    <div class="col-sm-12 mb-1" style="display: flex;flex-wrap: wrap;justify-content:center;">
-                                        
+                                    <div class="col-sm-12 mb-1" style="display: flex; flex-wrap: wrap; justify-content: center;">
                                     </div>
                                 </div>
                                 <div class="row mb-2">
                                     <div class="col-sm-12">
-                                        <div class="table-responsive p-1" style="border-top: 2px solid black; overflow-y: auto;max-height: 20rem;">
+                                        <div class="table-responsive p-1" style="border-top: 2px solid black; overflow-y: auto; max-height: 20rem;">
                                             <asp:GridView ID="gvCerrarRutas"
                                                 CssClass="table table-sm2 table-bordered table-hover header-grid"
                                                 AutoGenerateColumns="False"
@@ -128,13 +204,30 @@
                                                 AllowPaging="false"
                                                 RowStyle-CssClass="row-grid-smaller"
                                                 HeaderStyle-CssClass="header-grid-smaller headfijo"
+                                                
                                                 FooterStyle-CssClass="footertable footerfijo"
                                                 >
                                                 <Columns>
-                                                    <asp:TemplateField HeaderText="DocEntry"    SortExpression="DocEntry" HeaderStyle-CssClass="" Visible="false"><ItemTemplate><asp:Label ID="lblDocEntry" runat="server" Text='<%# Eval("DocEntry") %>' /></ItemTemplate><ItemStyle HorizontalAlign="Center" Width="9%"></ItemStyle></asp:TemplateField>
-                                                    <asp:TemplateField HeaderText="Factura"   HeaderStyle-CssClass=""><ItemTemplate><asp:Label ID="lblFolioDF"  runat="server" Width="40" Text='<%# Eval("FolioDF") %>' /></ItemTemplate>      <ItemStyle HorizontalAlign="Center" Width="5%"></ItemStyle></asp:TemplateField>
-                                                    <asp:TemplateField HeaderText="Pedido"        HeaderStyle-CssClass=""><ItemTemplate><asp:Label ID="lblPedido"  runat="server" Width="40" Text='<%# Eval("Pedido") %>' /></ItemTemplate>      <ItemStyle HorizontalAlign="Center" Width="5%"></ItemStyle></asp:TemplateField>
-                                                    <asp:TemplateField HeaderText="Cliente"       HeaderStyle-CssClass=""><ItemTemplate><asp:Label ID="lblCliente" runat="server" CssClass="text-truncate" Width="200" Text='<%# Eval("RazonSocial") %>' /></ItemTemplate>                                     <ItemStyle HorizontalAlign="Left" Width="5%"></ItemStyle></asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="DocEntry" SortExpression="DocEntry" HeaderStyle-CssClass="" Visible="false">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblDocEntry" runat="server" Text='<%# Eval("DocEntry") %>' /></ItemTemplate>
+                                                        <ItemStyle HorizontalAlign="Center" Width="9%"></ItemStyle>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Factura" HeaderStyle-CssClass="">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblFolioDF" runat="server" Width="40" Text='<%# Eval("FolioDF") %>' /></ItemTemplate>
+                                                        <ItemStyle HorizontalAlign="Center" Width="5%"></ItemStyle>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Pedido" HeaderStyle-CssClass="">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblPedido" runat="server" Width="40" Text='<%# Eval("Pedido") %>' /></ItemTemplate>
+                                                        <ItemStyle HorizontalAlign="Center" Width="5%"></ItemStyle>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Cliente" HeaderStyle-CssClass="">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblCliente" runat="server" CssClass="text-truncate" Width="200" Text='<%# Eval("RazonSocial") %>' /></ItemTemplate>
+                                                        <ItemStyle HorizontalAlign="Left" Width="5%"></ItemStyle>
+                                                    </asp:TemplateField>
                                                 </Columns>
                                                 <EmptyDataTemplate>
                                                     <i class="fas fa-exclamation-circle"></i>
@@ -155,7 +248,7 @@
                 </div>
             </ContentTemplate>
         </asp:UpdatePanel>
-    </asp:Panel>
+        </asp:Panel>
         <!-- FIN POPUP CERRAR RUTA -->
 
         <!-- INI POPUP CERRAR CON RCT / RCC-->
@@ -238,6 +331,12 @@
         <!-- INI POPUP DETALLE BANDEJA-->
         <asp:Panel ID="pnlDetalleBandeja" runat="server" TabIndex="-1" Style="display: none; width: 90%; max-width: 1300px;">
         <asp:UpdatePanel runat="server">
+            <Triggers>
+                <asp:PostBackTrigger ControlID="optRechazo" />
+                <asp:PostBackTrigger ControlID="optNoEntregado" />
+                <asp:PostBackTrigger ControlID="optRechazoTotal" />
+                <asp:PostBackTrigger ControlID="optRechazoParcial" />
+            </Triggers>
             <ContentTemplate>
                 <asp:HiddenField ID="HiddenFieldDocentry" runat="server" />
                 <div class="window-ficha-modal-sm">
@@ -245,138 +344,254 @@
                         <div class="modal-content">
                             <div class="modal-header" style="background-color: #a9202c; color: white;">
                                 <h2 class="modal-title" id="exampleModalLiveLabel5">
-                                    <span>Documento: </span>
+                                    <span>Cierre Ruta: </span>
                                     <asp:Label ID="lblRazonSocion" runat="server" ForeColor="antiquewhite" Text="Cliente"></asp:Label>
                                 </h2>
                                 <asp:LinkButton ID="LinkButton11" CssClass="btn-close" runat="server" OnClick="ClosePopupBandeja"></asp:LinkButton>
                             </div>
                             <div class="modal-body modal-body-max-height" style="min-height: 300px;">
                                 <div class="row justify-content-between">
-                                    <div class="col-sm-4">
-                                        <div class="input-group input-group-sm mb-1">
-                                            <span class="input-group-text label-caption-130">Numero</span>
-                                            <asp:TextBox ID="txtNumeroPedido" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
+                                    <div class="col-sm-4" style="border: 1px solid #d3d3d3;">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="row mb-1">
+                                                    <label class="text-start" style="background-color: #a9202c;color: white;font-size: medium;">Tipo Problema</label>
+                                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                                        <div class="input-group p-1">
+                                                            <span class="input-group-text border border-secondary w-75" id="basic-addon10">Rechazo Cliente</span>
+                                                            <asp:Label ID="lblRechazo" runat="server" CssClass="m-0 border border-secondary">
+                                                                <asp:RadioButton ID="optRechazo" runat="server" GroupName="TipoProblema" AutoPostBack="true" OnCheckedChanged="optRechazo_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
+                                                            </asp:Label>
+                                                        </div>
+                                                        <div class="input-group p-1">
+                                                            <span class="input-group-text border border-secondary w-75" id="basic-addon11">No Entregado</span>
+                                                            <asp:Label ID="lblNoEntregado" runat="server" CssClass="m-0 border border-secondary">
+                                                                <asp:RadioButton ID="optNoEntregado" runat="server" GroupName="TipoProblema" AutoPostBack="true" BorderStyle="None" OnCheckedChanged="optNoEntregado_CheckedChanged" CssClass="form-control text-center bg-transparent" />
+                                                            </asp:Label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-1">
+                                                    <label class="text-start">Devolución</label>
+                                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                                        <div class="input-group p-1">
+                                                            <span class="input-group-text border border-secondary w-75" id="basic-addon3">Total</span>
+                                                            <asp:Label ID="lblRechazoTotal" runat="server" CssClass="m-0 border border-secondary">
+                                                                <asp:RadioButton ID="optRechazoTotal" runat="server" GroupName="TipoRechazo" AutoPostBack="true" OnCheckedChanged="optRechazoTotal_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
+                                                            </asp:Label>
+                                                        </div>
+                                                        <div class="input-group p-1">
+                                                            <span class="input-group-text border border-secondary w-75" id="basic-addon2">Parcial</span>
+                                                            <asp:Label ID="lblRechazoParcial" runat="server" CssClass="m-0 border border-secondary">
+                                                                <asp:RadioButton ID="optRechazoParcial" runat="server" GroupName="TipoRechazo" AutoPostBack="true" OnCheckedChanged="optRechazoParcial_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
+                                                            </asp:Label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-1">   
+                                                    <label class="text-start">Motivo</label>
+                                                    <div class="input-group">
+                                                        <label class="input-group-text" for="inputGroupSelect01">Motivo</label>
+                                                        <asp:DropDownList ID="cboMotivo" runat="server" CssClass="form-select"></asp:DropDownList>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-1">
+                                                    <label class="text-start">Dónde quedaron los Productos</label>
+                                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                                        <div class="input-group p-1">
+                                                            <span class="input-group-text border border-secondary w-50 font-size-small" id="basic-addon6">Planta</span>
+                                                            <asp:Label ID="lblPlanta" runat="server" CssClass="m-0 border border-secondary">
+                                                                <asp:RadioButton ID="optPlanta" runat="server" GroupName="Custodia" AutoPostBack="true" OnCheckedChanged="optPlata_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
+                                                            </asp:Label>
+                                                        </div>
+                                                        <div class="input-group p-1">
+                                                            <span class="input-group-text border border-secondary w-50 font-size-small" id="basic-addon7">Transport</span>
+                                                            <asp:Label ID="lblTransporte" runat="server" CssClass="m-0 border border-secondary">
+                                                                <asp:RadioButton ID="optTransporte" runat="server" GroupName="Custodia" AutoPostBack="true" OnCheckedChanged="optTransporte_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
+                                                            </asp:Label>
+                                                        </div>
+                                                        <div class="input-group p-1">
+                                                            <span class="input-group-text border border-secondary w-50 font-size-small" id="basic-addon8">Cliente</span>
+                                                            <asp:Label ID="lblCliente" runat="server" CssClass="m-0 border border-secondary">
+                                                                <asp:RadioButton ID="optCliente" runat="server" GroupName="Custodia" AutoPostBack="true" OnCheckedChanged="optCliente_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
+                                                            </asp:Label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <asp:Panel ID="pnlSINO" runat="server" Enabled="false">
+                                                    <div class="row mb-1">
+                                                        <label class="text-start">Requiere Otra Entrega</label>
+                                                        <div class="btn-group w-100" role="group" aria-label="Basic radio toggle button group">
+                                                            <div class="input-group p-1 w-50">
+                                                                <span class="input-group-text border border-secondary" id="basic-addon4">SI</span>
+                                                                <asp:Label ID="lblOtraEntregaSI" runat="server" CssClass="m-0 border border-secondary">
+                                                                    <asp:RadioButton ID="optOtraEntregaSI" runat="server" GroupName="OtraEntrega" AutoPostBack="true" OnCheckedChanged="optOtraEntregaSI_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
+                                                                </asp:Label>
+                                                            </div>
+                                                            <div class="input-group p-1 w-50">
+                                                                <span class="input-group-text border border-secondary" id="basic-addon5">NO</span>
+                                                                <asp:Label ID="lblOtraEntregaNO" runat="server" CssClass="m-0 border border-secondary">
+                                                                    <asp:RadioButton ID="optOtraEntregaNO" runat="server" GroupName="OtraEntrega" AutoPostBack="true" OnCheckedChanged="optOtraEntregaNO_CheckedChanged" BorderStyle="None" CssClass="form-control text-center bg-transparent" />
+                                                                </asp:Label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </asp:Panel>
+                                                <div class="row mb-1 justify-content-center border-top border-secondary">
+                                                    <label class="text-start">Observaciones (Opcional)</label>
+                                                    <asp:TextBox ID="txtObservacionesRechazoNoEntregado" runat="server" TextMode="MultiLine" MaxLength="200" Rows="2" CssClass="w-75"></asp:TextBox>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="input-group input-group-sm mb-1">
-                                            <span class="input-group-text label-caption-130">Cliente</span>
-                                            <asp:TextBox ID="txtRazonSocial" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
-                                        </div>
-
-                                        <div class="input-group input-group-sm mb-1">
-                                            <span class="input-group-text label-caption-130">Vendedor</span>
-                                            <asp:TextBox ID="txtVendedorPedido" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
-                                        </div>
-
+                                        <%--<a href="mantenedor-animal.aspx">mantenedor-animal.aspx</a>--%>
                                     </div>
-                                    <div class="col-sm-4">
-                                        <div class="input-group input-group-sm mb-1">
-                                            <span class="input-group-text label-caption-130">Fecha de Entrega</span>
-                                            <asp:TextBox ID="txtFechadeEntrega" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
+                                    <div class="col-sm-8">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="input-group input-group-sm mb-1">
+                                                    <span class="input-group-text label-caption-130">Id</span>
+                                                    <asp:TextBox ID="txtDocEntry" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
+                                                </div>
+                                                <div class="input-group input-group-sm mb-1">
+                                                    <span class="input-group-text label-caption-130">Factura</span>
+                                                    <asp:TextBox ID="txtFactura" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
+                                                </div>
+                                                <div class="input-group input-group-sm mb-1">
+                                                    <span class="input-group-text label-caption-130">Numero</span>
+                                                    <asp:TextBox ID="txtNumeroPedido" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
+                                                </div>
+                                                <div class="input-group input-group-sm mb-1">
+                                                    <span class="input-group-text label-caption-130">Cliente</span>
+                                                    <asp:TextBox ID="txtRazonSocial" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
+                                                </div>
+
+                                                <div class="input-group input-group-sm mb-1">
+                                                    <span class="input-group-text label-caption-130">Vendedor</span>
+                                                    <asp:TextBox ID="txtVendedorPedido" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="input-group input-group-sm mb-1">
+                                                    <span class="input-group-text label-caption-130">Fecha de Entrega</span>
+                                                    <asp:TextBox ID="txtFechadeEntrega" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
+                                                </div>
+                                                <div class="input-group input-group-sm mb-1">
+                                                    <span class="input-group-text label-caption-130">Fecha Pedido</span>
+                                                    <asp:TextBox ID="txtFechaPedido" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
+                                                </div>
+                                                <div class="input-group input-group-sm mb-1">
+                                                    <span class="input-group-text label-caption-130">Retira Cliente</span>
+                                                    <asp:CheckBox ID="chkRetiraCliente" CssClass="form-control text-center" Enabled="false" runat="server" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="input-group input-group-sm mb-1">
+                                                    <span class="input-group-text label-caption-130">Neto</span>
+                                                    <asp:TextBox ID="txtNeto" runat="server" ReadOnly="true" CssClass="form-control text-end"></asp:TextBox>
+                                                </div>
+                                                <div class="input-group input-group-sm mb-1">
+                                                    <span class="input-group-text label-caption-130">IVA</span>
+                                                    <asp:TextBox ID="txtIVA" runat="server" ReadOnly="true" CssClass="form-control text-end"></asp:TextBox>
+                                                </div>
+                                                <div class="input-group input-group-sm mb-1">
+                                                    <span class="input-group-text label-caption-130">Total</span>
+                                                    <asp:TextBox ID="txtTotal" runat="server" ReadOnly="true" CssClass="form-control text-end"></asp:TextBox>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="input-group input-group-sm mb-1">
-                                            <span class="input-group-text label-caption-130">Fecha Pedido</span>
-                                            <asp:TextBox ID="txtFechaPedido" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
-                                        </div>
-                                        <div class="input-group input-group-sm mb-1">
-                                            <span class="input-group-text label-caption-130">Retira Cliente</span>
-                                            <asp:CheckBox ID="chkRetiraCliente" CssClass="form-control text-center" runat="server" />
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="input-group input-group-sm mb-1">
-                                            <span class="input-group-text label-caption-130">Neto</span>
-                                            <asp:TextBox ID="txtNeto" runat="server" ReadOnly="true" CssClass="form-control text-end"></asp:TextBox>
-                                        </div>
-                                        <div class="input-group input-group-sm mb-1">
-                                            <span class="input-group-text label-caption-130">IVA</span>
-                                            <asp:TextBox ID="txtIVA" runat="server" ReadOnly="true" CssClass="form-control text-end"></asp:TextBox>
-                                        </div>
-                                        <div class="input-group input-group-sm mb-1">
-                                            <span class="input-group-text label-caption-130">Total</span>
-                                            <asp:TextBox ID="txtTotal" runat="server" ReadOnly="true" CssClass="form-control text-end"></asp:TextBox>
+                                        <div class="row mb-2">
+                                            <div class="col-sm-12">
+                                                <div class="table-responsive p-1" style="border-top: 2px solid black; overflow-y: auto;">
+                                                    <asp:GridView ID="gvDetalle"
+                                                        CssClass="table table-sm table-bordered table-hover header-grid"
+                                                        AutoGenerateColumns="False"
+                                                        runat="server"
+                                                        AllowPaging="false"
+                                                        RowStyle-CssClass="row-grid-smaller"
+                                                        HeaderStyle-CssClass="header-grid-smaller headfijo"
+                                                        FooterStyle-CssClass="footertable footerfijo"
+                                                        OnRowDataBound="gvDetalle_RowDataBound"
+                                                        >
+                                                        <Columns>
+                                                            
+                                                            <asp:TemplateField HeaderText="" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center"><HeaderTemplate><asp:CheckBox ID="checkbox2Det" AutoPostBack="true" OnCheckedChanged="CheckAllDet" runat="server" Width="20" /></HeaderTemplate><ItemTemplate><asp:CheckBox ID="chkSeleccionadoDet" runat="server" /></ItemTemplate><ItemStyle Width="1%" HorizontalAlign="Center"></ItemStyle></asp:TemplateField>
+                                                            
+                                                            <asp:TemplateField HeaderText="LineaItem" HeaderStyle-CssClass="" Visible="false">
+                                                                <ItemTemplate>
+                                                                    <asp:Label ID="lblLineaItem" runat="server" Text='<%# Eval("LineaItem") %>' /></ItemTemplate>
+                                                                <ItemStyle HorizontalAlign="Center" Width="3%"></ItemStyle>
+                                                            </asp:TemplateField>
+                                                            <asp:TemplateField HeaderText="SKU" HeaderStyle-CssClass="">
+                                                                <ItemTemplate>
+                                                                    <asp:Label ID="lblProdCode" runat="server" Text='<%# Eval("ProdCode") %>' /></ItemTemplate>
+                                                                <ItemStyle HorizontalAlign="Left" Width="7%"></ItemStyle>
+                                                            </asp:TemplateField>
+                                                            <asp:TemplateField HeaderText="Descripción" HeaderStyle-CssClass="">
+                                                                <ItemTemplate>
+                                                                    <asp:Label ID="lblProdNombre" runat="server" CssClass="text-truncate w-100" Text='<%# Eval("ProdNombre") %>' /></ItemTemplate>
+                                                                <ItemStyle HorizontalAlign="Left" Width="12%"></ItemStyle>
+                                                            </asp:TemplateField>
+                                                            <asp:TemplateField HeaderText="Completado" Visible="false" HeaderStyle-CssClass="">
+                                                                <ItemTemplate>
+                                                                    <asp:Label ID="lblCompletado" runat="server" Text='<%# Eval("Completado","{0:P0}") %>' /></ItemTemplate>
+                                                                <ItemStyle HorizontalAlign="Center" Width="7%"></ItemStyle>
+                                                            </asp:TemplateField>
+                                                            <asp:TemplateField HeaderText="Bodega" HeaderStyle-CssClass="">
+                                                                <ItemTemplate>
+                                                                    <asp:Label ID="lblBodegaCode" runat="server" Text='<%# Eval("BodegaCode") %>' /></ItemTemplate>
+                                                                <ItemStyle HorizontalAlign="Center" Width="7%"></ItemStyle>
+                                                            </asp:TemplateField>
+                                                            <asp:TemplateField HeaderText="Precio" HeaderStyle-CssClass="">
+                                                                <ItemTemplate>
+                                                                    <asp:Label ID="lblPrecioFinal" CssClass="text-end" runat="server" Text='<%# Eval("PrecioFinal","{0:N0}") %>' /></ItemTemplate>
+                                                                <ItemStyle HorizontalAlign="Right" Width="7%"></ItemStyle>
+                                                            </asp:TemplateField>
+                                                            <asp:TemplateField HeaderText="Solicitado" HeaderStyle-CssClass="">
+                                                                <ItemTemplate>
+                                                                    <asp:Label ID="lblCantidad" Width="70" CssClass="text-end" runat="server" Text='<%# Eval("CantidadSolicitada","{0:N2}") %>'></asp:Label></ItemTemplate>
+                                                                <ItemStyle HorizontalAlign="Right" Width="7%"></ItemStyle>
+                                                            </asp:TemplateField>
+                                                            <asp:TemplateField HeaderText="Devuelto" HeaderStyle-CssClass="">
+                                                                <ItemTemplate>
+                                                                    <asp:TextBox ID="txtCantidad" Width="70" CssClass="text-end" runat="server" ReadOnly="true" Text='<%# Eval("CantidadSolicitada","{0:N2}") %>'></asp:TextBox>
+                                                                    <asp:RegularExpressionValidator ID="NumericOnlyValidator3" runat="server" ControlToValidate="txtCantidad" CssClass="d-block" ErrorMessage="valor incorrecto" ForeColor="Red" ValidationExpression="^((?:[1-9]\d*)|(?:(?=[\d.]+)(?:[1-9]\d*|0).\d+))$"></asp:RegularExpressionValidator>
+                                                                </ItemTemplate>
+                                                                <ItemStyle HorizontalAlign="Right" Width="7%"></ItemStyle>
+                                                            </asp:TemplateField>
+                                                            <asp:TemplateField HeaderText="Pendiente" Visible="false" HeaderStyle-CssClass="">
+                                                                <ItemTemplate>
+                                                                    <asp:Label ID="txtPendiente" Width="70" CssClass="text-end" runat="server" Text='<%# Eval("CantidadPendiente","{0:N2}") %>'></asp:Label></ItemTemplate>
+                                                                <ItemStyle HorizontalAlign="Right" Width="7%"></ItemStyle>
+                                                            </asp:TemplateField>
+                                                            <asp:TemplateField HeaderText="Marcado" Visible="false" HeaderStyle-CssClass="">
+                                                                <ItemTemplate>
+                                                                    <asp:Label ID="txtCantidadReal" Width="70" CssClass="text-end" runat="server" Text='<%# Eval("CantidadReal","{0:N2}") %>'></asp:Label></ItemTemplate>
+                                                                <ItemStyle HorizontalAlign="Right" Width="7%"></ItemStyle>
+                                                            </asp:TemplateField>
+                                                            <asp:TemplateField HeaderText="Total" Visible="false" HeaderStyle-CssClass="">
+                                                                <ItemTemplate>
+                                                                    <asp:Label ID="txtTotalReal" Width="70" CssClass="text-end" runat="server" Text='<%# Eval("TotalReal","{0:N0}") %>'></asp:Label></ItemTemplate>
+                                                                <ItemStyle HorizontalAlign="Right" Width="7%"></ItemStyle>
+                                                            </asp:TemplateField>
+
+                                                        </Columns>
+                                                        <EmptyDataTemplate>
+                                                            <i class="fas fa-exclamation-circle"></i>
+                                                            <span style="font-size: 15px; font-style: italic; margin-left: 5px;">Ningún registro encontrado...</span>
+                                                        </EmptyDataTemplate>
+                                                        <PagerStyle CssClass="pagination-ys" />
+                                                    </asp:GridView>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row mb-2">
-                                    <div class="col-sm-12">
-                                        <div class="table-responsive p-1" style="border-top: 2px solid black; overflow-y: auto;">
-                                            <asp:GridView ID="gvDetalle"
-                                                CssClass="table table-sm table-bordered table-hover header-grid"
-                                                AutoGenerateColumns="False"
-                                                runat="server"
-                                                AllowPaging="false"
-                                                RowStyle-CssClass="row-grid-smaller"
-                                                HeaderStyle-CssClass="header-grid-smaller headfijo"
-                                                ShowFooter="true"
-                                                FooterStyle-CssClass="footertable footerfijo"
-                                                OnRowDataBound="gvDetalle_RowDataBound"
-                                                >
-                                                <Columns>
-                                                    <asp:TemplateField HeaderText="LineaItem" HeaderStyle-CssClass="" Visible="false">
-                                                        <ItemTemplate>
-                                                            <asp:Label ID="lblLineaItem" runat="server" Text='<%# Eval("LineaItem") %>' /></ItemTemplate>
-                                                        <ItemStyle HorizontalAlign="Center" Width="3%"></ItemStyle>
-                                                    </asp:TemplateField>
-                                                    <asp:TemplateField HeaderText="SKU" HeaderStyle-CssClass="">
-                                                        <ItemTemplate>
-                                                            <asp:Label ID="lblProdCode" runat="server" Text='<%# Eval("ProdCode") %>' /></ItemTemplate>
-                                                        <ItemStyle HorizontalAlign="Left" Width="7%"></ItemStyle>
-                                                    </asp:TemplateField>
-                                                    <asp:TemplateField HeaderText="Descripción" HeaderStyle-CssClass="">
-                                                        <ItemTemplate>
-                                                            <asp:Label ID="lblProdNombre" runat="server" CssClass="text-truncate w-100" Text='<%# Eval("ProdNombre") %>' /></ItemTemplate>
-                                                        <ItemStyle HorizontalAlign="Left" Width="12%"></ItemStyle>
-                                                    </asp:TemplateField>
-                                                    <asp:TemplateField HeaderText="Completado" Visible="false" HeaderStyle-CssClass="">
-                                                        <ItemTemplate>
-                                                            <asp:Label ID="lblCompletado" runat="server" Text='<%# Eval("Completado","{0:P0}") %>' /></ItemTemplate>
-                                                        <ItemStyle HorizontalAlign="Center" Width="7%"></ItemStyle>
-                                                    </asp:TemplateField>
-                                                    <asp:TemplateField HeaderText="Bodega" HeaderStyle-CssClass="">
-                                                        <ItemTemplate>
-                                                            <asp:Label ID="lblBodegaCode" runat="server" Text='<%# Eval("BodegaCode") %>' /></ItemTemplate>
-                                                        <ItemStyle HorizontalAlign="Center" Width="7%"></ItemStyle>
-                                                    </asp:TemplateField>
-                                                    <asp:TemplateField HeaderText="Precio" HeaderStyle-CssClass="">
-                                                        <ItemTemplate>
-                                                            <asp:Label ID="lblPrecioFinal" CssClass="text-end" runat="server" Text='<%# Eval("PrecioFinal","{0:N0}") %>' /></ItemTemplate>
-                                                        <ItemStyle HorizontalAlign="Right" Width="7%"></ItemStyle>
-                                                    </asp:TemplateField>
-                                                    <asp:TemplateField HeaderText="Solicitado" HeaderStyle-CssClass="">
-                                                        <ItemTemplate>
-                                                            <asp:Label ID="txtCantidad" Width="70" CssClass="text-end" runat="server" Text='<%# Eval("CantidadSolicitada","{0:N2}") %>'></asp:Label></ItemTemplate>
-                                                        <ItemStyle HorizontalAlign="Right" Width="7%"></ItemStyle>
-                                                    </asp:TemplateField>
-                                                    <asp:TemplateField HeaderText="Pendiente" Visible="false" HeaderStyle-CssClass="">
-                                                        <ItemTemplate>
-                                                            <asp:Label ID="txtPendiente" Width="70" CssClass="text-end" runat="server" Text='<%# Eval("CantidadPendiente","{0:N2}") %>'></asp:Label></ItemTemplate>
-                                                        <ItemStyle HorizontalAlign="Right" Width="7%"></ItemStyle>
-                                                    </asp:TemplateField>
-                                                    <asp:TemplateField HeaderText="Marcado" Visible="false" HeaderStyle-CssClass="">
-                                                        <ItemTemplate>
-                                                            <asp:Label ID="txtCantidadReal" Width="70" CssClass="text-end" runat="server" Text='<%# Eval("CantidadReal","{0:N2}") %>'></asp:Label></ItemTemplate>
-                                                        <ItemStyle HorizontalAlign="Right" Width="7%"></ItemStyle>
-                                                    </asp:TemplateField>
-                                                    <asp:TemplateField HeaderText="Total" HeaderStyle-CssClass="">
-                                                        <ItemTemplate>
-                                                            <asp:Label ID="txtTotalReal" Width="70" CssClass="text-end" runat="server" Text='<%# Eval("TotalReal","{0:N0}") %>'></asp:Label></ItemTemplate>
-                                                        <ItemStyle HorizontalAlign="Right" Width="7%"></ItemStyle>
-                                                    </asp:TemplateField>
-
-                                                </Columns>
-                                                <EmptyDataTemplate>
-                                                    <i class="fas fa-exclamation-circle"></i>
-                                                    <span style="font-size: 15px; font-style: italic; margin-left: 5px;">Ningún registro encontrado...</span>
-                                                </EmptyDataTemplate>
-                                                <PagerStyle CssClass="pagination-ys" />
-                                            </asp:GridView>
-                                        </div>
-                                    </div>
-                                </div>
+                                
 
                             </div>
                             <div class="modal-footer">
-                                <asp:Button ID="Button1" CssClass="btn btn-secondary btn-sm" runat="server" OnClick="ClosePopupBandeja" Text="Cerrar" />
+                                <asp:LinkButton ID="btnCerrarError" runat="server" OnClick="CierreRutaError_Event" CssClass="btn btn-sm btn-danger">Guardar Cierre</asp:LinkButton>
                             </div>
                         </div>
                     </div>
@@ -472,10 +687,10 @@
                                                             <asp:LinkButton ID="btnCerrarRuta" CssClass="btn btn-sm btn-outline-success m-1" runat="server" OnClick="CerrarRuta_Event"><i class="fas fa-check-circle p-1"></i>Cerrar Ruta</asp:LinkButton>
                                                         </li>
                                                         <li class="nav-item">
-                                                            <asp:LinkButton ID="btnGenerarRCT" Visible="false" CssClass="btn btn-sm btn-outline-danger m-1" runat="server" OnClick="GeneraRCT_Event"><i class="fas fa-exclamation-circle p-1"></i>Cerrar con RCT</asp:LinkButton>
+                                                            <asp:LinkButton ID="btnRechazo" Visible="false" CssClass="btn btn-sm btn-outline-danger m-1" runat="server" OnClick="VerBandeja_Event"><i class="fas fa-exclamation-circle p-1"></i>Rechazo</asp:LinkButton>
                                                         </li>
                                                         <li class="nav-item">
-                                                            <asp:LinkButton ID="btnGenerarRCC" Visible="false" CssClass="btn btn-sm btn-outline-danger m-1" runat="server" OnClick="GeneraRCC_Event"><i class="fas fa-exclamation-circle p-1"></i>Cerrar con RCC</asp:LinkButton>
+                                                            <asp:LinkButton ID="btnGenerarRCC" Visible="false" CssClass="btn btn-sm btn-outline-danger m-1" runat="server" OnClick="GeneraRCC_Event"><i class="fas fa-exclamation-circle p-1"></i>No Entregado</asp:LinkButton>
                                                         </li>
                                                         <li>
                                                             <h4><asp:Label ID="lblRutaSeleccionada" Font-Bold="true" runat="server" CssClass="btn btn-sm font-size-large" Text=""></asp:Label></h4>
@@ -613,6 +828,15 @@
         DropShadow="false"
         PopupControlID="pnlCerrarRutaRCTRCC"
         TargetControlID="lnkFake3"
+        BackgroundCssClass="modalBackground">
+    </cc1:ModalPopupExtender>
+
+    <asp:LinkButton ID="lnkFake4" runat="server"></asp:LinkButton>
+    <cc1:ModalPopupExtender
+        ID="popupResumenCierre" runat="server"
+        DropShadow="false"
+        PopupControlID="pnlResumenCierre"
+        TargetControlID="lnkFake4"
         BackgroundCssClass="modalBackground">
     </cc1:ModalPopupExtender>
 </asp:Content>

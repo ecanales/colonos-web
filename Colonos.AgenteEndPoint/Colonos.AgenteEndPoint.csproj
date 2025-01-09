@@ -57,6 +57,7 @@
     <Compile Include="Implement\Bandejas\AgenteBandejas.cs" />
     <Compile Include="Implement\Config\AgenteParametros.cs" />
     <Compile Include="Implement\Config\AgenteUsuario.cs" />
+    <Compile Include="Implement\Devoluciones\AgenteDevolucion.cs" />
     <Compile Include="Implement\Informes\AgenteInformes.cs" />
     <Compile Include="Implement\Logistica\AgenteLogistica.cs" />
     <Compile Include="Implement\Mentenedores\Inventario\AgenteProductos.cs" />

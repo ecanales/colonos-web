@@ -3,24 +3,36 @@
   "WorkspaceRootPath": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|c:\\esystem\\fuentes\\colonos\\colonos-web\\colonos.web\\bandeja-logistica.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|solutionrelative:colonos.web\\bandeja-logistica.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|c:\\esystem\\fuentes\\colonos\\colonos-web\\colonos.web\\bandeja-logistica.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|solutionrelative:colonos.web\\bandeja-logistica.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|c:\\esystem\\fuentes\\colonos\\colonos-web\\colonos.web\\confirmar-picking.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|solutionrelative:colonos.web\\confirmar-picking.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|c:\\esystem\\fuentes\\colonos\\colonos-web\\colonos.web\\confirmar-rutas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|solutionrelative:colonos.web\\confirmar-rutas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|c:\\esystem\\fuentes\\colonos\\colonos-web\\colonos.web\\confirmar-rutas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|C:\\esystem\\Fuentes\\Colonos\\colonos-web\\colonos.web\\confirmar-rutas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|solutionrelative:colonos.web\\confirmar-rutas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91224353-DDEF-4B09-AAEA-CADC5375CB43}|Colonos.Manager\\Colonos.Manager.csproj|c:\\esystem\\fuentes\\colonos\\colonos-web\\colonos.manager\\implement\\ventas\\managerdocumentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91224353-DDEF-4B09-AAEA-CADC5375CB43}|Colonos.Manager\\Colonos.Manager.csproj|solutionrelative:colonos.manager\\implement\\ventas\\managerdocumentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|c:\\esystem\\fuentes\\colonos\\colonos-web\\colonos.web\\confirmar-picking.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|solutionrelative:colonos.web\\confirmar-picking.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|c:\\esystem\\fuentes\\colonos\\colonos-web\\colonos.web\\mantenedor-usuarios.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|solutionrelative:colonos.web\\mantenedor-usuarios.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|c:\\esystem\\fuentes\\colonos\\colonos-web\\colonos.web\\bandeja-toledo.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|solutionrelative:colonos.web\\bandeja-toledo.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|c:\\esystem\\fuentes\\colonos\\colonos-web\\colonos.web\\pdfhandler.ashx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|solutionrelative:colonos.web\\pdfhandler.ashx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|c:\\esystem\\fuentes\\colonos\\colonos-web\\colonos.web\\bandeja-toledo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{26DF7A23-B189-4766-8151-950695951DA7}|Colonos.Web\\Colonos.Web.csproj|solutionrelative:colonos.web\\bandeja-toledo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,20 +54,98 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "bandeja-toledo.aspx.cs",
+              "DocumentMoniker": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Web\\bandeja-toledo.aspx.cs",
+              "RelativeDocumentMoniker": "Colonos.Web\\bandeja-toledo.aspx.cs",
+              "ToolTip": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Web\\bandeja-toledo.aspx.cs",
+              "RelativeToolTip": "Colonos.Web\\bandeja-toledo.aspx.cs",
+              "ViewState": "AQIAACIBAAAAAAAAAAAQwEQBAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T03:41:56.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "bandeja-logistica.aspx.cs",
+              "DocumentMoniker": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Web\\bandeja-logistica.aspx.cs",
+              "RelativeDocumentMoniker": "Colonos.Web\\bandeja-logistica.aspx.cs",
+              "ToolTip": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Web\\bandeja-logistica.aspx.cs",
+              "RelativeToolTip": "Colonos.Web\\bandeja-logistica.aspx.cs",
+              "ViewState": "AQIAANcAAAAAAAAAAAApwNwAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T22:45:37.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "bandeja-logistica.aspx",
+              "DocumentMoniker": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Web\\bandeja-logistica.aspx",
+              "RelativeDocumentMoniker": "Colonos.Web\\bandeja-logistica.aspx",
+              "ToolTip": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Web\\bandeja-logistica.aspx",
+              "RelativeToolTip": "Colonos.Web\\bandeja-logistica.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-01-08T06:32:14.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "bandeja-toledo.aspx",
+              "DocumentMoniker": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Web\\bandeja-toledo.aspx",
+              "RelativeDocumentMoniker": "Colonos.Web\\bandeja-toledo.aspx",
+              "ToolTip": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Web\\bandeja-toledo.aspx",
+              "RelativeToolTip": "Colonos.Web\\bandeja-toledo.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-01-08T03:41:31.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "confirmar-rutas.aspx.cs",
               "DocumentMoniker": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Web\\confirmar-rutas.aspx.cs",
               "RelativeDocumentMoniker": "Colonos.Web\\confirmar-rutas.aspx.cs",
               "ToolTip": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Web\\confirmar-rutas.aspx.cs",
               "RelativeToolTip": "Colonos.Web\\confirmar-rutas.aspx.cs",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAowF0AAAAcAAAA",
+              "ViewState": "AQIAAPEBAAAAAAAAAAAywAICAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-03T06:12:34.978Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "confirmar-picking.aspx.cs",
+              "DocumentMoniker": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Web\\confirmar-picking.aspx.cs",
+              "RelativeDocumentMoniker": "Colonos.Web\\confirmar-picking.aspx.cs",
+              "ToolTip": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Web\\confirmar-picking.aspx.cs",
+              "RelativeToolTip": "Colonos.Web\\confirmar-picking.aspx.cs",
+              "ViewState": "AQIAALcAAAAAAAAAAAAIwMQAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T22:45:37.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "confirmar-picking.aspx",
+              "DocumentMoniker": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Web\\confirmar-picking.aspx",
+              "RelativeDocumentMoniker": "Colonos.Web\\confirmar-picking.aspx",
+              "ToolTip": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Web\\confirmar-picking.aspx",
+              "RelativeToolTip": "Colonos.Web\\confirmar-picking.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-01-08T03:45:00.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "confirmar-rutas.aspx",
               "DocumentMoniker": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Web\\confirmar-rutas.aspx",
               "RelativeDocumentMoniker": "Colonos.Web\\confirmar-rutas.aspx",
@@ -64,45 +154,6 @@
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-01-06T05:25:50.635Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "mantenedor-usuarios.aspx.cs",
-              "DocumentMoniker": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Web\\mantenedor-usuarios.aspx.cs",
-              "RelativeDocumentMoniker": "Colonos.Web\\mantenedor-usuarios.aspx.cs",
-              "ToolTip": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Web\\mantenedor-usuarios.aspx.cs",
-              "RelativeToolTip": "Colonos.Web\\mantenedor-usuarios.aspx.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T05:50:59.096Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PdfHandler.ashx.cs",
-              "DocumentMoniker": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Web\\PdfHandler.ashx.cs",
-              "RelativeDocumentMoniker": "Colonos.Web\\PdfHandler.ashx.cs",
-              "ToolTip": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Web\\PdfHandler.ashx.cs",
-              "RelativeToolTip": "Colonos.Web\\PdfHandler.ashx.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T05:50:52.027Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ManagerDocumentos.cs",
-              "DocumentMoniker": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Manager\\Implement\\Ventas\\ManagerDocumentos.cs",
-              "RelativeDocumentMoniker": "Colonos.Manager\\Implement\\Ventas\\ManagerDocumentos.cs",
-              "ToolTip": "C:\\esystem\\Fuentes\\Colonos\\colonos-web\\Colonos.Manager\\Implement\\Ventas\\ManagerDocumentos.cs",
-              "RelativeToolTip": "Colonos.Manager\\Implement\\Ventas\\ManagerDocumentos.cs",
-              "ViewState": "AQIAAMoAAAAAAAAAAIA6wOIAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T06:12:35.07Z",
               "EditorCaption": ""
             }
           ]
